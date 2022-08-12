@@ -1,0 +1,11 @@
+App.xbf
+MainWindow.xbf
+Pages\AccountPage.xbf
+Pages\Home.xbf
+Pages\MainPage.xbf
+Pages\RepoHome.xbf
+SettingPage.xbf
+Test\Git\GitBranchPage.xbf
+Test\Git\GitClonePage.xbf
+Test\Git\GitInitPage.xbf
+Themes\Generic.xbf

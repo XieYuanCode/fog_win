@@ -1,0 +1,9 @@
+App.xbf
+Help.xbf
+MainWindow.xbf
+Pages\AccountPage.xbf
+Pages\MainPage.xbf
+SettingPage.xbf
+Test\Git\GitBranchPage.xbf
+Test\Git\GitClonePage.xbf
+Test\Git\GitInitPage.xbf

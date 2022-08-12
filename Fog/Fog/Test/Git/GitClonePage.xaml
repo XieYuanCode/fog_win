@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="Fog.Pages.GitClonePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left" Spacing="10" Margin="10">
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left" Spacing="10">
+            <Button Content="选择目录" Click="Select_folder" />
+            <TextBlock Text="{x:Bind Path=CloneData.ClonePath.Path, Mode=OneWay}" VerticalAlignment="Center"/>
+        </StackPanel>
+        <TextBox Header="Remote" PlaceholderText="Remote" Text="{x:Bind Path=CloneData.Remote, Mode=TwoWay}"/>
+
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <CheckBox Content="Bare"
+                      Checked="Bare_Checked"
+                      Unchecked="Bare_Unchecked" />
+            <Button Content="克隆" Click="Clone" />
+            <TextBlock Text="{x:Bind Path=CloneData.Message, Mode=OneWay}" VerticalAlignment="Center"/>
+        </StackPanel>
+    </StackPanel>
+</Page>

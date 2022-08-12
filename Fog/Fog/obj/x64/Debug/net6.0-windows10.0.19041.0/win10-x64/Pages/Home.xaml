@@ -1,0 +1,179 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="Fog.Pages.Home"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Fog"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:fog_pages="using:Fog.Pages"
+    xmlns:fog="using:Fog"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <DataTemplate x:Key="LocalRepositoryGroupItemTemplate"                                      >
+            <TreeViewItem x:ConnectionId='15'                                                                               Margin="10, 0, 0, 0">
+                <StackPanel Orientation="Horizontal">
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe7b8;" FontSize="15" Margin="0, 0, 10, 0"/>
+                    <TextBlock x:ConnectionId='16'                      />
+                </StackPanel>
+            </TreeViewItem>
+        </DataTemplate>
+        <DataTemplate x:Key="LocalRepositoryItemTemplate"                                 >
+            <TreeViewItem x:ConnectionId='12'                                                                                       Margin="10, 0, 0, 0">
+                <StackPanel Orientation="Horizontal">
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe8b7;" FontSize="15" Margin="0, 0, 10, 0"/>
+                    <TextBlock x:ConnectionId='13'                      />
+                </StackPanel>
+            </TreeViewItem>
+        </DataTemplate>
+        <fog_pages:ExplorerItemTemplateSelector
+            x:Key="ExplorerItemTemplateSelector"
+            FolderTemplate="{StaticResource LocalRepositoryGroupItemTemplate}"
+            FileTemplate="{StaticResource LocalRepositoryItemTemplate}" />
+        <MenuFlyout x:ConnectionId='2' ShowMode="Transient" x:Name="RepoMenuFlyout">
+            <ToggleMenuFlyoutItem Text="Pin">
+                <MenuFlyoutItem.Icon>
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe718;"></FontIcon>
+                </MenuFlyoutItem.Icon>
+            </ToggleMenuFlyoutItem>
+            <MenuFlyoutSeparator></MenuFlyoutSeparator>
+            <MenuFlyoutItem Text="Open">
+                <MenuFlyoutItem.Icon>
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xee35;"></FontIcon>
+                </MenuFlyoutItem.Icon>
+            </MenuFlyoutItem>
+            <MenuFlyoutItem Text="Open In New Window">
+                <MenuFlyoutItem.Icon>
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe8a7;"></FontIcon>
+                </MenuFlyoutItem.Icon>
+            </MenuFlyoutItem>
+            <MenuFlyoutSeparator></MenuFlyoutSeparator>
+            <MenuFlyoutItem x:ConnectionId='7' Text="Reveal In File Explorer"                                 >
+                <MenuFlyoutItem.Icon>
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe8a7;"></FontIcon>
+                </MenuFlyoutItem.Icon>
+                <MenuFlyoutItem.KeyboardAccelerators>
+                    <KeyboardAccelerator Key="R" Modifiers="Control,Menu"></KeyboardAccelerator>
+                </MenuFlyoutItem.KeyboardAccelerators>
+            </MenuFlyoutItem>
+            <MenuFlyoutItem x:ConnectionId='8' Text="Open In Terminal"                           >
+                <MenuFlyoutItem.Icon>
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe756;"></FontIcon>
+                </MenuFlyoutItem.Icon>
+                <MenuFlyoutItem.KeyboardAccelerators>
+                    <KeyboardAccelerator Key="T" Modifiers="Control,Menu"></KeyboardAccelerator>
+                </MenuFlyoutItem.KeyboardAccelerators>
+            </MenuFlyoutItem>
+            <MenuFlyoutItem x:ConnectionId='9' Text="Open In Editor"                         >
+                <MenuFlyoutItem.Icon>
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe977;"></FontIcon>
+                </MenuFlyoutItem.Icon>
+                <MenuFlyoutItem.KeyboardAccelerators>
+                    <KeyboardAccelerator Key="E" Modifiers="Control,Menu"></KeyboardAccelerator>
+                </MenuFlyoutItem.KeyboardAccelerators>
+            </MenuFlyoutItem>
+            <MenuFlyoutSeparator></MenuFlyoutSeparator>
+            <MenuFlyoutItem x:ConnectionId='10' Text="Copy Path"                     >
+                <MenuFlyoutItem.Icon>
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe74d;"></FontIcon>
+                </MenuFlyoutItem.Icon>
+                <MenuFlyoutItem.KeyboardAccelerators>
+                    <KeyboardAccelerator Key="C" Modifiers="Control,Menu"></KeyboardAccelerator>
+                </MenuFlyoutItem.KeyboardAccelerators>
+            </MenuFlyoutItem>
+            <MenuFlyoutSeparator></MenuFlyoutSeparator>
+            <MenuFlyoutItem Text="Delete">
+                <MenuFlyoutItem.Icon>
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe74d;"></FontIcon>
+                </MenuFlyoutItem.Icon>
+                <MenuFlyoutItem.KeyboardAccelerators>
+                    <KeyboardAccelerator Key="Back" Modifiers="Control"></KeyboardAccelerator>
+                    <KeyboardAccelerator Key="Delete"></KeyboardAccelerator>
+                </MenuFlyoutItem.KeyboardAccelerators>
+            </MenuFlyoutItem>
+        </MenuFlyout>
+        <MenuFlyout x:ConnectionId='3' ShowMode="Transient" x:Name="RepoGroupMenuFlyout">
+            <MenuFlyoutItem Text="Open">
+                <MenuFlyoutItem.Icon>
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xee35;"></FontIcon>
+                </MenuFlyoutItem.Icon>
+            </MenuFlyoutItem>
+            <MenuFlyoutItem Text="Rename">
+                <MenuFlyoutItem.Icon>
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe8ac;"></FontIcon>
+                </MenuFlyoutItem.Icon>
+            </MenuFlyoutItem>
+            <MenuFlyoutItem Text="Delete">
+                <MenuFlyoutItem.Icon>
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe74d;"></FontIcon>
+                </MenuFlyoutItem.Icon>
+                <MenuFlyoutItem.KeyboardAccelerators>
+                    <KeyboardAccelerator Key="Back" Modifiers="Control"></KeyboardAccelerator>
+                    <KeyboardAccelerator Key="Delete"></KeyboardAccelerator>
+                </MenuFlyoutItem.KeyboardAccelerators>
+            </MenuFlyoutItem>
+        </MenuFlyout>
+        <MenuFlyout x:ConnectionId='4' ShowMode="Transient" x:Name="AddMenuFlout">
+            <MenuFlyoutItem x:ConnectionId='5' Text="New Group"                           >
+                <MenuFlyoutItem.Icon>
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xed0e;"></FontIcon>
+                </MenuFlyoutItem.Icon>
+            </MenuFlyoutItem>
+            <MenuFlyoutSeparator></MenuFlyoutSeparator>
+            <MenuFlyoutItem Text="Create A Git Repository">
+                <MenuFlyoutItem.Icon>
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe8f4;"></FontIcon>
+                </MenuFlyoutItem.Icon>
+            </MenuFlyoutItem>
+            <MenuFlyoutItem x:ConnectionId='6' Text="Add Local Repository"                     >
+                <MenuFlyoutItem.Icon>
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe8b5;"></FontIcon>
+                </MenuFlyoutItem.Icon>
+            </MenuFlyoutItem>
+            <MenuFlyoutItem Text="Clone A Git Repository">
+                <MenuFlyoutItem.Icon>
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe896;"></FontIcon>
+                </MenuFlyoutItem.Icon>
+            </MenuFlyoutItem>
+        </MenuFlyout>
+    </Page.Resources>
+
+    <Grid>
+        <SplitView x:ConnectionId='17' x:Name="mainSplitView"
+                   IsPaneOpen="True" 
+                   DisplayMode="Inline"
+                   PaneBackground="Transparent">
+            <SplitView.Pane>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBox  Margin="10, 10, 0, 10" PlaceholderText="Search" Grid.Row="0"/>
+                    <TreeView x:ConnectionId='19'                                         
+                              ItemTemplateSelector="{StaticResource ExplorerItemTemplateSelector}"
+                              Grid.Row="1">
+                    </TreeView>
+                    <Grid Padding="10" Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <HyperlinkButton x:ConnectionId='20' Grid.Column="0"                           x:Name="SettingButton">
+                            <SymbolIcon Symbol="Setting"></SymbolIcon>
+                        </HyperlinkButton>
+                        <HyperlinkButton x:ConnectionId='21' Grid.Column="3"                          >
+                            <SymbolIcon Symbol="Add"></SymbolIcon>
+                        </HyperlinkButton>
+                    </Grid>
+                </Grid>
+            </SplitView.Pane>
+        </SplitView>
+            <TeachingTip x:ConnectionId='18' x:Name="copyed_TT"
+                     Title="Copyed To Clipboard"
+                     IsLightDismissEnabled="True"></TeachingTip>
+    </Grid>
+</Page>
+

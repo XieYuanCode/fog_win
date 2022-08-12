@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="Fog.Pages.GitInitPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+    <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left" Spacing="10" Margin="10">
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left" Spacing="10">
+            <Button Content="选择目录" Click="Button_Click" />
+            <TextBlock Text="{x:Bind Path=InitGitData.InitPath.Path, Mode=OneWay}" VerticalAlignment="Center"/>
+        </StackPanel>
+        
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <CheckBox Content="Bare"
+                      Checked="CheckBox_Checked"
+                      Unchecked="CheckBox_Unchecked" />
+            <Button Content="初始化Git" Click="Button_Click_1" />
+            <TextBlock Text="{x:Bind Path=InitGitData.Message, Mode=OneWay}" VerticalAlignment="Center"/>
+        </StackPanel>
+    </StackPanel>
+
+</Page>

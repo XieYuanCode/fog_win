@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Fog (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Fog (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
