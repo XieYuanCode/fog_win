@@ -11,18 +11,18 @@
 
     <Page.Resources>
         <DataTemplate x:Key="LocalRepositoryGroupItemTemplate"                                      >
-            <TreeViewItem x:ConnectionId='15'                                                                               Margin="10, 0, 0, 0">
+            <TreeViewItem x:ConnectionId='17'                                                                               Margin="10, 0, 0, 0">
                 <StackPanel Orientation="Horizontal">
                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe7b8;" FontSize="15" Margin="0, 0, 10, 0"/>
-                    <TextBlock x:ConnectionId='16'                      />
+                    <TextBlock x:ConnectionId='18'                      />
                 </StackPanel>
             </TreeViewItem>
         </DataTemplate>
         <DataTemplate x:Key="LocalRepositoryItemTemplate"                                 >
-            <TreeViewItem x:ConnectionId='12'                                                                                       Margin="10, 0, 0, 0">
+            <TreeViewItem x:ConnectionId='14'                                                                                       Margin="10, 0, 0, 0">
                 <StackPanel Orientation="Horizontal">
                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe8b7;" FontSize="15" Margin="0, 0, 10, 0"/>
-                    <TextBlock x:ConnectionId='13'                      />
+                    <TextBlock x:ConnectionId='15'                      />
                 </StackPanel>
             </TreeViewItem>
         </DataTemplate>
@@ -37,18 +37,18 @@
                 </MenuFlyoutItem.Icon>
             </ToggleMenuFlyoutItem>
             <MenuFlyoutSeparator></MenuFlyoutSeparator>
-            <MenuFlyoutItem Text="Open">
+            <MenuFlyoutItem x:ConnectionId='7' Text="Open"                                  >
                 <MenuFlyoutItem.Icon>
                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xee35;"></FontIcon>
                 </MenuFlyoutItem.Icon>
             </MenuFlyoutItem>
-            <MenuFlyoutItem Text="Open In New Window">
+            <MenuFlyoutItem x:ConnectionId='8' Text="Open In New Window"                                              IsEnabled="False">
                 <MenuFlyoutItem.Icon>
                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe8a7;"></FontIcon>
                 </MenuFlyoutItem.Icon>
             </MenuFlyoutItem>
             <MenuFlyoutSeparator></MenuFlyoutSeparator>
-            <MenuFlyoutItem x:ConnectionId='7' Text="Reveal In File Explorer"                                 >
+            <MenuFlyoutItem x:ConnectionId='9' Text="Reveal In File Explorer"                                 >
                 <MenuFlyoutItem.Icon>
                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe8a7;"></FontIcon>
                 </MenuFlyoutItem.Icon>
@@ -56,7 +56,7 @@
                     <KeyboardAccelerator Key="R" Modifiers="Control,Menu"></KeyboardAccelerator>
                 </MenuFlyoutItem.KeyboardAccelerators>
             </MenuFlyoutItem>
-            <MenuFlyoutItem x:ConnectionId='8' Text="Open In Terminal"                           >
+            <MenuFlyoutItem x:ConnectionId='10' Text="Open In Terminal"                           >
                 <MenuFlyoutItem.Icon>
                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe756;"></FontIcon>
                 </MenuFlyoutItem.Icon>
@@ -64,7 +64,7 @@
                     <KeyboardAccelerator Key="T" Modifiers="Control,Menu"></KeyboardAccelerator>
                 </MenuFlyoutItem.KeyboardAccelerators>
             </MenuFlyoutItem>
-            <MenuFlyoutItem x:ConnectionId='9' Text="Open In Editor"                         >
+            <MenuFlyoutItem x:ConnectionId='11' Text="Open In Editor"                         >
                 <MenuFlyoutItem.Icon>
                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe977;"></FontIcon>
                 </MenuFlyoutItem.Icon>
@@ -73,7 +73,7 @@
                 </MenuFlyoutItem.KeyboardAccelerators>
             </MenuFlyoutItem>
             <MenuFlyoutSeparator></MenuFlyoutSeparator>
-            <MenuFlyoutItem x:ConnectionId='10' Text="Copy Path"                     >
+            <MenuFlyoutItem x:ConnectionId='12' Text="Copy Path"                     >
                 <MenuFlyoutItem.Icon>
                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe74d;"></FontIcon>
                 </MenuFlyoutItem.Icon>
@@ -96,11 +96,6 @@
             <MenuFlyoutItem Text="Open">
                 <MenuFlyoutItem.Icon>
                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xee35;"></FontIcon>
-                </MenuFlyoutItem.Icon>
-            </MenuFlyoutItem>
-            <MenuFlyoutItem Text="Rename">
-                <MenuFlyoutItem.Icon>
-                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe8ac;"></FontIcon>
                 </MenuFlyoutItem.Icon>
             </MenuFlyoutItem>
             <MenuFlyoutItem Text="Delete">
@@ -139,7 +134,7 @@
     </Page.Resources>
 
     <Grid>
-        <SplitView x:ConnectionId='17' x:Name="mainSplitView"
+        <SplitView x:ConnectionId='19' x:Name="mainSplitView"
                    IsPaneOpen="True" 
                    DisplayMode="Inline"
                    PaneBackground="Transparent">
@@ -151,7 +146,7 @@
                         <RowDefinition Height="Auto"></RowDefinition>
                     </Grid.RowDefinitions>
                     <TextBox  Margin="10, 10, 0, 10" PlaceholderText="Search" Grid.Row="0"/>
-                    <TreeView x:ConnectionId='19'                                         
+                    <TreeView x:ConnectionId='21'                                         
                               ItemTemplateSelector="{StaticResource ExplorerItemTemplateSelector}"
                               Grid.Row="1">
                     </TreeView>
@@ -161,17 +156,20 @@
                             <ColumnDefinition Width="*"></ColumnDefinition>
                             <ColumnDefinition Width="Auto"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <HyperlinkButton x:ConnectionId='20' Grid.Column="0"                           x:Name="SettingButton">
+                        <HyperlinkButton x:ConnectionId='22' Grid.Column="0"                           x:Name="SettingButton">
                             <SymbolIcon Symbol="Setting"></SymbolIcon>
                         </HyperlinkButton>
-                        <HyperlinkButton x:ConnectionId='21' Grid.Column="3"                          >
+                        <HyperlinkButton x:ConnectionId='23' Grid.Column="1"                          >
+                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe753;"/>
+                        </HyperlinkButton>
+                        <HyperlinkButton x:ConnectionId='24' Grid.Column="3"                          >
                             <SymbolIcon Symbol="Add"></SymbolIcon>
                         </HyperlinkButton>
                     </Grid>
                 </Grid>
             </SplitView.Pane>
         </SplitView>
-            <TeachingTip x:ConnectionId='18' x:Name="copyed_TT"
+        <TeachingTip x:ConnectionId='20' x:Name="copyed_TT"
                      Title="Copyed To Clipboard"
                      IsLightDismissEnabled="True"></TeachingTip>
     </Grid>

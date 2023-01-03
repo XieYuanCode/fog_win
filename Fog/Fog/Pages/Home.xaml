@@ -37,12 +37,12 @@
                 </MenuFlyoutItem.Icon>
             </ToggleMenuFlyoutItem>
             <MenuFlyoutSeparator></MenuFlyoutSeparator>
-            <MenuFlyoutItem Text="Open">
+            <MenuFlyoutItem Text="Open" Click="MenuFlyoutItem_Open_Click">
                 <MenuFlyoutItem.Icon>
                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xee35;"></FontIcon>
                 </MenuFlyoutItem.Icon>
             </MenuFlyoutItem>
-            <MenuFlyoutItem Text="Open In New Window">
+            <MenuFlyoutItem Text="Open In New Window" Click="MenuFlyoutItem_Open_New_Window_Click" IsEnabled="False">
                 <MenuFlyoutItem.Icon>
                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe8a7;"></FontIcon>
                 </MenuFlyoutItem.Icon>
@@ -96,11 +96,6 @@
             <MenuFlyoutItem Text="Open">
                 <MenuFlyoutItem.Icon>
                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xee35;"></FontIcon>
-                </MenuFlyoutItem.Icon>
-            </MenuFlyoutItem>
-            <MenuFlyoutItem Text="Rename">
-                <MenuFlyoutItem.Icon>
-                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe8ac;"></FontIcon>
                 </MenuFlyoutItem.Icon>
             </MenuFlyoutItem>
             <MenuFlyoutItem Text="Delete">
@@ -164,6 +159,9 @@
                         <HyperlinkButton Grid.Column="0" Click="SwitchSettingPage" x:Name="SettingButton">
                             <SymbolIcon Symbol="Setting"></SymbolIcon>
                         </HyperlinkButton>
+                        <HyperlinkButton Grid.Column="1" Click="SwitchAccountPage">
+                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe753;"/>
+                        </HyperlinkButton>
                         <HyperlinkButton Grid.Column="3" Click="ShowAddMenuFlyout">
                             <SymbolIcon Symbol="Add"></SymbolIcon>
                         </HyperlinkButton>
@@ -171,7 +169,7 @@
                 </Grid>
             </SplitView.Pane>
         </SplitView>
-            <TeachingTip x:Name="copyed_TT"
+        <TeachingTip x:Name="copyed_TT"
                      Title="Copyed To Clipboard"
                      IsLightDismissEnabled="True"></TeachingTip>
     </Grid>

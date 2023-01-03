@@ -1,4 +1,6 @@
-﻿using Microsoft.UI.Xaml;
+﻿using LibGit2Sharp;
+using Microsoft.Toolkit.Uwp.Notifications;
+using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
@@ -6,6 +8,7 @@ using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Media.Animation;
 using Microsoft.UI.Xaml.Navigation;
+using Microsoft.UI.Xaml.Shapes;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -19,6 +22,7 @@ using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Storage.Pickers;
 using WinRT.Interop;
+using Path = System.IO.Path;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -123,7 +127,41 @@ namespace Fog.Pages
             var selectFolder = await SelectFolder();
             if (selectFolder != null)
             {
-                LocalRepoManager.GetLocalRepoManager().RegisterGitRepo(selectFolder.Path);
+                if (LocalRepoManager.GetLocalRepoManager().isRepoExist(selectFolder.Path))
+                {
+                    new ToastContentBuilder()
+                        .AddText("Repository: " + Path.GetFileName(selectFolder.Path) + " is Already Exist")
+                        .Show();
+                }
+                else
+                {
+                    if (Repository.IsValid(selectFolder.Path) == false)
+                    {
+                        ContentDialog dialog = new()
+                        {
+                            XamlRoot = XamlRoot,
+                            Style = Application.Current.Resources["DefaultContentDialogStyle"] as Style,
+                            Title = "Warring",
+                            Content = "The Selected Directory Is Not A Git Repository, Do You Want To Initialize A Git Repository?",
+                            PrimaryButtonText = "Initialize A Git Repository",
+                            CloseButtonText = "Cancel",
+                            DefaultButton = ContentDialogButton.Primary
+                        };
+
+                        var result = await dialog.ShowAsync();
+
+                        if (result == ContentDialogResult.Primary)
+                        {
+                            Repository.Init(selectFolder.Path);
+                            LocalRepoManager.GetLocalRepoManager().RegisterGitRepo(selectFolder.Path);
+                        }
+
+                    }
+                    else
+                    {
+                        LocalRepoManager.GetLocalRepoManager().RegisterGitRepo(selectFolder.Path);
+                    }
+                }
             }
         }
 
@@ -158,6 +196,15 @@ namespace Fog.Pages
             }
         }
 
+        private void SwitchAccountPage(object sender, RoutedEventArgs e)
+        {
+            Frame contentFrame = Parent as Frame;
+            if (contentFrame.CurrentSourcePageType?.Name != "SettingPage")
+            {
+                contentFrame.Navigate(typeof(ServiceAccountsPage), null, new SuppressNavigationTransitionInfo());
+            }
+        }
+
         private void TreeViewItem_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
         {
             var repo = (sender as TreeViewItem).DataContext as LocalRepository;
@@ -166,7 +213,26 @@ namespace Fog.Pages
 
         public void OpenRepoHome(LocalRepository repo)
         {
-            //RepoFrame.Navigate(typeof(RepoHome), repo, new DrillInNavigationTransitionInfo());
+            Frame frame = Parent as Frame;
+            frame.Navigate(typeof(RepoHome), repo.Path, new DrillInNavigationTransitionInfo());
+        }
+
+        public void OpenRepoHomeInNewWidnow(LocalRepository repo)
+        {
+            var newWindow = new MainWindow();
+            newWindow.Activate();
+        }
+
+        private void MenuFlyoutItem_Open_Click(object sender, RoutedEventArgs e)
+        {
+            var repo = (sender as MenuFlyoutItem).DataContext as LocalRepository;
+            OpenRepoHome(repo);
+        }
+
+        private void MenuFlyoutItem_Open_New_Window_Click(object sender, RoutedEventArgs e)
+        {
+            var repo = (sender as MenuFlyoutItem).DataContext as LocalRepository;
+            OpenRepoHomeInNewWidnow(repo);
         }
     }
 

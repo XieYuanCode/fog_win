@@ -5,6 +5,42 @@
     <None Update="App.xaml">
       <SubType>Designer</SubType>
     </None>
+    <Page Update="WelcomeWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ServiceAccountsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Settings\SettingAccountAdd.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Repos\RepoStatusPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Settings\SettingIntegration.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Settings\SettingUserProfile.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Settings\SettingAbout.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Settings\SettingShortcut.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Settings\SettingGit.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Settings\SettingAccount.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Settings\SettingAppearance.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Settings\SettingGeneral.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Pages\Home.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -12,9 +48,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\MainPage.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\AccountPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Test\Git\GitBranchPage.xaml">
@@ -33,9 +66,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="SettingPage.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Themes\Generic.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

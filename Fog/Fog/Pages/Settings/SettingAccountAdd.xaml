@@ -1,0 +1,102 @@
+﻿<Page
+    x:Class="Fog.Pages.Settings.SettingAccountAdd"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Fog.Pages.Settings"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Padding="0, 20" MaxWidth="1000" Spacing="5">
+            <StackPanel.Resources>
+                <Style TargetType="Expander">
+                    <Setter Property="HorizontalAlignment" Value="Stretch"></Setter>
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                </Style>
+            </StackPanel.Resources>
+            <BreadcrumbBar x:Name="BreadcrumbBar" ItemsSource="{x:Bind BreadcrumbBarItems}" ItemClicked="BreadcrumbBar_ItemClicked"/>
+            <Grid Background="{ThemeResource ButtonBackground}" Width="1000" HorizontalAlignment="Center" Height="70" VerticalAlignment="Center"  CornerRadius="4" Margin="0,20,0,0">
+                <RelativePanel Padding="15,0">
+                    <StackPanel Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" VerticalAlignment="Center">
+                        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe97c;" Margin="5, 0, 15, 0"/>
+                        <TextBlock Text="Account Type" VerticalAlignment="Center"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
+                        <ComboBox x:Name="AccountType_ComboBox" SelectedIndex="0" SelectionChanged="AccountType_ComboBox_SelectionChanged">
+                            <StackPanel Orientation="Horizontal">
+                                <ImageIcon Width="18" Source="\Assets\github-logo.png" Margin="0, 0, 10, 0"></ImageIcon>
+                                <TextBlock Text="GitHub"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <ImageIcon Width="18" Source="\Assets\gitlab-logo.png" Margin="0, 0, 10, 0"></ImageIcon>
+                                <TextBlock Text="GitLab CE/EE"></TextBlock>
+                            </StackPanel>
+                        </ComboBox>
+                    </StackPanel>
+                </RelativePanel>
+            </Grid>
+            <Grid Background="{ThemeResource ButtonBackground}" Width="1000" HorizontalAlignment="Center" Height="70" VerticalAlignment="Center"  CornerRadius="4">
+                <RelativePanel Padding="15,0">
+                    <StackPanel Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" VerticalAlignment="Center">
+                        <TextBlock Text="Host" VerticalAlignment="Center"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
+                        <TextBox Width="300" PlaceholderText="Enter your host, protocol is necessary." 
+                                 IsEnabled="{x:Bind Path=local:SettingAccountAdd.GetHostTextBoxVisibility(AccountType_ComboBox.SelectedIndex), Mode=OneWay}"
+                                 x:Name="Host_TextBox" Text="https://github.com/"></TextBox>
+                    </StackPanel>
+                </RelativePanel>
+            </Grid>
+            <Grid Background="{ThemeResource ButtonBackground}" Width="1000" HorizontalAlignment="Center" Height="70" VerticalAlignment="Center"  CornerRadius="4">
+                <RelativePanel Padding="15,0">
+                    <StackPanel Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" VerticalAlignment="Center">
+                        <TextBlock Text="Username" VerticalAlignment="Center"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
+                        <TextBox Width="300" PlaceholderText="Enter Your Username" x:Name="Username_TextBox"></TextBox>
+                    </StackPanel>
+                </RelativePanel>
+            </Grid>
+            <Grid Background="{ThemeResource ButtonBackground}" Width="1000" HorizontalAlignment="Center" Height="70" VerticalAlignment="Center"  CornerRadius="4">
+                <RelativePanel Padding="15,0">
+                    <StackPanel Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" VerticalAlignment="Center">
+                        <TextBlock Text="Personal Access Token" VerticalAlignment="Center"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
+                        <TextBox Width="300" PlaceholderText="Enter your personal access token" x:Name="PAT_TextBox"></TextBox>
+                    </StackPanel>
+                </RelativePanel>
+            </Grid>
+            <Grid Background="{ThemeResource ButtonBackground}" Width="1000" HorizontalAlignment="Center" Height="70" VerticalAlignment="Center"  CornerRadius="4">
+                <RelativePanel Padding="15,0">
+                    <StackPanel Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" VerticalAlignment="Center">
+                        <TextBlock Text="Comfirm Account Infomation" VerticalAlignment="Center"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
+                        <Button Content="Comfirm" Click="AddServiceAccount" IsEnabled="{x:Bind Path=local:SettingAccountAdd.GetConfirmButtonIsEnabled(AccountType_ComboBox.SelectedIndex, Host_TextBox.Text,Username_TextBox.Text, PAT_TextBox.Text), Mode=OneWay}"></Button>
+                    </StackPanel>
+                </RelativePanel>
+            </Grid>
+            <ProgressBar Width="1000" IsIndeterminate="True" ShowPaused="False" ShowError="False" Visibility="Collapsed" x:Name="IsLoading_ProgressBar"/>
+        </StackPanel>
+        <TeachingTip x:Name="LoginSuccess_TT"
+                     IsLightDismissEnabled="True">
+            <TeachingTip.IconSource>
+                <FontIconSource FontFamily="Segoe Fluent Icons" Glyph="&#xe73e;"/>
+            </TeachingTip.IconSource>
+        </TeachingTip>
+        <TeachingTip x:Name="LoginFail_TT"
+                     IsLightDismissEnabled="True">
+            <TeachingTip.IconSource>
+                <FontIconSource FontFamily="Segoe Fluent Icons" Glyph="&#xe7ba;"/>
+            </TeachingTip.IconSource>
+        </TeachingTip>
+        <TeachingTip x:Name="LoginExist_TT"
+                     IsLightDismissEnabled="True">
+            <TeachingTip.IconSource>
+                <FontIconSource FontFamily="Segoe Fluent Icons" Glyph="&#xe7ba;"/>
+            </TeachingTip.IconSource>
+        </TeachingTip>
+    </Grid>
+</Page>

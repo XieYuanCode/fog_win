@@ -17,25 +17,37 @@
                         <RowDefinition Height="*"></RowDefinition>
                         <RowDefinition Height="Auto"></RowDefinition>
                     </Grid.RowDefinitions>
-                    <ListView Margin="10, 10, 0, 0">
-                        <StackPanel Orientation="Horizontal">
-                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe771;" FontSize="13" Margin="0, 0, 10, 0"/>
+                    <ListView Margin="10, 10, 0, 0" ItemClick="ListView_ItemClick" SelectionMode="Single" IsItemClickEnabled="True" SelectedIndex="0">
+                        <StackPanel Orientation="Horizontal" Tag="General">
+                            <ImageIcon Source="\Assets\icon_general.png" Margin="0,0,10,0" Width="18"></ImageIcon>
                             <TextBlock Text="General"></TextBlock>
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe771;" FontSize="13" Margin="0, 0, 10, 0"/>
-                            <TextBlock Text="Account"></TextBlock>
+                        <StackPanel Orientation="Horizontal" Tag="Appearance">
+                            <ImageIcon Source="\Assets\icon_appearance.png" Margin="0,0,10,0" Width="18"></ImageIcon>
+                            <TextBlock Text="Appearance"></TextBlock>
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <ImageIcon Source="./Assets/Icons/icon_git.png" Margin="0,0,10,0"></ImageIcon>
+                        <StackPanel Orientation="Horizontal" Tag="Git">
+                            <ImageIcon Source="\Assets\icon_git.png" Margin="0,0,10,0" Width="18"></ImageIcon>
                             <TextBlock Text="Git"></TextBlock>
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xeda7;" FontSize="13" Margin="0, 0, 10, 0"/>
+                        <StackPanel Orientation="Horizontal" Tag="Account">
+                            <ImageIcon Source="\Assets\icon_account.png" Margin="0,0,10,0" Width="18"></ImageIcon>
+                            <TextBlock Text="Service Account"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Tag="User Profiles">
+                            <ImageIcon Source="\Assets\icon_profiles.png" Margin="0,0,10,0" Width="18"></ImageIcon>
+                            <TextBlock Text="User Profiles"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Tag="Shortcut">
+                            <ImageIcon Source="\Assets\icon_shortcut.png" Margin="0,0,10,0" Width="18"></ImageIcon>
                             <TextBlock Text="Shortcut"></TextBlock>
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe771;" FontSize="13" Margin="0, 0, 10, 0"/>
+                        <StackPanel Orientation="Horizontal" Tag="Integration">
+                            <ImageIcon Source="\Assets\icon_integration.png" Margin="0,0,10,0" Width="18"></ImageIcon>
+                            <TextBlock Text="Integration"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Tag="About">
+                            <ImageIcon Source="\Assets\icon_about.png" Margin="0,0,10,0" Width="18"></ImageIcon>
                             <TextBlock Text="About"></TextBlock>
                         </StackPanel>
                     </ListView>
@@ -51,19 +63,13 @@
                     </Grid>
                 </Grid>
             </SplitView.Pane>
-            <StackPanel Orientation="Vertical">
-                <TextBlock Text="1"></TextBlock>
-                <Image Source="./Assets/Icons/icon_git.png" Height="100" Width="100"/>
-                <TextBlock Text="2"></TextBlock>
-            </StackPanel>
+            <Frame x:Name="SettingFrame">
+                <Frame.ContentTransitions>
+                    <TransitionCollection>
+                        <NavigationThemeTransition  />
+                    </TransitionCollection>
+                </Frame.ContentTransitions>
+            </Frame>
         </SplitView>
-       
-        <InfoBar x:Name="ColorModeChanged_Tip"
-                 Margin="0,50,0,0"
-                 Message="The Application Needs To Restart To Apply The New Color Mode">
-            <InfoBar.ActionButton>
-                <HyperlinkButton Content="Restart"></HyperlinkButton>
-            </InfoBar.ActionButton>
-        </InfoBar>
     </Grid>
 </Page>

@@ -25,7 +25,7 @@ namespace Fog
         }
 
         public ObservableCollection<FogTreeViewItem> localRepositories = new ObservableCollection<FogTreeViewItem>();
-
+         
         public void Init()
         {
             var data = DataAccess.GetRepoCollection();
@@ -62,6 +62,13 @@ namespace Fog
             };
 
             localRepositories.Add(repoGroup);
+        }
+
+        public bool isRepoExist(string path)
+        {
+            var isExist = localRepositories.Any(x => x.Type == TreeViewItemType.File && (x as LocalRepository).Path == path);
+
+            return isExist;
         }
     }
 }

@@ -224,7 +224,7 @@ namespace Fog.Fog_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[64];
+            _typeNameTable = new string[124];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Controls.XamlControlsResources";
             _typeNameTable[1] = "Microsoft.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
@@ -242,55 +242,115 @@ namespace Fog.Fog_XamlTypeInfo
             _typeNameTable[14] = "System.Collections.Generic.IReadOnlyDictionary`2<String, Double>";
             _typeNameTable[15] = "Fog.MainWindow";
             _typeNameTable[16] = "Microsoft.UI.Xaml.Window";
-            _typeNameTable[17] = "Fog.Pages.AccountPage";
-            _typeNameTable[18] = "Fog.Pages.ExplorerItemTemplateSelector";
-            _typeNameTable[19] = "Microsoft.UI.Xaml.Controls.DataTemplateSelector";
-            _typeNameTable[20] = "Microsoft.UI.Xaml.DataTemplate";
-            _typeNameTable[21] = "Microsoft.UI.Xaml.Controls.TreeViewItem";
-            _typeNameTable[22] = "Microsoft.UI.Xaml.Controls.ListViewItem";
-            _typeNameTable[23] = "Microsoft.UI.Xaml.Controls.ContentControl";
-            _typeNameTable[24] = "Microsoft.UI.Xaml.Media.Brush";
-            _typeNameTable[25] = "Double";
-            _typeNameTable[26] = "Microsoft.UI.Xaml.Controls.TreeViewItemTemplateSettings";
-            _typeNameTable[27] = "Microsoft.UI.Xaml.Controls.TeachingTip";
-            _typeNameTable[28] = "System.Windows.Input.ICommand";
-            _typeNameTable[29] = "Microsoft.UI.Xaml.Style";
-            _typeNameTable[30] = "Microsoft.UI.Xaml.UIElement";
-            _typeNameTable[31] = "Microsoft.UI.Xaml.Controls.TeachingTipHeroContentPlacementMode";
-            _typeNameTable[32] = "System.Enum";
-            _typeNameTable[33] = "System.ValueType";
-            _typeNameTable[34] = "Microsoft.UI.Xaml.Thickness";
-            _typeNameTable[35] = "Microsoft.UI.Xaml.Controls.TeachingTipPlacementMode";
-            _typeNameTable[36] = "Microsoft.UI.Xaml.Controls.TeachingTipTailVisibility";
-            _typeNameTable[37] = "Microsoft.UI.Xaml.FrameworkElement";
-            _typeNameTable[38] = "Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings";
-            _typeNameTable[39] = "Microsoft.UI.Xaml.Controls.TreeView";
-            _typeNameTable[40] = "Microsoft.UI.Xaml.Controls.Control";
-            _typeNameTable[41] = "Microsoft.UI.Xaml.Controls.StyleSelector";
-            _typeNameTable[42] = "Microsoft.UI.Xaml.Media.Animation.TransitionCollection";
-            _typeNameTable[43] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
-            _typeNameTable[44] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
-            _typeNameTable[45] = "Int32";
-            _typeNameTable[46] = "System.Collections.Generic.IList`1<Object>";
-            _typeNameTable[47] = "Microsoft.UI.Xaml.Controls.TreeViewSelectionMode";
-            _typeNameTable[48] = "Fog.Pages.Home";
-            _typeNameTable[49] = "Fog.Pages.RepoHome";
-            _typeNameTable[50] = "Fog.LocalRepository";
-            _typeNameTable[51] = "Fog.FogTreeViewItem";
-            _typeNameTable[52] = "Microsoft.UI.Xaml.Controls.InfoBar";
-            _typeNameTable[53] = "Microsoft.UI.Xaml.Controls.Primitives.ButtonBase";
-            _typeNameTable[54] = "Microsoft.UI.Xaml.Controls.InfoBarSeverity";
-            _typeNameTable[55] = "Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings";
-            _typeNameTable[56] = "Microsoft.UI.Xaml.Controls.ImageIcon";
-            _typeNameTable[57] = "Microsoft.UI.Xaml.Media.ImageSource";
-            _typeNameTable[58] = "Fog.Pages.SettingPage";
-            _typeNameTable[59] = "Fog.Pages.GitBranchPage";
-            _typeNameTable[60] = "Fog.Pages.GitClonePage";
-            _typeNameTable[61] = "Fog.Pages.CloneGitDataModel";
-            _typeNameTable[62] = "Fog.Pages.GitInitPage";
-            _typeNameTable[63] = "Fog.Pages.InitGitDataModel";
+            _typeNameTable[17] = "Fog.Pages.ExplorerItemTemplateSelector";
+            _typeNameTable[18] = "Microsoft.UI.Xaml.Controls.DataTemplateSelector";
+            _typeNameTable[19] = "Microsoft.UI.Xaml.DataTemplate";
+            _typeNameTable[20] = "Microsoft.UI.Xaml.Controls.TreeViewItem";
+            _typeNameTable[21] = "Microsoft.UI.Xaml.Controls.ListViewItem";
+            _typeNameTable[22] = "Microsoft.UI.Xaml.Controls.ContentControl";
+            _typeNameTable[23] = "Microsoft.UI.Xaml.Media.Brush";
+            _typeNameTable[24] = "Double";
+            _typeNameTable[25] = "Microsoft.UI.Xaml.Controls.TreeViewItemTemplateSettings";
+            _typeNameTable[26] = "Microsoft.UI.Xaml.Controls.TeachingTip";
+            _typeNameTable[27] = "System.Windows.Input.ICommand";
+            _typeNameTable[28] = "Microsoft.UI.Xaml.Style";
+            _typeNameTable[29] = "Microsoft.UI.Xaml.UIElement";
+            _typeNameTable[30] = "Microsoft.UI.Xaml.Controls.TeachingTipHeroContentPlacementMode";
+            _typeNameTable[31] = "System.Enum";
+            _typeNameTable[32] = "System.ValueType";
+            _typeNameTable[33] = "Microsoft.UI.Xaml.Thickness";
+            _typeNameTable[34] = "Microsoft.UI.Xaml.Controls.TeachingTipPlacementMode";
+            _typeNameTable[35] = "Microsoft.UI.Xaml.Controls.TeachingTipTailVisibility";
+            _typeNameTable[36] = "Microsoft.UI.Xaml.FrameworkElement";
+            _typeNameTable[37] = "Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings";
+            _typeNameTable[38] = "Microsoft.UI.Xaml.Controls.TreeView";
+            _typeNameTable[39] = "Microsoft.UI.Xaml.Controls.Control";
+            _typeNameTable[40] = "Microsoft.UI.Xaml.Controls.StyleSelector";
+            _typeNameTable[41] = "Microsoft.UI.Xaml.Media.Animation.TransitionCollection";
+            _typeNameTable[42] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
+            _typeNameTable[43] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
+            _typeNameTable[44] = "Int32";
+            _typeNameTable[45] = "System.Collections.Generic.IList`1<Object>";
+            _typeNameTable[46] = "Microsoft.UI.Xaml.Controls.TreeViewSelectionMode";
+            _typeNameTable[47] = "Fog.Pages.Home";
+            _typeNameTable[48] = "Fog.Converters.BoolNegationConverter";
+            _typeNameTable[49] = "Microsoft.UI.Xaml.Controls.InfoBar";
+            _typeNameTable[50] = "Microsoft.UI.Xaml.Controls.InfoBarSeverity";
+            _typeNameTable[51] = "Microsoft.UI.Xaml.Controls.Primitives.ButtonBase";
+            _typeNameTable[52] = "Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings";
+            _typeNameTable[53] = "Fog.Pages.RepoHome";
+            _typeNameTable[54] = "LibGit2Sharp.Repository";
+            _typeNameTable[55] = "System.Collections.ObjectModel.ObservableCollection`1<LibGit2Sharp.Branch>";
+            _typeNameTable[56] = "System.Collections.ObjectModel.Collection`1<LibGit2Sharp.Branch>";
+            _typeNameTable[57] = "LibGit2Sharp.Branch";
+            _typeNameTable[58] = "LibGit2Sharp.ReferenceWrapper`1<LibGit2Sharp.Commit>";
+            _typeNameTable[59] = "LibGit2Sharp.BranchTrackingDetails";
+            _typeNameTable[60] = "LibGit2Sharp.Commit";
+            _typeNameTable[61] = "LibGit2Sharp.GitObject";
+            _typeNameTable[62] = "LibGit2Sharp.ICommitLog";
+            _typeNameTable[63] = "LibGit2Sharp.Reference";
+            _typeNameTable[64] = "System.Collections.ObjectModel.ObservableCollection`1<LibGit2Sharp.Tag>";
+            _typeNameTable[65] = "System.Collections.ObjectModel.Collection`1<LibGit2Sharp.Tag>";
+            _typeNameTable[66] = "LibGit2Sharp.Tag";
+            _typeNameTable[67] = "LibGit2Sharp.ReferenceWrapper`1<LibGit2Sharp.GitObject>";
+            _typeNameTable[68] = "LibGit2Sharp.TagAnnotation";
+            _typeNameTable[69] = "System.Collections.ObjectModel.ObservableCollection`1<LibGit2Sharp.Stash>";
+            _typeNameTable[70] = "System.Collections.ObjectModel.Collection`1<LibGit2Sharp.Stash>";
+            _typeNameTable[71] = "LibGit2Sharp.Stash";
+            _typeNameTable[72] = "System.Collections.ObjectModel.ObservableCollection`1<LibGit2Sharp.Submodule>";
+            _typeNameTable[73] = "System.Collections.ObjectModel.Collection`1<LibGit2Sharp.Submodule>";
+            _typeNameTable[74] = "LibGit2Sharp.Submodule";
+            _typeNameTable[75] = "LibGit2Sharp.ObjectId";
+            _typeNameTable[76] = "LibGit2Sharp.SubmoduleRecurse";
+            _typeNameTable[77] = "LibGit2Sharp.SubmoduleIgnore";
+            _typeNameTable[78] = "LibGit2Sharp.SubmoduleUpdate";
+            _typeNameTable[79] = "System.Collections.ObjectModel.ObservableCollection`1<LibGit2Sharp.Note>";
+            _typeNameTable[80] = "System.Collections.ObjectModel.Collection`1<LibGit2Sharp.Note>";
+            _typeNameTable[81] = "LibGit2Sharp.Note";
+            _typeNameTable[82] = "Fog.Converters.FileNameWithoutExtension";
+            _typeNameTable[83] = "Fog.Converters.ChangedFIleStatusBorderBrush";
+            _typeNameTable[84] = "Fog.Pages.Repos.RepoStatusPage";
+            _typeNameTable[85] = "Fog.Pages.ServiceAccountsPage";
+            _typeNameTable[86] = "System.Collections.ObjectModel.ObservableCollection`1<Fog.ServiceAccount>";
+            _typeNameTable[87] = "System.Collections.ObjectModel.Collection`1<Fog.ServiceAccount>";
+            _typeNameTable[88] = "Fog.ServiceAccount";
+            _typeNameTable[89] = "Microsoft.UI.Xaml.Controls.Expander";
+            _typeNameTable[90] = "Microsoft.UI.Xaml.Controls.ExpandDirection";
+            _typeNameTable[91] = "Microsoft.UI.Xaml.Controls.ExpanderTemplateSettings";
+            _typeNameTable[92] = "Fog.Pages.Settings.SettingAbout";
+            _typeNameTable[93] = "Microsoft.UI.Xaml.Media.AcrylicBrush";
+            _typeNameTable[94] = "Microsoft.UI.Xaml.Media.XamlCompositionBrushBase";
+            _typeNameTable[95] = "System.Nullable`1<Double>";
+            _typeNameTable[96] = "Windows.UI.Color";
+            _typeNameTable[97] = "TimeSpan";
+            _typeNameTable[98] = "Microsoft.UI.Xaml.Controls.PersonPicture";
+            _typeNameTable[99] = "Microsoft.UI.Xaml.Media.ImageSource";
+            _typeNameTable[100] = "Windows.ApplicationModel.Contacts.Contact";
+            _typeNameTable[101] = "Microsoft.UI.Xaml.Controls.PersonPictureTemplateSettings";
+            _typeNameTable[102] = "Fog.Pages.Settings.SettingAccount";
+            _typeNameTable[103] = "Microsoft.UI.Xaml.Controls.BreadcrumbBar";
+            _typeNameTable[104] = "Microsoft.UI.Xaml.Controls.ProgressBar";
+            _typeNameTable[105] = "Microsoft.UI.Xaml.Controls.Primitives.RangeBase";
+            _typeNameTable[106] = "Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings";
+            _typeNameTable[107] = "Microsoft.UI.Xaml.Controls.ImageIcon";
+            _typeNameTable[108] = "Fog.Pages.Settings.SettingAccountAdd";
+            _typeNameTable[109] = "String[]";
+            _typeNameTable[110] = "System.Array";
+            _typeNameTable[111] = "Fog.Pages.Settings.SettingAppearance";
+            _typeNameTable[112] = "Fog.Pages.Settings.SettingGeneral";
+            _typeNameTable[113] = "Fog.Pages.Settings.SettingGit";
+            _typeNameTable[114] = "Fog.Pages.Settings.SettingIntegration";
+            _typeNameTable[115] = "Fog.Pages.Settings.SettingShortcut";
+            _typeNameTable[116] = "Fog.Pages.Settings.SettingUserProfile";
+            _typeNameTable[117] = "Fog.Pages.SettingPage";
+            _typeNameTable[118] = "Fog.Pages.GitBranchPage";
+            _typeNameTable[119] = "Fog.Pages.GitClonePage";
+            _typeNameTable[120] = "Fog.Pages.CloneGitDataModel";
+            _typeNameTable[121] = "Fog.Pages.GitInitPage";
+            _typeNameTable[122] = "Fog.Pages.InitGitDataModel";
+            _typeNameTable[123] = "Fog.WelcomeWindow";
 
-            _typeTable = new global::System.Type[64];
+            _typeTable = new global::System.Type[124];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
@@ -308,53 +368,113 @@ namespace Fog.Fog_XamlTypeInfo
             _typeTable[14] = typeof(global::System.Collections.Generic.IReadOnlyDictionary<global::System.String, global::System.Double>);
             _typeTable[15] = typeof(global::Fog.MainWindow);
             _typeTable[16] = typeof(global::Microsoft.UI.Xaml.Window);
-            _typeTable[17] = typeof(global::Fog.Pages.AccountPage);
-            _typeTable[18] = typeof(global::Fog.Pages.ExplorerItemTemplateSelector);
-            _typeTable[19] = typeof(global::Microsoft.UI.Xaml.Controls.DataTemplateSelector);
-            _typeTable[20] = typeof(global::Microsoft.UI.Xaml.DataTemplate);
-            _typeTable[21] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewItem);
-            _typeTable[22] = typeof(global::Microsoft.UI.Xaml.Controls.ListViewItem);
-            _typeTable[23] = typeof(global::Microsoft.UI.Xaml.Controls.ContentControl);
-            _typeTable[24] = typeof(global::Microsoft.UI.Xaml.Media.Brush);
-            _typeTable[25] = typeof(global::System.Double);
-            _typeTable[26] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewItemTemplateSettings);
-            _typeTable[27] = typeof(global::Microsoft.UI.Xaml.Controls.TeachingTip);
-            _typeTable[28] = typeof(global::System.Windows.Input.ICommand);
-            _typeTable[29] = typeof(global::Microsoft.UI.Xaml.Style);
-            _typeTable[30] = typeof(global::Microsoft.UI.Xaml.UIElement);
-            _typeTable[31] = typeof(global::Microsoft.UI.Xaml.Controls.TeachingTipHeroContentPlacementMode);
-            _typeTable[32] = typeof(global::System.Enum);
-            _typeTable[33] = typeof(global::System.ValueType);
-            _typeTable[34] = typeof(global::Microsoft.UI.Xaml.Thickness);
-            _typeTable[35] = typeof(global::Microsoft.UI.Xaml.Controls.TeachingTipPlacementMode);
-            _typeTable[36] = typeof(global::Microsoft.UI.Xaml.Controls.TeachingTipTailVisibility);
-            _typeTable[37] = typeof(global::Microsoft.UI.Xaml.FrameworkElement);
-            _typeTable[38] = typeof(global::Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings);
-            _typeTable[39] = typeof(global::Microsoft.UI.Xaml.Controls.TreeView);
-            _typeTable[40] = typeof(global::Microsoft.UI.Xaml.Controls.Control);
-            _typeTable[41] = typeof(global::Microsoft.UI.Xaml.Controls.StyleSelector);
-            _typeTable[42] = typeof(global::Microsoft.UI.Xaml.Media.Animation.TransitionCollection);
-            _typeTable[43] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
-            _typeTable[44] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
-            _typeTable[45] = typeof(global::System.Int32);
-            _typeTable[46] = typeof(global::System.Collections.Generic.IList<global::System.Object>);
-            _typeTable[47] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewSelectionMode);
-            _typeTable[48] = typeof(global::Fog.Pages.Home);
-            _typeTable[49] = typeof(global::Fog.Pages.RepoHome);
-            _typeTable[50] = typeof(global::Fog.LocalRepository);
-            _typeTable[51] = typeof(global::Fog.FogTreeViewItem);
-            _typeTable[52] = typeof(global::Microsoft.UI.Xaml.Controls.InfoBar);
-            _typeTable[53] = typeof(global::Microsoft.UI.Xaml.Controls.Primitives.ButtonBase);
-            _typeTable[54] = typeof(global::Microsoft.UI.Xaml.Controls.InfoBarSeverity);
-            _typeTable[55] = typeof(global::Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings);
-            _typeTable[56] = typeof(global::Microsoft.UI.Xaml.Controls.ImageIcon);
-            _typeTable[57] = typeof(global::Microsoft.UI.Xaml.Media.ImageSource);
-            _typeTable[58] = typeof(global::Fog.Pages.SettingPage);
-            _typeTable[59] = typeof(global::Fog.Pages.GitBranchPage);
-            _typeTable[60] = typeof(global::Fog.Pages.GitClonePage);
-            _typeTable[61] = typeof(global::Fog.Pages.CloneGitDataModel);
-            _typeTable[62] = typeof(global::Fog.Pages.GitInitPage);
-            _typeTable[63] = typeof(global::Fog.Pages.InitGitDataModel);
+            _typeTable[17] = typeof(global::Fog.Pages.ExplorerItemTemplateSelector);
+            _typeTable[18] = typeof(global::Microsoft.UI.Xaml.Controls.DataTemplateSelector);
+            _typeTable[19] = typeof(global::Microsoft.UI.Xaml.DataTemplate);
+            _typeTable[20] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewItem);
+            _typeTable[21] = typeof(global::Microsoft.UI.Xaml.Controls.ListViewItem);
+            _typeTable[22] = typeof(global::Microsoft.UI.Xaml.Controls.ContentControl);
+            _typeTable[23] = typeof(global::Microsoft.UI.Xaml.Media.Brush);
+            _typeTable[24] = typeof(global::System.Double);
+            _typeTable[25] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewItemTemplateSettings);
+            _typeTable[26] = typeof(global::Microsoft.UI.Xaml.Controls.TeachingTip);
+            _typeTable[27] = typeof(global::System.Windows.Input.ICommand);
+            _typeTable[28] = typeof(global::Microsoft.UI.Xaml.Style);
+            _typeTable[29] = typeof(global::Microsoft.UI.Xaml.UIElement);
+            _typeTable[30] = typeof(global::Microsoft.UI.Xaml.Controls.TeachingTipHeroContentPlacementMode);
+            _typeTable[31] = typeof(global::System.Enum);
+            _typeTable[32] = typeof(global::System.ValueType);
+            _typeTable[33] = typeof(global::Microsoft.UI.Xaml.Thickness);
+            _typeTable[34] = typeof(global::Microsoft.UI.Xaml.Controls.TeachingTipPlacementMode);
+            _typeTable[35] = typeof(global::Microsoft.UI.Xaml.Controls.TeachingTipTailVisibility);
+            _typeTable[36] = typeof(global::Microsoft.UI.Xaml.FrameworkElement);
+            _typeTable[37] = typeof(global::Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings);
+            _typeTable[38] = typeof(global::Microsoft.UI.Xaml.Controls.TreeView);
+            _typeTable[39] = typeof(global::Microsoft.UI.Xaml.Controls.Control);
+            _typeTable[40] = typeof(global::Microsoft.UI.Xaml.Controls.StyleSelector);
+            _typeTable[41] = typeof(global::Microsoft.UI.Xaml.Media.Animation.TransitionCollection);
+            _typeTable[42] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
+            _typeTable[43] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
+            _typeTable[44] = typeof(global::System.Int32);
+            _typeTable[45] = typeof(global::System.Collections.Generic.IList<global::System.Object>);
+            _typeTable[46] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewSelectionMode);
+            _typeTable[47] = typeof(global::Fog.Pages.Home);
+            _typeTable[48] = typeof(global::Fog.Converters.BoolNegationConverter);
+            _typeTable[49] = typeof(global::Microsoft.UI.Xaml.Controls.InfoBar);
+            _typeTable[50] = typeof(global::Microsoft.UI.Xaml.Controls.InfoBarSeverity);
+            _typeTable[51] = typeof(global::Microsoft.UI.Xaml.Controls.Primitives.ButtonBase);
+            _typeTable[52] = typeof(global::Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings);
+            _typeTable[53] = typeof(global::Fog.Pages.RepoHome);
+            _typeTable[54] = typeof(global::LibGit2Sharp.Repository);
+            _typeTable[55] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::LibGit2Sharp.Branch>);
+            _typeTable[56] = typeof(global::System.Collections.ObjectModel.Collection<global::LibGit2Sharp.Branch>);
+            _typeTable[57] = typeof(global::LibGit2Sharp.Branch);
+            _typeTable[58] = typeof(global::LibGit2Sharp.ReferenceWrapper<global::LibGit2Sharp.Commit>);
+            _typeTable[59] = typeof(global::LibGit2Sharp.BranchTrackingDetails);
+            _typeTable[60] = typeof(global::LibGit2Sharp.Commit);
+            _typeTable[61] = typeof(global::LibGit2Sharp.GitObject);
+            _typeTable[62] = typeof(global::LibGit2Sharp.ICommitLog);
+            _typeTable[63] = typeof(global::LibGit2Sharp.Reference);
+            _typeTable[64] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::LibGit2Sharp.Tag>);
+            _typeTable[65] = typeof(global::System.Collections.ObjectModel.Collection<global::LibGit2Sharp.Tag>);
+            _typeTable[66] = typeof(global::LibGit2Sharp.Tag);
+            _typeTable[67] = typeof(global::LibGit2Sharp.ReferenceWrapper<global::LibGit2Sharp.GitObject>);
+            _typeTable[68] = typeof(global::LibGit2Sharp.TagAnnotation);
+            _typeTable[69] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::LibGit2Sharp.Stash>);
+            _typeTable[70] = typeof(global::System.Collections.ObjectModel.Collection<global::LibGit2Sharp.Stash>);
+            _typeTable[71] = typeof(global::LibGit2Sharp.Stash);
+            _typeTable[72] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::LibGit2Sharp.Submodule>);
+            _typeTable[73] = typeof(global::System.Collections.ObjectModel.Collection<global::LibGit2Sharp.Submodule>);
+            _typeTable[74] = typeof(global::LibGit2Sharp.Submodule);
+            _typeTable[75] = typeof(global::LibGit2Sharp.ObjectId);
+            _typeTable[76] = typeof(global::LibGit2Sharp.SubmoduleRecurse);
+            _typeTable[77] = typeof(global::LibGit2Sharp.SubmoduleIgnore);
+            _typeTable[78] = typeof(global::LibGit2Sharp.SubmoduleUpdate);
+            _typeTable[79] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::LibGit2Sharp.Note>);
+            _typeTable[80] = typeof(global::System.Collections.ObjectModel.Collection<global::LibGit2Sharp.Note>);
+            _typeTable[81] = typeof(global::LibGit2Sharp.Note);
+            _typeTable[82] = typeof(global::Fog.Converters.FileNameWithoutExtension);
+            _typeTable[83] = typeof(global::Fog.Converters.ChangedFIleStatusBorderBrush);
+            _typeTable[84] = typeof(global::Fog.Pages.Repos.RepoStatusPage);
+            _typeTable[85] = typeof(global::Fog.Pages.ServiceAccountsPage);
+            _typeTable[86] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Fog.ServiceAccount>);
+            _typeTable[87] = typeof(global::System.Collections.ObjectModel.Collection<global::Fog.ServiceAccount>);
+            _typeTable[88] = typeof(global::Fog.ServiceAccount);
+            _typeTable[89] = typeof(global::Microsoft.UI.Xaml.Controls.Expander);
+            _typeTable[90] = typeof(global::Microsoft.UI.Xaml.Controls.ExpandDirection);
+            _typeTable[91] = typeof(global::Microsoft.UI.Xaml.Controls.ExpanderTemplateSettings);
+            _typeTable[92] = typeof(global::Fog.Pages.Settings.SettingAbout);
+            _typeTable[93] = typeof(global::Microsoft.UI.Xaml.Media.AcrylicBrush);
+            _typeTable[94] = typeof(global::Microsoft.UI.Xaml.Media.XamlCompositionBrushBase);
+            _typeTable[95] = typeof(global::System.Nullable<global::System.Double>);
+            _typeTable[96] = typeof(global::Windows.UI.Color);
+            _typeTable[97] = typeof(global::System.TimeSpan);
+            _typeTable[98] = typeof(global::Microsoft.UI.Xaml.Controls.PersonPicture);
+            _typeTable[99] = typeof(global::Microsoft.UI.Xaml.Media.ImageSource);
+            _typeTable[100] = typeof(global::Windows.ApplicationModel.Contacts.Contact);
+            _typeTable[101] = typeof(global::Microsoft.UI.Xaml.Controls.PersonPictureTemplateSettings);
+            _typeTable[102] = typeof(global::Fog.Pages.Settings.SettingAccount);
+            _typeTable[103] = typeof(global::Microsoft.UI.Xaml.Controls.BreadcrumbBar);
+            _typeTable[104] = typeof(global::Microsoft.UI.Xaml.Controls.ProgressBar);
+            _typeTable[105] = typeof(global::Microsoft.UI.Xaml.Controls.Primitives.RangeBase);
+            _typeTable[106] = typeof(global::Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings);
+            _typeTable[107] = typeof(global::Microsoft.UI.Xaml.Controls.ImageIcon);
+            _typeTable[108] = typeof(global::Fog.Pages.Settings.SettingAccountAdd);
+            _typeTable[109] = typeof(global::System.String[]);
+            _typeTable[110] = typeof(global::System.Array);
+            _typeTable[111] = typeof(global::Fog.Pages.Settings.SettingAppearance);
+            _typeTable[112] = typeof(global::Fog.Pages.Settings.SettingGeneral);
+            _typeTable[113] = typeof(global::Fog.Pages.Settings.SettingGit);
+            _typeTable[114] = typeof(global::Fog.Pages.Settings.SettingIntegration);
+            _typeTable[115] = typeof(global::Fog.Pages.Settings.SettingShortcut);
+            _typeTable[116] = typeof(global::Fog.Pages.Settings.SettingUserProfile);
+            _typeTable[117] = typeof(global::Fog.Pages.SettingPage);
+            _typeTable[118] = typeof(global::Fog.Pages.GitBranchPage);
+            _typeTable[119] = typeof(global::Fog.Pages.GitClonePage);
+            _typeTable[120] = typeof(global::Fog.Pages.CloneGitDataModel);
+            _typeTable[121] = typeof(global::Fog.Pages.GitInitPage);
+            _typeTable[122] = typeof(global::Fog.Pages.InitGitDataModel);
+            _typeTable[123] = typeof(global::Fog.WelcomeWindow);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -394,27 +514,58 @@ namespace Fog.Fog_XamlTypeInfo
         private object Activate_7_AnimatedIcon() { return new global::Microsoft.UI.Xaml.Controls.AnimatedIcon(); }
         private object Activate_13_AnimatedBackVisualSource() { return new global::Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedBackVisualSource(); }
         private object Activate_15_MainWindow() { return new global::Fog.MainWindow(); }
-        private object Activate_17_AccountPage() { return new global::Fog.Pages.AccountPage(); }
-        private object Activate_18_ExplorerItemTemplateSelector() { return new global::Fog.Pages.ExplorerItemTemplateSelector(); }
-        private object Activate_21_TreeViewItem() { return new global::Microsoft.UI.Xaml.Controls.TreeViewItem(); }
-        private object Activate_26_TreeViewItemTemplateSettings() { return new global::Microsoft.UI.Xaml.Controls.TreeViewItemTemplateSettings(); }
-        private object Activate_27_TeachingTip() { return new global::Microsoft.UI.Xaml.Controls.TeachingTip(); }
-        private object Activate_38_TeachingTipTemplateSettings() { return new global::Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings(); }
-        private object Activate_39_TreeView() { return new global::Microsoft.UI.Xaml.Controls.TreeView(); }
-        private object Activate_44_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
-        private object Activate_48_Home() { return new global::Fog.Pages.Home(); }
-        private object Activate_49_RepoHome() { return new global::Fog.Pages.RepoHome(); }
-        private object Activate_50_LocalRepository() { return new global::Fog.LocalRepository(); }
-        private object Activate_51_FogTreeViewItem() { return new global::Fog.FogTreeViewItem(); }
-        private object Activate_52_InfoBar() { return new global::Microsoft.UI.Xaml.Controls.InfoBar(); }
-        private object Activate_55_InfoBarTemplateSettings() { return new global::Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings(); }
-        private object Activate_56_ImageIcon() { return new global::Microsoft.UI.Xaml.Controls.ImageIcon(); }
-        private object Activate_58_SettingPage() { return new global::Fog.Pages.SettingPage(); }
-        private object Activate_59_GitBranchPage() { return new global::Fog.Pages.GitBranchPage(); }
-        private object Activate_60_GitClonePage() { return new global::Fog.Pages.GitClonePage(); }
-        private object Activate_61_CloneGitDataModel() { return new global::Fog.Pages.CloneGitDataModel(); }
-        private object Activate_62_GitInitPage() { return new global::Fog.Pages.GitInitPage(); }
-        private object Activate_63_InitGitDataModel() { return new global::Fog.Pages.InitGitDataModel(); }
+        private object Activate_17_ExplorerItemTemplateSelector() { return new global::Fog.Pages.ExplorerItemTemplateSelector(); }
+        private object Activate_20_TreeViewItem() { return new global::Microsoft.UI.Xaml.Controls.TreeViewItem(); }
+        private object Activate_25_TreeViewItemTemplateSettings() { return new global::Microsoft.UI.Xaml.Controls.TreeViewItemTemplateSettings(); }
+        private object Activate_26_TeachingTip() { return new global::Microsoft.UI.Xaml.Controls.TeachingTip(); }
+        private object Activate_37_TeachingTipTemplateSettings() { return new global::Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings(); }
+        private object Activate_38_TreeView() { return new global::Microsoft.UI.Xaml.Controls.TreeView(); }
+        private object Activate_43_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
+        private object Activate_47_Home() { return new global::Fog.Pages.Home(); }
+        private object Activate_48_BoolNegationConverter() { return new global::Fog.Converters.BoolNegationConverter(); }
+        private object Activate_49_InfoBar() { return new global::Microsoft.UI.Xaml.Controls.InfoBar(); }
+        private object Activate_52_InfoBarTemplateSettings() { return new global::Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings(); }
+        private object Activate_53_RepoHome() { return new global::Fog.Pages.RepoHome(); }
+        private object Activate_54_Repository() { return new global::LibGit2Sharp.Repository(); }
+        private object Activate_55_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::LibGit2Sharp.Branch>(); }
+        private object Activate_56_Collection() { return new global::System.Collections.ObjectModel.Collection<global::LibGit2Sharp.Branch>(); }
+        private object Activate_64_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::LibGit2Sharp.Tag>(); }
+        private object Activate_65_Collection() { return new global::System.Collections.ObjectModel.Collection<global::LibGit2Sharp.Tag>(); }
+        private object Activate_69_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::LibGit2Sharp.Stash>(); }
+        private object Activate_70_Collection() { return new global::System.Collections.ObjectModel.Collection<global::LibGit2Sharp.Stash>(); }
+        private object Activate_72_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::LibGit2Sharp.Submodule>(); }
+        private object Activate_73_Collection() { return new global::System.Collections.ObjectModel.Collection<global::LibGit2Sharp.Submodule>(); }
+        private object Activate_79_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::LibGit2Sharp.Note>(); }
+        private object Activate_80_Collection() { return new global::System.Collections.ObjectModel.Collection<global::LibGit2Sharp.Note>(); }
+        private object Activate_82_FileNameWithoutExtension() { return new global::Fog.Converters.FileNameWithoutExtension(); }
+        private object Activate_83_ChangedFIleStatusBorderBrush() { return new global::Fog.Converters.ChangedFIleStatusBorderBrush(); }
+        private object Activate_84_RepoStatusPage() { return new global::Fog.Pages.Repos.RepoStatusPage(); }
+        private object Activate_85_ServiceAccountsPage() { return new global::Fog.Pages.ServiceAccountsPage(); }
+        private object Activate_86_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Fog.ServiceAccount>(); }
+        private object Activate_87_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Fog.ServiceAccount>(); }
+        private object Activate_89_Expander() { return new global::Microsoft.UI.Xaml.Controls.Expander(); }
+        private object Activate_92_SettingAbout() { return new global::Fog.Pages.Settings.SettingAbout(); }
+        private object Activate_93_AcrylicBrush() { return new global::Microsoft.UI.Xaml.Media.AcrylicBrush(); }
+        private object Activate_98_PersonPicture() { return new global::Microsoft.UI.Xaml.Controls.PersonPicture(); }
+        private object Activate_100_Contact() { return new global::Windows.ApplicationModel.Contacts.Contact(); }
+        private object Activate_102_SettingAccount() { return new global::Fog.Pages.Settings.SettingAccount(); }
+        private object Activate_103_BreadcrumbBar() { return new global::Microsoft.UI.Xaml.Controls.BreadcrumbBar(); }
+        private object Activate_104_ProgressBar() { return new global::Microsoft.UI.Xaml.Controls.ProgressBar(); }
+        private object Activate_107_ImageIcon() { return new global::Microsoft.UI.Xaml.Controls.ImageIcon(); }
+        private object Activate_108_SettingAccountAdd() { return new global::Fog.Pages.Settings.SettingAccountAdd(); }
+        private object Activate_111_SettingAppearance() { return new global::Fog.Pages.Settings.SettingAppearance(); }
+        private object Activate_112_SettingGeneral() { return new global::Fog.Pages.Settings.SettingGeneral(); }
+        private object Activate_113_SettingGit() { return new global::Fog.Pages.Settings.SettingGit(); }
+        private object Activate_114_SettingIntegration() { return new global::Fog.Pages.Settings.SettingIntegration(); }
+        private object Activate_115_SettingShortcut() { return new global::Fog.Pages.Settings.SettingShortcut(); }
+        private object Activate_116_SettingUserProfile() { return new global::Fog.Pages.Settings.SettingUserProfile(); }
+        private object Activate_117_SettingPage() { return new global::Fog.Pages.SettingPage(); }
+        private object Activate_118_GitBranchPage() { return new global::Fog.Pages.GitBranchPage(); }
+        private object Activate_119_GitClonePage() { return new global::Fog.Pages.GitClonePage(); }
+        private object Activate_120_CloneGitDataModel() { return new global::Fog.Pages.CloneGitDataModel(); }
+        private object Activate_121_GitInitPage() { return new global::Fog.Pages.GitInitPage(); }
+        private object Activate_122_InitGitDataModel() { return new global::Fog.Pages.InitGitDataModel(); }
+        private object Activate_123_WelcomeWindow() { return new global::Fog.WelcomeWindow(); }
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -422,16 +573,88 @@ namespace Fog.Fog_XamlTypeInfo
             var newItem = (global::System.Object)item;
             collection.Add(newKey, newItem);
         }
-        private void VectorAdd_43_IList(object instance, object item)
+        private void VectorAdd_42_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.TreeViewNode>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_46_IList(object instance, object item)
+        private void VectorAdd_45_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::System.Object>)instance;
             var newItem = (global::System.Object)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_55_ObservableCollection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::LibGit2Sharp.Branch>)instance;
+            var newItem = (global::LibGit2Sharp.Branch)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_56_Collection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::LibGit2Sharp.Branch>)instance;
+            var newItem = (global::LibGit2Sharp.Branch)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_64_ObservableCollection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::LibGit2Sharp.Tag>)instance;
+            var newItem = (global::LibGit2Sharp.Tag)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_65_Collection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::LibGit2Sharp.Tag>)instance;
+            var newItem = (global::LibGit2Sharp.Tag)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_69_ObservableCollection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::LibGit2Sharp.Stash>)instance;
+            var newItem = (global::LibGit2Sharp.Stash)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_70_Collection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::LibGit2Sharp.Stash>)instance;
+            var newItem = (global::LibGit2Sharp.Stash)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_72_ObservableCollection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::LibGit2Sharp.Submodule>)instance;
+            var newItem = (global::LibGit2Sharp.Submodule)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_73_Collection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::LibGit2Sharp.Submodule>)instance;
+            var newItem = (global::LibGit2Sharp.Submodule)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_79_ObservableCollection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::LibGit2Sharp.Note>)instance;
+            var newItem = (global::LibGit2Sharp.Note)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_80_Collection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::LibGit2Sharp.Note>)instance;
+            var newItem = (global::LibGit2Sharp.Note)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_86_ObservableCollection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::Fog.ServiceAccount>)instance;
+            var newItem = (global::Fog.ServiceAccount)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_87_Collection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::Fog.ServiceAccount>)instance;
+            var newItem = (global::Fog.ServiceAccount)item;
             collection.Add(newItem);
         }
 
@@ -537,33 +760,26 @@ namespace Fog.Fog_XamlTypeInfo
                 xamlType = new global::Fog.Fog_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 17:   //  Fog.Pages.AccountPage
-                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_17_AccountPage;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 18:   //  Fog.Pages.ExplorerItemTemplateSelector
+            case 17:   //  Fog.Pages.ExplorerItemTemplateSelector
                 userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.DataTemplateSelector"));
-                userType.Activator = Activate_18_ExplorerItemTemplateSelector;
+                userType.Activator = Activate_17_ExplorerItemTemplateSelector;
                 userType.AddMemberName("FolderTemplate");
                 userType.AddMemberName("FileTemplate");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 19:   //  Microsoft.UI.Xaml.Controls.DataTemplateSelector
+            case 18:   //  Microsoft.UI.Xaml.Controls.DataTemplateSelector
                 xamlType = new global::Fog.Fog_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 20:   //  Microsoft.UI.Xaml.DataTemplate
+            case 19:   //  Microsoft.UI.Xaml.DataTemplate
                 xamlType = new global::Fog.Fog_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 21:   //  Microsoft.UI.Xaml.Controls.TreeViewItem
+            case 20:   //  Microsoft.UI.Xaml.Controls.TreeViewItem
                 userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ListViewItem"));
-                userType.Activator = Activate_21_TreeViewItem;
+                userType.Activator = Activate_20_TreeViewItem;
                 userType.AddMemberName("ItemsSource");
                 userType.AddMemberName("CollapsedGlyph");
                 userType.AddMemberName("ExpandedGlyph");
@@ -576,31 +792,31 @@ namespace Fog.Fog_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 22:   //  Microsoft.UI.Xaml.Controls.ListViewItem
+            case 21:   //  Microsoft.UI.Xaml.Controls.ListViewItem
                 xamlType = new global::Fog.Fog_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 23:   //  Microsoft.UI.Xaml.Controls.ContentControl
+            case 22:   //  Microsoft.UI.Xaml.Controls.ContentControl
                 xamlType = new global::Fog.Fog_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 24:   //  Microsoft.UI.Xaml.Media.Brush
+            case 23:   //  Microsoft.UI.Xaml.Media.Brush
                 xamlType = new global::Fog.Fog_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 25:   //  Double
+            case 24:   //  Double
                 xamlType = new global::Fog.Fog_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 26:   //  Microsoft.UI.Xaml.Controls.TreeViewItemTemplateSettings
+            case 25:   //  Microsoft.UI.Xaml.Controls.TreeViewItemTemplateSettings
                 userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 27:   //  Microsoft.UI.Xaml.Controls.TeachingTip
+            case 26:   //  Microsoft.UI.Xaml.Controls.TeachingTip
                 userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ContentControl"));
-                userType.Activator = Activate_27_TeachingTip;
+                userType.Activator = Activate_26_TeachingTip;
                 userType.AddMemberName("Title");
                 userType.AddMemberName("IsLightDismissEnabled");
                 userType.AddMemberName("ActionButtonCommand");
@@ -625,21 +841,21 @@ namespace Fog.Fog_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 28:   //  System.Windows.Input.ICommand
+            case 27:   //  System.Windows.Input.ICommand
                 userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 29:   //  Microsoft.UI.Xaml.Style
+            case 28:   //  Microsoft.UI.Xaml.Style
                 xamlType = new global::Fog.Fog_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 30:   //  Microsoft.UI.Xaml.UIElement
+            case 29:   //  Microsoft.UI.Xaml.UIElement
                 xamlType = new global::Fog.Fog_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 31:   //  Microsoft.UI.Xaml.Controls.TeachingTipHeroContentPlacementMode
+            case 30:   //  Microsoft.UI.Xaml.Controls.TeachingTipHeroContentPlacementMode
                 userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Auto", global::Microsoft.UI.Xaml.Controls.TeachingTipHeroContentPlacementMode.Auto);
                 userType.AddEnumValue("Top", global::Microsoft.UI.Xaml.Controls.TeachingTipHeroContentPlacementMode.Top);
@@ -647,23 +863,23 @@ namespace Fog.Fog_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 32:   //  System.Enum
+            case 31:   //  System.Enum
                 userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 xamlType = userType;
                 break;
 
-            case 33:   //  System.ValueType
+            case 32:   //  System.ValueType
                 userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 xamlType = userType;
                 break;
 
-            case 34:   //  Microsoft.UI.Xaml.Thickness
+            case 33:   //  Microsoft.UI.Xaml.Thickness
                 userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 35:   //  Microsoft.UI.Xaml.Controls.TeachingTipPlacementMode
+            case 34:   //  Microsoft.UI.Xaml.Controls.TeachingTipPlacementMode
                 userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Auto", global::Microsoft.UI.Xaml.Controls.TeachingTipPlacementMode.Auto);
                 userType.AddEnumValue("Top", global::Microsoft.UI.Xaml.Controls.TeachingTipPlacementMode.Top);
@@ -682,7 +898,7 @@ namespace Fog.Fog_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 36:   //  Microsoft.UI.Xaml.Controls.TeachingTipTailVisibility
+            case 35:   //  Microsoft.UI.Xaml.Controls.TeachingTipTailVisibility
                 userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Auto", global::Microsoft.UI.Xaml.Controls.TeachingTipTailVisibility.Auto);
                 userType.AddEnumValue("Visible", global::Microsoft.UI.Xaml.Controls.TeachingTipTailVisibility.Visible);
@@ -690,19 +906,19 @@ namespace Fog.Fog_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 37:   //  Microsoft.UI.Xaml.FrameworkElement
+            case 36:   //  Microsoft.UI.Xaml.FrameworkElement
                 xamlType = new global::Fog.Fog_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 38:   //  Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings
+            case 37:   //  Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings
                 userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 39:   //  Microsoft.UI.Xaml.Controls.TreeView
+            case 38:   //  Microsoft.UI.Xaml.Controls.TreeView
                 userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
-                userType.Activator = Activate_39_TreeView;
+                userType.Activator = Activate_38_TreeView;
                 userType.AddMemberName("ItemsSource");
                 userType.AddMemberName("ItemTemplateSelector");
                 userType.AddMemberName("CanDragItems");
@@ -720,28 +936,28 @@ namespace Fog.Fog_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 40:   //  Microsoft.UI.Xaml.Controls.Control
+            case 39:   //  Microsoft.UI.Xaml.Controls.Control
                 xamlType = new global::Fog.Fog_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 41:   //  Microsoft.UI.Xaml.Controls.StyleSelector
+            case 40:   //  Microsoft.UI.Xaml.Controls.StyleSelector
                 xamlType = new global::Fog.Fog_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 42:   //  Microsoft.UI.Xaml.Media.Animation.TransitionCollection
+            case 41:   //  Microsoft.UI.Xaml.Media.Animation.TransitionCollection
                 xamlType = new global::Fog.Fog_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 43:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
+            case 42:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
                 userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.CollectionAdd = VectorAdd_43_IList;
+                userType.CollectionAdd = VectorAdd_42_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 44:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
+            case 43:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
                 userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_44_TreeViewNode;
+                userType.Activator = Activate_43_TreeViewNode;
                 userType.AddMemberName("Children");
                 userType.AddMemberName("Content");
                 userType.AddMemberName("Depth");
@@ -752,18 +968,18 @@ namespace Fog.Fog_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 45:   //  Int32
+            case 44:   //  Int32
                 xamlType = new global::Fog.Fog_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 46:   //  System.Collections.Generic.IList`1<Object>
+            case 45:   //  System.Collections.Generic.IList`1<Object>
                 userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.CollectionAdd = VectorAdd_46_IList;
+                userType.CollectionAdd = VectorAdd_45_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 47:   //  Microsoft.UI.Xaml.Controls.TreeViewSelectionMode
+            case 46:   //  Microsoft.UI.Xaml.Controls.TreeViewSelectionMode
                 userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("None", global::Microsoft.UI.Xaml.Controls.TreeViewSelectionMode.None);
                 userType.AddEnumValue("Single", global::Microsoft.UI.Xaml.Controls.TreeViewSelectionMode.Single);
@@ -771,61 +987,42 @@ namespace Fog.Fog_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 48:   //  Fog.Pages.Home
+            case 47:   //  Fog.Pages.Home
                 userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_48_Home;
+                userType.Activator = Activate_47_Home;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 49:   //  Fog.Pages.RepoHome
-                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_49_RepoHome;
-                userType.AddMemberName("Repository");
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 50:   //  Fog.LocalRepository
-                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Fog.FogTreeViewItem"));
-                userType.SetIsReturnTypeStub();
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 51:   //  Fog.FogTreeViewItem
+            case 48:   //  Fog.Converters.BoolNegationConverter
                 userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_51_FogTreeViewItem;
+                userType.Activator = Activate_48_BoolNegationConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 52:   //  Microsoft.UI.Xaml.Controls.InfoBar
+            case 49:   //  Microsoft.UI.Xaml.Controls.InfoBar
                 userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
-                userType.Activator = Activate_52_InfoBar;
+                userType.Activator = Activate_49_InfoBar;
                 userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.InfoBar.Content");
                 userType.AddMemberName("Content");
+                userType.AddMemberName("IsOpen");
                 userType.AddMemberName("Message");
+                userType.AddMemberName("Severity");
+                userType.AddMemberName("IsClosable");
                 userType.AddMemberName("ActionButton");
                 userType.AddMemberName("CloseButtonCommand");
                 userType.AddMemberName("CloseButtonCommandParameter");
                 userType.AddMemberName("CloseButtonStyle");
                 userType.AddMemberName("ContentTemplate");
                 userType.AddMemberName("IconSource");
-                userType.AddMemberName("IsClosable");
                 userType.AddMemberName("IsIconVisible");
-                userType.AddMemberName("IsOpen");
-                userType.AddMemberName("Severity");
                 userType.AddMemberName("TemplateSettings");
                 userType.AddMemberName("Title");
                 xamlType = userType;
                 break;
 
-            case 53:   //  Microsoft.UI.Xaml.Controls.Primitives.ButtonBase
-                xamlType = new global::Fog.Fog_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 54:   //  Microsoft.UI.Xaml.Controls.InfoBarSeverity
+            case 50:   //  Microsoft.UI.Xaml.Controls.InfoBarSeverity
                 userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Informational", global::Microsoft.UI.Xaml.Controls.InfoBarSeverity.Informational);
                 userType.AddEnumValue("Success", global::Microsoft.UI.Xaml.Controls.InfoBarSeverity.Success);
@@ -834,64 +1031,562 @@ namespace Fog.Fog_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 55:   //  Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings
+            case 51:   //  Microsoft.UI.Xaml.Controls.Primitives.ButtonBase
+                xamlType = new global::Fog.Fog_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 52:   //  Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings
                 userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 56:   //  Microsoft.UI.Xaml.Controls.ImageIcon
+            case 53:   //  Fog.Pages.RepoHome
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_53_RepoHome;
+                userType.AddMemberName("RepoPath");
+                userType.AddMemberName("Repo");
+                userType.AddMemberName("IsRepoNotAvliable");
+                userType.AddMemberName("NotAvliableReason");
+                userType.AddMemberName("ChangedFileCount");
+                userType.AddMemberName("LocalBranches");
+                userType.AddMemberName("RemoteBranches");
+                userType.AddMemberName("Tags");
+                userType.AddMemberName("Stashes");
+                userType.AddMemberName("Submodules");
+                userType.AddMemberName("Notes");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 54:   //  LibGit2Sharp.Repository
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 55:   //  System.Collections.ObjectModel.ObservableCollection`1<LibGit2Sharp.Branch>
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<LibGit2Sharp.Branch>"));
+                userType.CollectionAdd = VectorAdd_55_ObservableCollection;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 56:   //  System.Collections.ObjectModel.Collection`1<LibGit2Sharp.Branch>
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_56_Collection;
+                userType.CollectionAdd = VectorAdd_56_Collection;
+                xamlType = userType;
+                break;
+
+            case 57:   //  LibGit2Sharp.Branch
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("LibGit2Sharp.ReferenceWrapper`1<LibGit2Sharp.Commit>"));
+                userType.AddMemberName("IsRemote");
+                userType.AddMemberName("TrackedBranch");
+                userType.AddMemberName("IsTracking");
+                userType.AddMemberName("TrackingDetails");
+                userType.AddMemberName("IsCurrentRepositoryHead");
+                userType.AddMemberName("Tip");
+                userType.AddMemberName("Commits");
+                userType.AddMemberName("UpstreamBranchCanonicalName");
+                userType.AddMemberName("RemoteName");
+                xamlType = userType;
+                break;
+
+            case 58:   //  LibGit2Sharp.ReferenceWrapper`1<LibGit2Sharp.Commit>
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.AddMemberName("CanonicalName");
+                userType.AddMemberName("FriendlyName");
+                userType.AddMemberName("Reference");
+                xamlType = userType;
+                break;
+
+            case 59:   //  LibGit2Sharp.BranchTrackingDetails
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 60:   //  LibGit2Sharp.Commit
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("LibGit2Sharp.GitObject"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 61:   //  LibGit2Sharp.GitObject
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                xamlType = userType;
+                break;
+
+            case 62:   //  LibGit2Sharp.ICommitLog
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 63:   //  LibGit2Sharp.Reference
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 64:   //  System.Collections.ObjectModel.ObservableCollection`1<LibGit2Sharp.Tag>
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<LibGit2Sharp.Tag>"));
+                userType.CollectionAdd = VectorAdd_64_ObservableCollection;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 65:   //  System.Collections.ObjectModel.Collection`1<LibGit2Sharp.Tag>
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_65_Collection;
+                userType.CollectionAdd = VectorAdd_65_Collection;
+                xamlType = userType;
+                break;
+
+            case 66:   //  LibGit2Sharp.Tag
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("LibGit2Sharp.ReferenceWrapper`1<LibGit2Sharp.GitObject>"));
+                userType.AddMemberName("Annotation");
+                userType.AddMemberName("Target");
+                userType.AddMemberName("PeeledTarget");
+                userType.AddMemberName("IsAnnotated");
+                xamlType = userType;
+                break;
+
+            case 67:   //  LibGit2Sharp.ReferenceWrapper`1<LibGit2Sharp.GitObject>
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.AddMemberName("CanonicalName");
+                userType.AddMemberName("FriendlyName");
+                userType.AddMemberName("Reference");
+                xamlType = userType;
+                break;
+
+            case 68:   //  LibGit2Sharp.TagAnnotation
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("LibGit2Sharp.GitObject"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 69:   //  System.Collections.ObjectModel.ObservableCollection`1<LibGit2Sharp.Stash>
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<LibGit2Sharp.Stash>"));
+                userType.CollectionAdd = VectorAdd_69_ObservableCollection;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 70:   //  System.Collections.ObjectModel.Collection`1<LibGit2Sharp.Stash>
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_70_Collection;
+                userType.CollectionAdd = VectorAdd_70_Collection;
+                xamlType = userType;
+                break;
+
+            case 71:   //  LibGit2Sharp.Stash
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("LibGit2Sharp.ReferenceWrapper`1<LibGit2Sharp.Commit>"));
+                userType.AddMemberName("WorkTree");
+                userType.AddMemberName("Base");
+                userType.AddMemberName("Index");
+                userType.AddMemberName("Untracked");
+                userType.AddMemberName("Message");
+                xamlType = userType;
+                break;
+
+            case 72:   //  System.Collections.ObjectModel.ObservableCollection`1<LibGit2Sharp.Submodule>
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<LibGit2Sharp.Submodule>"));
+                userType.CollectionAdd = VectorAdd_72_ObservableCollection;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 73:   //  System.Collections.ObjectModel.Collection`1<LibGit2Sharp.Submodule>
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_73_Collection;
+                userType.CollectionAdd = VectorAdd_73_Collection;
+                xamlType = userType;
+                break;
+
+            case 74:   //  LibGit2Sharp.Submodule
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.AddMemberName("Name");
+                userType.AddMemberName("Path");
+                userType.AddMemberName("Url");
+                userType.AddMemberName("HeadCommitId");
+                userType.AddMemberName("IndexCommitId");
+                userType.AddMemberName("WorkDirCommitId");
+                userType.AddMemberName("FetchRecurseSubmodulesRule");
+                userType.AddMemberName("IgnoreRule");
+                userType.AddMemberName("UpdateRule");
+                xamlType = userType;
+                break;
+
+            case 75:   //  LibGit2Sharp.ObjectId
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 76:   //  LibGit2Sharp.SubmoduleRecurse
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("Reset", global::LibGit2Sharp.SubmoduleRecurse.Reset);
+                userType.AddEnumValue("No", global::LibGit2Sharp.SubmoduleRecurse.No);
+                userType.AddEnumValue("Yes", global::LibGit2Sharp.SubmoduleRecurse.Yes);
+                userType.AddEnumValue("OnDemand", global::LibGit2Sharp.SubmoduleRecurse.OnDemand);
+                xamlType = userType;
+                break;
+
+            case 77:   //  LibGit2Sharp.SubmoduleIgnore
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("Reset", global::LibGit2Sharp.SubmoduleIgnore.Reset);
+                userType.AddEnumValue("None", global::LibGit2Sharp.SubmoduleIgnore.None);
+                userType.AddEnumValue("Untracked", global::LibGit2Sharp.SubmoduleIgnore.Untracked);
+                userType.AddEnumValue("Dirty", global::LibGit2Sharp.SubmoduleIgnore.Dirty);
+                userType.AddEnumValue("All", global::LibGit2Sharp.SubmoduleIgnore.All);
+                xamlType = userType;
+                break;
+
+            case 78:   //  LibGit2Sharp.SubmoduleUpdate
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("Reset", global::LibGit2Sharp.SubmoduleUpdate.Reset);
+                userType.AddEnumValue("Unspecified", global::LibGit2Sharp.SubmoduleUpdate.Unspecified);
+                userType.AddEnumValue("Checkout", global::LibGit2Sharp.SubmoduleUpdate.Checkout);
+                userType.AddEnumValue("Rebase", global::LibGit2Sharp.SubmoduleUpdate.Rebase);
+                userType.AddEnumValue("Merge", global::LibGit2Sharp.SubmoduleUpdate.Merge);
+                userType.AddEnumValue("None", global::LibGit2Sharp.SubmoduleUpdate.None);
+                xamlType = userType;
+                break;
+
+            case 79:   //  System.Collections.ObjectModel.ObservableCollection`1<LibGit2Sharp.Note>
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<LibGit2Sharp.Note>"));
+                userType.CollectionAdd = VectorAdd_79_ObservableCollection;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 80:   //  System.Collections.ObjectModel.Collection`1<LibGit2Sharp.Note>
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_80_Collection;
+                userType.CollectionAdd = VectorAdd_80_Collection;
+                xamlType = userType;
+                break;
+
+            case 81:   //  LibGit2Sharp.Note
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.AddMemberName("BlobId");
+                userType.AddMemberName("Message");
+                userType.AddMemberName("Namespace");
+                userType.AddMemberName("TargetObjectId");
+                xamlType = userType;
+                break;
+
+            case 82:   //  Fog.Converters.FileNameWithoutExtension
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_82_FileNameWithoutExtension;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 83:   //  Fog.Converters.ChangedFIleStatusBorderBrush
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_83_ChangedFIleStatusBorderBrush;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 84:   //  Fog.Pages.Repos.RepoStatusPage
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_84_RepoStatusPage;
+                userType.AddMemberName("Repo");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 85:   //  Fog.Pages.ServiceAccountsPage
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_85_ServiceAccountsPage;
+                userType.AddMemberName("ServiceAccounts");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 86:   //  System.Collections.ObjectModel.ObservableCollection`1<Fog.ServiceAccount>
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Fog.ServiceAccount>"));
+                userType.CollectionAdd = VectorAdd_86_ObservableCollection;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 87:   //  System.Collections.ObjectModel.Collection`1<Fog.ServiceAccount>
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_87_Collection;
+                userType.CollectionAdd = VectorAdd_87_Collection;
+                xamlType = userType;
+                break;
+
+            case 88:   //  Fog.ServiceAccount
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.AddMemberName("ID");
+                userType.AddMemberName("Name");
+                userType.AddMemberName("Type");
+                userType.AddMemberName("Host");
+                userType.AddMemberName("PAT");
+                userType.AddMemberName("Avatar");
+                userType.AddMemberName("IsAuthenticated");
+                userType.AddMemberName("IsAuthenticating");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 89:   //  Microsoft.UI.Xaml.Controls.Expander
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ContentControl"));
+                userType.Activator = Activate_89_Expander;
+                userType.AddMemberName("ExpandDirection");
+                userType.AddMemberName("Header");
+                userType.AddMemberName("HeaderTemplate");
+                userType.AddMemberName("HeaderTemplateSelector");
+                userType.AddMemberName("IsExpanded");
+                userType.AddMemberName("TemplateSettings");
+                xamlType = userType;
+                break;
+
+            case 90:   //  Microsoft.UI.Xaml.Controls.ExpandDirection
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("Down", global::Microsoft.UI.Xaml.Controls.ExpandDirection.Down);
+                userType.AddEnumValue("Up", global::Microsoft.UI.Xaml.Controls.ExpandDirection.Up);
+                xamlType = userType;
+                break;
+
+            case 91:   //  Microsoft.UI.Xaml.Controls.ExpanderTemplateSettings
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 92:   //  Fog.Pages.Settings.SettingAbout
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_92_SettingAbout;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 93:   //  Microsoft.UI.Xaml.Media.AcrylicBrush
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Media.XamlCompositionBrushBase"));
+                userType.Activator = Activate_93_AcrylicBrush;
+                userType.AddMemberName("TintOpacity");
+                userType.AddMemberName("TintLuminosityOpacity");
+                userType.AddMemberName("TintColor");
+                userType.AddMemberName("AlwaysUseFallback");
+                userType.AddMemberName("TintTransitionDuration");
+                xamlType = userType;
+                break;
+
+            case 94:   //  Microsoft.UI.Xaml.Media.XamlCompositionBrushBase
+                xamlType = new global::Fog.Fog_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 95:   //  System.Nullable`1<Double>
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                userType.SetBoxedType(GetXamlTypeByName("Double"));
+                userType.BoxInstance = userType.BoxType<global::System.Double>;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 96:   //  Windows.UI.Color
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 97:   //  TimeSpan
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 98:   //  Microsoft.UI.Xaml.Controls.PersonPicture
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
+                userType.Activator = Activate_98_PersonPicture;
+                userType.AddMemberName("ProfilePicture");
+                userType.AddMemberName("BadgeGlyph");
+                userType.AddMemberName("BadgeImageSource");
+                userType.AddMemberName("BadgeNumber");
+                userType.AddMemberName("BadgeText");
+                userType.AddMemberName("Contact");
+                userType.AddMemberName("DisplayName");
+                userType.AddMemberName("Initials");
+                userType.AddMemberName("IsGroup");
+                userType.AddMemberName("PreferSmallImage");
+                userType.AddMemberName("TemplateSettings");
+                xamlType = userType;
+                break;
+
+            case 99:   //  Microsoft.UI.Xaml.Media.ImageSource
+                xamlType = new global::Fog.Fog_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 100:   //  Windows.ApplicationModel.Contacts.Contact
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 101:   //  Microsoft.UI.Xaml.Controls.PersonPictureTemplateSettings
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 102:   //  Fog.Pages.Settings.SettingAccount
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_102_SettingAccount;
+                userType.AddMemberName("ServiceAccounts");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 103:   //  Microsoft.UI.Xaml.Controls.BreadcrumbBar
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
+                userType.Activator = Activate_103_BreadcrumbBar;
+                userType.AddMemberName("ItemsSource");
+                userType.AddMemberName("ItemTemplate");
+                xamlType = userType;
+                break;
+
+            case 104:   //  Microsoft.UI.Xaml.Controls.ProgressBar
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Primitives.RangeBase"));
+                userType.Activator = Activate_104_ProgressBar;
+                userType.AddMemberName("IsIndeterminate");
+                userType.AddMemberName("ShowPaused");
+                userType.AddMemberName("ShowError");
+                userType.AddMemberName("TemplateSettings");
+                xamlType = userType;
+                break;
+
+            case 105:   //  Microsoft.UI.Xaml.Controls.Primitives.RangeBase
+                xamlType = new global::Fog.Fog_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 106:   //  Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 107:   //  Microsoft.UI.Xaml.Controls.ImageIcon
                 userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.IconElement"));
-                userType.Activator = Activate_56_ImageIcon;
+                userType.Activator = Activate_107_ImageIcon;
                 userType.AddMemberName("Source");
                 xamlType = userType;
                 break;
 
-            case 57:   //  Microsoft.UI.Xaml.Media.ImageSource
-                xamlType = new global::Fog.Fog_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 58:   //  Fog.Pages.SettingPage
+            case 108:   //  Fog.Pages.Settings.SettingAccountAdd
                 userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_58_SettingPage;
-                userType.AddMemberName("ColorTheme");
+                userType.Activator = Activate_108_SettingAccountAdd;
+                userType.AddMemberName("BreadcrumbBarItems");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 59:   //  Fog.Pages.GitBranchPage
+            case 109:   //  String[]
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Array"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 110:   //  System.Array
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                xamlType = userType;
+                break;
+
+            case 111:   //  Fog.Pages.Settings.SettingAppearance
                 userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_59_GitBranchPage;
+                userType.Activator = Activate_111_SettingAppearance;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 60:   //  Fog.Pages.GitClonePage
+            case 112:   //  Fog.Pages.Settings.SettingGeneral
                 userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_60_GitClonePage;
+                userType.Activator = Activate_112_SettingGeneral;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 113:   //  Fog.Pages.Settings.SettingGit
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_113_SettingGit;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 114:   //  Fog.Pages.Settings.SettingIntegration
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_114_SettingIntegration;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 115:   //  Fog.Pages.Settings.SettingShortcut
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_115_SettingShortcut;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 116:   //  Fog.Pages.Settings.SettingUserProfile
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_116_SettingUserProfile;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 117:   //  Fog.Pages.SettingPage
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_117_SettingPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 118:   //  Fog.Pages.GitBranchPage
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_118_GitBranchPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 119:   //  Fog.Pages.GitClonePage
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_119_GitClonePage;
                 userType.AddMemberName("CloneData");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 61:   //  Fog.Pages.CloneGitDataModel
+            case 120:   //  Fog.Pages.CloneGitDataModel
                 userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 62:   //  Fog.Pages.GitInitPage
+            case 121:   //  Fog.Pages.GitInitPage
                 userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_62_GitInitPage;
+                userType.Activator = Activate_121_GitInitPage;
                 userType.AddMemberName("InitGitData");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 63:   //  Fog.Pages.InitGitDataModel
+            case 122:   //  Fog.Pages.InitGitDataModel
                 userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 123:   //  Fog.WelcomeWindow
+                userType = new global::Fog.Fog_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Window"));
+                userType.Activator = Activate_123_WelcomeWindow;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -1492,25 +2187,25 @@ namespace Fog.Fog_XamlTypeInfo
             var that = (global::Microsoft.UI.Xaml.Controls.TreeView)instance;
             that.SelectionMode = (global::Microsoft.UI.Xaml.Controls.TreeViewSelectionMode)Value;
         }
-        private object get_59_RepoHome_Repository(object instance)
-        {
-            var that = (global::Fog.Pages.RepoHome)instance;
-            return that.Repository;
-        }
-        private void set_59_RepoHome_Repository(object instance, object Value)
-        {
-            var that = (global::Fog.Pages.RepoHome)instance;
-            that.Repository = (global::Fog.LocalRepository)Value;
-        }
-        private object get_60_InfoBar_Content(object instance)
+        private object get_59_InfoBar_Content(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             return that.Content;
         }
-        private void set_60_InfoBar_Content(object instance, object Value)
+        private void set_59_InfoBar_Content(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             that.Content = (global::System.Object)Value;
+        }
+        private object get_60_InfoBar_IsOpen(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
+            return that.IsOpen;
+        }
+        private void set_60_InfoBar_IsOpen(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
+            that.IsOpen = (global::System.Boolean)Value;
         }
         private object get_61_InfoBar_Message(object instance)
         {
@@ -1522,157 +2217,807 @@ namespace Fog.Fog_XamlTypeInfo
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             that.Message = (global::System.String)Value;
         }
-        private object get_62_InfoBar_ActionButton(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
-            return that.ActionButton;
-        }
-        private void set_62_InfoBar_ActionButton(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
-            that.ActionButton = (global::Microsoft.UI.Xaml.Controls.Primitives.ButtonBase)Value;
-        }
-        private object get_63_InfoBar_CloseButtonCommand(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
-            return that.CloseButtonCommand;
-        }
-        private void set_63_InfoBar_CloseButtonCommand(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
-            that.CloseButtonCommand = (global::System.Windows.Input.ICommand)Value;
-        }
-        private object get_64_InfoBar_CloseButtonCommandParameter(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
-            return that.CloseButtonCommandParameter;
-        }
-        private void set_64_InfoBar_CloseButtonCommandParameter(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
-            that.CloseButtonCommandParameter = (global::System.Object)Value;
-        }
-        private object get_65_InfoBar_CloseButtonStyle(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
-            return that.CloseButtonStyle;
-        }
-        private void set_65_InfoBar_CloseButtonStyle(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
-            that.CloseButtonStyle = (global::Microsoft.UI.Xaml.Style)Value;
-        }
-        private object get_66_InfoBar_ContentTemplate(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
-            return that.ContentTemplate;
-        }
-        private void set_66_InfoBar_ContentTemplate(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
-            that.ContentTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
-        }
-        private object get_67_InfoBar_IconSource(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
-            return that.IconSource;
-        }
-        private void set_67_InfoBar_IconSource(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
-            that.IconSource = (global::Microsoft.UI.Xaml.Controls.IconSource)Value;
-        }
-        private object get_68_InfoBar_IsClosable(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
-            return that.IsClosable;
-        }
-        private void set_68_InfoBar_IsClosable(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
-            that.IsClosable = (global::System.Boolean)Value;
-        }
-        private object get_69_InfoBar_IsIconVisible(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
-            return that.IsIconVisible;
-        }
-        private void set_69_InfoBar_IsIconVisible(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
-            that.IsIconVisible = (global::System.Boolean)Value;
-        }
-        private object get_70_InfoBar_IsOpen(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
-            return that.IsOpen;
-        }
-        private void set_70_InfoBar_IsOpen(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
-            that.IsOpen = (global::System.Boolean)Value;
-        }
-        private object get_71_InfoBar_Severity(object instance)
+        private object get_62_InfoBar_Severity(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             return that.Severity;
         }
-        private void set_71_InfoBar_Severity(object instance, object Value)
+        private void set_62_InfoBar_Severity(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             that.Severity = (global::Microsoft.UI.Xaml.Controls.InfoBarSeverity)Value;
         }
-        private object get_72_InfoBar_TemplateSettings(object instance)
+        private object get_63_InfoBar_IsClosable(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
+            return that.IsClosable;
+        }
+        private void set_63_InfoBar_IsClosable(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
+            that.IsClosable = (global::System.Boolean)Value;
+        }
+        private object get_64_InfoBar_ActionButton(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
+            return that.ActionButton;
+        }
+        private void set_64_InfoBar_ActionButton(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
+            that.ActionButton = (global::Microsoft.UI.Xaml.Controls.Primitives.ButtonBase)Value;
+        }
+        private object get_65_InfoBar_CloseButtonCommand(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
+            return that.CloseButtonCommand;
+        }
+        private void set_65_InfoBar_CloseButtonCommand(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
+            that.CloseButtonCommand = (global::System.Windows.Input.ICommand)Value;
+        }
+        private object get_66_InfoBar_CloseButtonCommandParameter(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
+            return that.CloseButtonCommandParameter;
+        }
+        private void set_66_InfoBar_CloseButtonCommandParameter(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
+            that.CloseButtonCommandParameter = (global::System.Object)Value;
+        }
+        private object get_67_InfoBar_CloseButtonStyle(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
+            return that.CloseButtonStyle;
+        }
+        private void set_67_InfoBar_CloseButtonStyle(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
+            that.CloseButtonStyle = (global::Microsoft.UI.Xaml.Style)Value;
+        }
+        private object get_68_InfoBar_ContentTemplate(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
+            return that.ContentTemplate;
+        }
+        private void set_68_InfoBar_ContentTemplate(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
+            that.ContentTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
+        }
+        private object get_69_InfoBar_IconSource(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
+            return that.IconSource;
+        }
+        private void set_69_InfoBar_IconSource(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
+            that.IconSource = (global::Microsoft.UI.Xaml.Controls.IconSource)Value;
+        }
+        private object get_70_InfoBar_IsIconVisible(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
+            return that.IsIconVisible;
+        }
+        private void set_70_InfoBar_IsIconVisible(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
+            that.IsIconVisible = (global::System.Boolean)Value;
+        }
+        private object get_71_InfoBar_TemplateSettings(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             return that.TemplateSettings;
         }
-        private object get_73_InfoBar_Title(object instance)
+        private object get_72_InfoBar_Title(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             return that.Title;
         }
-        private void set_73_InfoBar_Title(object instance, object Value)
+        private void set_72_InfoBar_Title(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.InfoBar)instance;
             that.Title = (global::System.String)Value;
         }
-        private object get_74_ImageIcon_Source(object instance)
+        private object get_73_RepoHome_RepoPath(object instance)
+        {
+            var that = (global::Fog.Pages.RepoHome)instance;
+            return that.RepoPath;
+        }
+        private void set_73_RepoHome_RepoPath(object instance, object Value)
+        {
+            var that = (global::Fog.Pages.RepoHome)instance;
+            that.RepoPath = (global::System.String)Value;
+        }
+        private object get_74_RepoHome_Repo(object instance)
+        {
+            var that = (global::Fog.Pages.RepoHome)instance;
+            return that.Repo;
+        }
+        private void set_74_RepoHome_Repo(object instance, object Value)
+        {
+            var that = (global::Fog.Pages.RepoHome)instance;
+            that.Repo = (global::LibGit2Sharp.Repository)Value;
+        }
+        private object get_75_RepoHome_IsRepoNotAvliable(object instance)
+        {
+            var that = (global::Fog.Pages.RepoHome)instance;
+            return that.IsRepoNotAvliable;
+        }
+        private void set_75_RepoHome_IsRepoNotAvliable(object instance, object Value)
+        {
+            var that = (global::Fog.Pages.RepoHome)instance;
+            that.IsRepoNotAvliable = (global::System.Boolean)Value;
+        }
+        private object get_76_RepoHome_NotAvliableReason(object instance)
+        {
+            var that = (global::Fog.Pages.RepoHome)instance;
+            return that.NotAvliableReason;
+        }
+        private void set_76_RepoHome_NotAvliableReason(object instance, object Value)
+        {
+            var that = (global::Fog.Pages.RepoHome)instance;
+            that.NotAvliableReason = (global::System.String)Value;
+        }
+        private object get_77_RepoHome_ChangedFileCount(object instance)
+        {
+            var that = (global::Fog.Pages.RepoHome)instance;
+            return that.ChangedFileCount;
+        }
+        private void set_77_RepoHome_ChangedFileCount(object instance, object Value)
+        {
+            var that = (global::Fog.Pages.RepoHome)instance;
+            that.ChangedFileCount = (global::System.String)Value;
+        }
+        private object get_78_RepoHome_LocalBranches(object instance)
+        {
+            var that = (global::Fog.Pages.RepoHome)instance;
+            return that.LocalBranches;
+        }
+        private void set_78_RepoHome_LocalBranches(object instance, object Value)
+        {
+            var that = (global::Fog.Pages.RepoHome)instance;
+            that.LocalBranches = (global::System.Collections.ObjectModel.ObservableCollection<global::LibGit2Sharp.Branch>)Value;
+        }
+        private object get_79_Branch_IsRemote(object instance)
+        {
+            var that = (global::LibGit2Sharp.Branch)instance;
+            return that.IsRemote;
+        }
+        private object get_80_Branch_TrackedBranch(object instance)
+        {
+            var that = (global::LibGit2Sharp.Branch)instance;
+            return that.TrackedBranch;
+        }
+        private object get_81_Branch_IsTracking(object instance)
+        {
+            var that = (global::LibGit2Sharp.Branch)instance;
+            return that.IsTracking;
+        }
+        private object get_82_Branch_TrackingDetails(object instance)
+        {
+            var that = (global::LibGit2Sharp.Branch)instance;
+            return that.TrackingDetails;
+        }
+        private object get_83_Branch_IsCurrentRepositoryHead(object instance)
+        {
+            var that = (global::LibGit2Sharp.Branch)instance;
+            return that.IsCurrentRepositoryHead;
+        }
+        private object get_84_Branch_Tip(object instance)
+        {
+            var that = (global::LibGit2Sharp.Branch)instance;
+            return that.Tip;
+        }
+        private object get_85_Branch_Commits(object instance)
+        {
+            var that = (global::LibGit2Sharp.Branch)instance;
+            return that.Commits;
+        }
+        private object get_86_Branch_UpstreamBranchCanonicalName(object instance)
+        {
+            var that = (global::LibGit2Sharp.Branch)instance;
+            return that.UpstreamBranchCanonicalName;
+        }
+        private object get_87_Branch_RemoteName(object instance)
+        {
+            var that = (global::LibGit2Sharp.Branch)instance;
+            return that.RemoteName;
+        }
+        private object get_88_ReferenceWrapper_CanonicalName(object instance)
+        {
+            var that = (global::LibGit2Sharp.ReferenceWrapper<global::LibGit2Sharp.Commit>)instance;
+            return that.CanonicalName;
+        }
+        private object get_89_ReferenceWrapper_FriendlyName(object instance)
+        {
+            var that = (global::LibGit2Sharp.ReferenceWrapper<global::LibGit2Sharp.Commit>)instance;
+            return that.FriendlyName;
+        }
+        private object get_90_ReferenceWrapper_Reference(object instance)
+        {
+            var that = (global::LibGit2Sharp.ReferenceWrapper<global::LibGit2Sharp.Commit>)instance;
+            return that.Reference;
+        }
+        private object get_91_RepoHome_RemoteBranches(object instance)
+        {
+            var that = (global::Fog.Pages.RepoHome)instance;
+            return that.RemoteBranches;
+        }
+        private void set_91_RepoHome_RemoteBranches(object instance, object Value)
+        {
+            var that = (global::Fog.Pages.RepoHome)instance;
+            that.RemoteBranches = (global::System.Collections.ObjectModel.ObservableCollection<global::LibGit2Sharp.Branch>)Value;
+        }
+        private object get_92_RepoHome_Tags(object instance)
+        {
+            var that = (global::Fog.Pages.RepoHome)instance;
+            return that.Tags;
+        }
+        private void set_92_RepoHome_Tags(object instance, object Value)
+        {
+            var that = (global::Fog.Pages.RepoHome)instance;
+            that.Tags = (global::System.Collections.ObjectModel.ObservableCollection<global::LibGit2Sharp.Tag>)Value;
+        }
+        private object get_93_Tag_Annotation(object instance)
+        {
+            var that = (global::LibGit2Sharp.Tag)instance;
+            return that.Annotation;
+        }
+        private object get_94_Tag_Target(object instance)
+        {
+            var that = (global::LibGit2Sharp.Tag)instance;
+            return that.Target;
+        }
+        private object get_95_Tag_PeeledTarget(object instance)
+        {
+            var that = (global::LibGit2Sharp.Tag)instance;
+            return that.PeeledTarget;
+        }
+        private object get_96_Tag_IsAnnotated(object instance)
+        {
+            var that = (global::LibGit2Sharp.Tag)instance;
+            return that.IsAnnotated;
+        }
+        private object get_97_ReferenceWrapper_CanonicalName(object instance)
+        {
+            var that = (global::LibGit2Sharp.ReferenceWrapper<global::LibGit2Sharp.GitObject>)instance;
+            return that.CanonicalName;
+        }
+        private object get_98_ReferenceWrapper_FriendlyName(object instance)
+        {
+            var that = (global::LibGit2Sharp.ReferenceWrapper<global::LibGit2Sharp.GitObject>)instance;
+            return that.FriendlyName;
+        }
+        private object get_99_ReferenceWrapper_Reference(object instance)
+        {
+            var that = (global::LibGit2Sharp.ReferenceWrapper<global::LibGit2Sharp.GitObject>)instance;
+            return that.Reference;
+        }
+        private object get_100_RepoHome_Stashes(object instance)
+        {
+            var that = (global::Fog.Pages.RepoHome)instance;
+            return that.Stashes;
+        }
+        private void set_100_RepoHome_Stashes(object instance, object Value)
+        {
+            var that = (global::Fog.Pages.RepoHome)instance;
+            that.Stashes = (global::System.Collections.ObjectModel.ObservableCollection<global::LibGit2Sharp.Stash>)Value;
+        }
+        private object get_101_Stash_WorkTree(object instance)
+        {
+            var that = (global::LibGit2Sharp.Stash)instance;
+            return that.WorkTree;
+        }
+        private object get_102_Stash_Base(object instance)
+        {
+            var that = (global::LibGit2Sharp.Stash)instance;
+            return that.Base;
+        }
+        private object get_103_Stash_Index(object instance)
+        {
+            var that = (global::LibGit2Sharp.Stash)instance;
+            return that.Index;
+        }
+        private object get_104_Stash_Untracked(object instance)
+        {
+            var that = (global::LibGit2Sharp.Stash)instance;
+            return that.Untracked;
+        }
+        private object get_105_Stash_Message(object instance)
+        {
+            var that = (global::LibGit2Sharp.Stash)instance;
+            return that.Message;
+        }
+        private object get_106_RepoHome_Submodules(object instance)
+        {
+            var that = (global::Fog.Pages.RepoHome)instance;
+            return that.Submodules;
+        }
+        private void set_106_RepoHome_Submodules(object instance, object Value)
+        {
+            var that = (global::Fog.Pages.RepoHome)instance;
+            that.Submodules = (global::System.Collections.ObjectModel.ObservableCollection<global::LibGit2Sharp.Submodule>)Value;
+        }
+        private object get_107_Submodule_Name(object instance)
+        {
+            var that = (global::LibGit2Sharp.Submodule)instance;
+            return that.Name;
+        }
+        private object get_108_Submodule_Path(object instance)
+        {
+            var that = (global::LibGit2Sharp.Submodule)instance;
+            return that.Path;
+        }
+        private object get_109_Submodule_Url(object instance)
+        {
+            var that = (global::LibGit2Sharp.Submodule)instance;
+            return that.Url;
+        }
+        private object get_110_Submodule_HeadCommitId(object instance)
+        {
+            var that = (global::LibGit2Sharp.Submodule)instance;
+            return that.HeadCommitId;
+        }
+        private object get_111_Submodule_IndexCommitId(object instance)
+        {
+            var that = (global::LibGit2Sharp.Submodule)instance;
+            return that.IndexCommitId;
+        }
+        private object get_112_Submodule_WorkDirCommitId(object instance)
+        {
+            var that = (global::LibGit2Sharp.Submodule)instance;
+            return that.WorkDirCommitId;
+        }
+        private object get_113_Submodule_FetchRecurseSubmodulesRule(object instance)
+        {
+            var that = (global::LibGit2Sharp.Submodule)instance;
+            return that.FetchRecurseSubmodulesRule;
+        }
+        private object get_114_Submodule_IgnoreRule(object instance)
+        {
+            var that = (global::LibGit2Sharp.Submodule)instance;
+            return that.IgnoreRule;
+        }
+        private object get_115_Submodule_UpdateRule(object instance)
+        {
+            var that = (global::LibGit2Sharp.Submodule)instance;
+            return that.UpdateRule;
+        }
+        private object get_116_RepoHome_Notes(object instance)
+        {
+            var that = (global::Fog.Pages.RepoHome)instance;
+            return that.Notes;
+        }
+        private void set_116_RepoHome_Notes(object instance, object Value)
+        {
+            var that = (global::Fog.Pages.RepoHome)instance;
+            that.Notes = (global::System.Collections.ObjectModel.ObservableCollection<global::LibGit2Sharp.Note>)Value;
+        }
+        private object get_117_Note_BlobId(object instance)
+        {
+            var that = (global::LibGit2Sharp.Note)instance;
+            return that.BlobId;
+        }
+        private object get_118_Note_Message(object instance)
+        {
+            var that = (global::LibGit2Sharp.Note)instance;
+            return that.Message;
+        }
+        private object get_119_Note_Namespace(object instance)
+        {
+            var that = (global::LibGit2Sharp.Note)instance;
+            return that.Namespace;
+        }
+        private object get_120_Note_TargetObjectId(object instance)
+        {
+            var that = (global::LibGit2Sharp.Note)instance;
+            return that.TargetObjectId;
+        }
+        private object get_121_RepoStatusPage_Repo(object instance)
+        {
+            var that = (global::Fog.Pages.Repos.RepoStatusPage)instance;
+            return that.Repo;
+        }
+        private void set_121_RepoStatusPage_Repo(object instance, object Value)
+        {
+            var that = (global::Fog.Pages.Repos.RepoStatusPage)instance;
+            that.Repo = (global::LibGit2Sharp.Repository)Value;
+        }
+        private object get_122_ServiceAccountsPage_ServiceAccounts(object instance)
+        {
+            var that = (global::Fog.Pages.ServiceAccountsPage)instance;
+            return that.ServiceAccounts;
+        }
+        private object get_123_ServiceAccount_ID(object instance)
+        {
+            var that = (global::Fog.ServiceAccount)instance;
+            return that.ID;
+        }
+        private void set_123_ServiceAccount_ID(object instance, object Value)
+        {
+            var that = (global::Fog.ServiceAccount)instance;
+            that.ID = (global::System.String)Value;
+        }
+        private object get_124_ServiceAccount_Name(object instance)
+        {
+            var that = (global::Fog.ServiceAccount)instance;
+            return that.Name;
+        }
+        private void set_124_ServiceAccount_Name(object instance, object Value)
+        {
+            var that = (global::Fog.ServiceAccount)instance;
+            that.Name = (global::System.String)Value;
+        }
+        private object get_125_ServiceAccount_Type(object instance)
+        {
+            var that = (global::Fog.ServiceAccount)instance;
+            return that.Type;
+        }
+        private void set_125_ServiceAccount_Type(object instance, object Value)
+        {
+            var that = (global::Fog.ServiceAccount)instance;
+            that.Type = (global::System.String)Value;
+        }
+        private object get_126_ServiceAccount_Host(object instance)
+        {
+            var that = (global::Fog.ServiceAccount)instance;
+            return that.Host;
+        }
+        private void set_126_ServiceAccount_Host(object instance, object Value)
+        {
+            var that = (global::Fog.ServiceAccount)instance;
+            that.Host = (global::System.String)Value;
+        }
+        private object get_127_ServiceAccount_PAT(object instance)
+        {
+            var that = (global::Fog.ServiceAccount)instance;
+            return that.PAT;
+        }
+        private void set_127_ServiceAccount_PAT(object instance, object Value)
+        {
+            var that = (global::Fog.ServiceAccount)instance;
+            that.PAT = (global::System.String)Value;
+        }
+        private object get_128_ServiceAccount_Avatar(object instance)
+        {
+            var that = (global::Fog.ServiceAccount)instance;
+            return that.Avatar;
+        }
+        private void set_128_ServiceAccount_Avatar(object instance, object Value)
+        {
+            var that = (global::Fog.ServiceAccount)instance;
+            that.Avatar = (global::System.String)Value;
+        }
+        private object get_129_ServiceAccount_IsAuthenticated(object instance)
+        {
+            var that = (global::Fog.ServiceAccount)instance;
+            return that.IsAuthenticated;
+        }
+        private void set_129_ServiceAccount_IsAuthenticated(object instance, object Value)
+        {
+            var that = (global::Fog.ServiceAccount)instance;
+            that.IsAuthenticated = (global::System.Boolean)Value;
+        }
+        private object get_130_ServiceAccount_IsAuthenticating(object instance)
+        {
+            var that = (global::Fog.ServiceAccount)instance;
+            return that.IsAuthenticating;
+        }
+        private void set_130_ServiceAccount_IsAuthenticating(object instance, object Value)
+        {
+            var that = (global::Fog.ServiceAccount)instance;
+            that.IsAuthenticating = (global::System.Boolean)Value;
+        }
+        private object get_131_Expander_ExpandDirection(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            return that.ExpandDirection;
+        }
+        private void set_131_Expander_ExpandDirection(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            that.ExpandDirection = (global::Microsoft.UI.Xaml.Controls.ExpandDirection)Value;
+        }
+        private object get_132_Expander_Header(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            return that.Header;
+        }
+        private void set_132_Expander_Header(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            that.Header = (global::System.Object)Value;
+        }
+        private object get_133_Expander_HeaderTemplate(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            return that.HeaderTemplate;
+        }
+        private void set_133_Expander_HeaderTemplate(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            that.HeaderTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
+        }
+        private object get_134_Expander_HeaderTemplateSelector(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            return that.HeaderTemplateSelector;
+        }
+        private void set_134_Expander_HeaderTemplateSelector(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            that.HeaderTemplateSelector = (global::Microsoft.UI.Xaml.Controls.DataTemplateSelector)Value;
+        }
+        private object get_135_Expander_IsExpanded(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            return that.IsExpanded;
+        }
+        private void set_135_Expander_IsExpanded(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            that.IsExpanded = (global::System.Boolean)Value;
+        }
+        private object get_136_Expander_TemplateSettings(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            return that.TemplateSettings;
+        }
+        private object get_137_AcrylicBrush_TintOpacity(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Media.AcrylicBrush)instance;
+            return that.TintOpacity;
+        }
+        private void set_137_AcrylicBrush_TintOpacity(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Media.AcrylicBrush)instance;
+            that.TintOpacity = (global::System.Double)Value;
+        }
+        private object get_138_AcrylicBrush_TintLuminosityOpacity(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Media.AcrylicBrush)instance;
+            return that.TintLuminosityOpacity;
+        }
+        private void set_138_AcrylicBrush_TintLuminosityOpacity(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Media.AcrylicBrush)instance;
+            that.TintLuminosityOpacity = (global::System.Nullable<global::System.Double>)Value;
+        }
+        private object get_139_AcrylicBrush_TintColor(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Media.AcrylicBrush)instance;
+            return that.TintColor;
+        }
+        private void set_139_AcrylicBrush_TintColor(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Media.AcrylicBrush)instance;
+            that.TintColor = (global::Windows.UI.Color)Value;
+        }
+        private object get_140_AcrylicBrush_AlwaysUseFallback(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Media.AcrylicBrush)instance;
+            return that.AlwaysUseFallback;
+        }
+        private void set_140_AcrylicBrush_AlwaysUseFallback(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Media.AcrylicBrush)instance;
+            that.AlwaysUseFallback = (global::System.Boolean)Value;
+        }
+        private object get_141_AcrylicBrush_TintTransitionDuration(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Media.AcrylicBrush)instance;
+            return that.TintTransitionDuration;
+        }
+        private void set_141_AcrylicBrush_TintTransitionDuration(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Media.AcrylicBrush)instance;
+            that.TintTransitionDuration = (global::System.TimeSpan)Value;
+        }
+        private object get_142_PersonPicture_ProfilePicture(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            return that.ProfilePicture;
+        }
+        private void set_142_PersonPicture_ProfilePicture(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            that.ProfilePicture = (global::Microsoft.UI.Xaml.Media.ImageSource)Value;
+        }
+        private object get_143_PersonPicture_BadgeGlyph(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            return that.BadgeGlyph;
+        }
+        private void set_143_PersonPicture_BadgeGlyph(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            that.BadgeGlyph = (global::System.String)Value;
+        }
+        private object get_144_PersonPicture_BadgeImageSource(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            return that.BadgeImageSource;
+        }
+        private void set_144_PersonPicture_BadgeImageSource(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            that.BadgeImageSource = (global::Microsoft.UI.Xaml.Media.ImageSource)Value;
+        }
+        private object get_145_PersonPicture_BadgeNumber(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            return that.BadgeNumber;
+        }
+        private void set_145_PersonPicture_BadgeNumber(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            that.BadgeNumber = (global::System.Int32)Value;
+        }
+        private object get_146_PersonPicture_BadgeText(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            return that.BadgeText;
+        }
+        private void set_146_PersonPicture_BadgeText(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            that.BadgeText = (global::System.String)Value;
+        }
+        private object get_147_PersonPicture_Contact(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            return that.Contact;
+        }
+        private void set_147_PersonPicture_Contact(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            that.Contact = (global::Windows.ApplicationModel.Contacts.Contact)Value;
+        }
+        private object get_148_PersonPicture_DisplayName(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            return that.DisplayName;
+        }
+        private void set_148_PersonPicture_DisplayName(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            that.DisplayName = (global::System.String)Value;
+        }
+        private object get_149_PersonPicture_Initials(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            return that.Initials;
+        }
+        private void set_149_PersonPicture_Initials(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            that.Initials = (global::System.String)Value;
+        }
+        private object get_150_PersonPicture_IsGroup(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            return that.IsGroup;
+        }
+        private void set_150_PersonPicture_IsGroup(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            that.IsGroup = (global::System.Boolean)Value;
+        }
+        private object get_151_PersonPicture_PreferSmallImage(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            return that.PreferSmallImage;
+        }
+        private void set_151_PersonPicture_PreferSmallImage(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            that.PreferSmallImage = (global::System.Boolean)Value;
+        }
+        private object get_152_PersonPicture_TemplateSettings(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.PersonPicture)instance;
+            return that.TemplateSettings;
+        }
+        private object get_153_SettingAccount_ServiceAccounts(object instance)
+        {
+            var that = (global::Fog.Pages.Settings.SettingAccount)instance;
+            return that.ServiceAccounts;
+        }
+        private object get_154_BreadcrumbBar_ItemsSource(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.BreadcrumbBar)instance;
+            return that.ItemsSource;
+        }
+        private void set_154_BreadcrumbBar_ItemsSource(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.BreadcrumbBar)instance;
+            that.ItemsSource = (global::System.Object)Value;
+        }
+        private object get_155_BreadcrumbBar_ItemTemplate(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.BreadcrumbBar)instance;
+            return that.ItemTemplate;
+        }
+        private void set_155_BreadcrumbBar_ItemTemplate(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.BreadcrumbBar)instance;
+            that.ItemTemplate = (global::System.Object)Value;
+        }
+        private object get_156_ProgressBar_IsIndeterminate(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressBar)instance;
+            return that.IsIndeterminate;
+        }
+        private void set_156_ProgressBar_IsIndeterminate(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressBar)instance;
+            that.IsIndeterminate = (global::System.Boolean)Value;
+        }
+        private object get_157_ProgressBar_ShowPaused(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressBar)instance;
+            return that.ShowPaused;
+        }
+        private void set_157_ProgressBar_ShowPaused(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressBar)instance;
+            that.ShowPaused = (global::System.Boolean)Value;
+        }
+        private object get_158_ProgressBar_ShowError(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressBar)instance;
+            return that.ShowError;
+        }
+        private void set_158_ProgressBar_ShowError(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressBar)instance;
+            that.ShowError = (global::System.Boolean)Value;
+        }
+        private object get_159_ProgressBar_TemplateSettings(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressBar)instance;
+            return that.TemplateSettings;
+        }
+        private object get_160_ImageIcon_Source(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ImageIcon)instance;
             return that.Source;
         }
-        private void set_74_ImageIcon_Source(object instance, object Value)
+        private void set_160_ImageIcon_Source(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ImageIcon)instance;
             that.Source = (global::Microsoft.UI.Xaml.Media.ImageSource)Value;
         }
-        private object get_75_SettingPage_ColorTheme(object instance)
+        private object get_161_SettingAccountAdd_BreadcrumbBarItems(object instance)
         {
-            var that = (global::Fog.Pages.SettingPage)instance;
-            return that.ColorTheme;
+            var that = (global::Fog.Pages.Settings.SettingAccountAdd)instance;
+            return that.BreadcrumbBarItems;
         }
-        private void set_75_SettingPage_ColorTheme(object instance, object Value)
+        private void set_161_SettingAccountAdd_BreadcrumbBarItems(object instance, object Value)
         {
-            var that = (global::Fog.Pages.SettingPage)instance;
-            that.ColorTheme = (global::System.String)Value;
+            var that = (global::Fog.Pages.Settings.SettingAccountAdd)instance;
+            that.BreadcrumbBarItems = (global::System.String[])Value;
         }
-        private object get_76_GitClonePage_CloneData(object instance)
+        private object get_162_GitClonePage_CloneData(object instance)
         {
             var that = (global::Fog.Pages.GitClonePage)instance;
             return that.CloneData;
         }
-        private void set_76_GitClonePage_CloneData(object instance, object Value)
+        private void set_162_GitClonePage_CloneData(object instance, object Value)
         {
             var that = (global::Fog.Pages.GitClonePage)instance;
             that.CloneData = (global::Fog.Pages.CloneGitDataModel)Value;
         }
-        private object get_77_GitInitPage_InitGitData(object instance)
+        private object get_163_GitInitPage_InitGitData(object instance)
         {
             var that = (global::Fog.Pages.GitInitPage)instance;
             return that.InitGitData;
         }
-        private void set_77_GitInitPage_InitGitData(object instance, object Value)
+        private void set_163_GitInitPage_InitGitData(object instance, object Value)
         {
             var that = (global::Fog.Pages.GitInitPage)instance;
             that.InitGitData = (global::Fog.Pages.InitGitDataModel)Value;
@@ -2090,18 +3435,19 @@ namespace Fog.Fog_XamlTypeInfo
                 xamlMember.Getter = get_58_TreeView_SelectionMode;
                 xamlMember.Setter = set_58_TreeView_SelectionMode;
                 break;
-            case "Fog.Pages.RepoHome.Repository":
-                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Fog.Pages.RepoHome");
-                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "Repository", "Fog.LocalRepository");
-                xamlMember.Getter = get_59_RepoHome_Repository;
-                xamlMember.Setter = set_59_RepoHome_Repository;
-                break;
             case "Microsoft.UI.Xaml.Controls.InfoBar.Content":
                 userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
                 xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "Content", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_60_InfoBar_Content;
-                xamlMember.Setter = set_60_InfoBar_Content;
+                xamlMember.Getter = get_59_InfoBar_Content;
+                xamlMember.Setter = set_59_InfoBar_Content;
+                break;
+            case "Microsoft.UI.Xaml.Controls.InfoBar.IsOpen":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "IsOpen", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_60_InfoBar_IsOpen;
+                xamlMember.Setter = set_60_InfoBar_IsOpen;
                 break;
             case "Microsoft.UI.Xaml.Controls.InfoBar.Message":
                 userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
@@ -2110,114 +3456,654 @@ namespace Fog.Fog_XamlTypeInfo
                 xamlMember.Getter = get_61_InfoBar_Message;
                 xamlMember.Setter = set_61_InfoBar_Message;
                 break;
-            case "Microsoft.UI.Xaml.Controls.InfoBar.ActionButton":
+            case "Microsoft.UI.Xaml.Controls.InfoBar.Severity":
                 userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
-                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "ActionButton", "Microsoft.UI.Xaml.Controls.Primitives.ButtonBase");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "Severity", "Microsoft.UI.Xaml.Controls.InfoBarSeverity");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_62_InfoBar_ActionButton;
-                xamlMember.Setter = set_62_InfoBar_ActionButton;
-                break;
-            case "Microsoft.UI.Xaml.Controls.InfoBar.CloseButtonCommand":
-                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
-                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "CloseButtonCommand", "System.Windows.Input.ICommand");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_63_InfoBar_CloseButtonCommand;
-                xamlMember.Setter = set_63_InfoBar_CloseButtonCommand;
-                break;
-            case "Microsoft.UI.Xaml.Controls.InfoBar.CloseButtonCommandParameter":
-                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
-                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "CloseButtonCommandParameter", "Object");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_64_InfoBar_CloseButtonCommandParameter;
-                xamlMember.Setter = set_64_InfoBar_CloseButtonCommandParameter;
-                break;
-            case "Microsoft.UI.Xaml.Controls.InfoBar.CloseButtonStyle":
-                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
-                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "CloseButtonStyle", "Microsoft.UI.Xaml.Style");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_65_InfoBar_CloseButtonStyle;
-                xamlMember.Setter = set_65_InfoBar_CloseButtonStyle;
-                break;
-            case "Microsoft.UI.Xaml.Controls.InfoBar.ContentTemplate":
-                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
-                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "ContentTemplate", "Microsoft.UI.Xaml.DataTemplate");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_66_InfoBar_ContentTemplate;
-                xamlMember.Setter = set_66_InfoBar_ContentTemplate;
-                break;
-            case "Microsoft.UI.Xaml.Controls.InfoBar.IconSource":
-                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
-                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "IconSource", "Microsoft.UI.Xaml.Controls.IconSource");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_67_InfoBar_IconSource;
-                xamlMember.Setter = set_67_InfoBar_IconSource;
+                xamlMember.Getter = get_62_InfoBar_Severity;
+                xamlMember.Setter = set_62_InfoBar_Severity;
                 break;
             case "Microsoft.UI.Xaml.Controls.InfoBar.IsClosable":
                 userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
                 xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "IsClosable", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_68_InfoBar_IsClosable;
-                xamlMember.Setter = set_68_InfoBar_IsClosable;
+                xamlMember.Getter = get_63_InfoBar_IsClosable;
+                xamlMember.Setter = set_63_InfoBar_IsClosable;
+                break;
+            case "Microsoft.UI.Xaml.Controls.InfoBar.ActionButton":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "ActionButton", "Microsoft.UI.Xaml.Controls.Primitives.ButtonBase");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_64_InfoBar_ActionButton;
+                xamlMember.Setter = set_64_InfoBar_ActionButton;
+                break;
+            case "Microsoft.UI.Xaml.Controls.InfoBar.CloseButtonCommand":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "CloseButtonCommand", "System.Windows.Input.ICommand");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_65_InfoBar_CloseButtonCommand;
+                xamlMember.Setter = set_65_InfoBar_CloseButtonCommand;
+                break;
+            case "Microsoft.UI.Xaml.Controls.InfoBar.CloseButtonCommandParameter":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "CloseButtonCommandParameter", "Object");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_66_InfoBar_CloseButtonCommandParameter;
+                xamlMember.Setter = set_66_InfoBar_CloseButtonCommandParameter;
+                break;
+            case "Microsoft.UI.Xaml.Controls.InfoBar.CloseButtonStyle":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "CloseButtonStyle", "Microsoft.UI.Xaml.Style");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_67_InfoBar_CloseButtonStyle;
+                xamlMember.Setter = set_67_InfoBar_CloseButtonStyle;
+                break;
+            case "Microsoft.UI.Xaml.Controls.InfoBar.ContentTemplate":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "ContentTemplate", "Microsoft.UI.Xaml.DataTemplate");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_68_InfoBar_ContentTemplate;
+                xamlMember.Setter = set_68_InfoBar_ContentTemplate;
+                break;
+            case "Microsoft.UI.Xaml.Controls.InfoBar.IconSource":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "IconSource", "Microsoft.UI.Xaml.Controls.IconSource");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_69_InfoBar_IconSource;
+                xamlMember.Setter = set_69_InfoBar_IconSource;
                 break;
             case "Microsoft.UI.Xaml.Controls.InfoBar.IsIconVisible":
                 userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
                 xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "IsIconVisible", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_69_InfoBar_IsIconVisible;
-                xamlMember.Setter = set_69_InfoBar_IsIconVisible;
-                break;
-            case "Microsoft.UI.Xaml.Controls.InfoBar.IsOpen":
-                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
-                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "IsOpen", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_70_InfoBar_IsOpen;
-                xamlMember.Setter = set_70_InfoBar_IsOpen;
-                break;
-            case "Microsoft.UI.Xaml.Controls.InfoBar.Severity":
-                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
-                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "Severity", "Microsoft.UI.Xaml.Controls.InfoBarSeverity");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_71_InfoBar_Severity;
-                xamlMember.Setter = set_71_InfoBar_Severity;
+                xamlMember.Getter = get_70_InfoBar_IsIconVisible;
+                xamlMember.Setter = set_70_InfoBar_IsIconVisible;
                 break;
             case "Microsoft.UI.Xaml.Controls.InfoBar.TemplateSettings":
                 userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
                 xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "TemplateSettings", "Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_72_InfoBar_TemplateSettings;
+                xamlMember.Getter = get_71_InfoBar_TemplateSettings;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.InfoBar.Title":
                 userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.InfoBar");
                 xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "Title", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_73_InfoBar_Title;
-                xamlMember.Setter = set_73_InfoBar_Title;
+                xamlMember.Getter = get_72_InfoBar_Title;
+                xamlMember.Setter = set_72_InfoBar_Title;
+                break;
+            case "Fog.Pages.RepoHome.RepoPath":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Fog.Pages.RepoHome");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "RepoPath", "String");
+                xamlMember.Getter = get_73_RepoHome_RepoPath;
+                xamlMember.Setter = set_73_RepoHome_RepoPath;
+                break;
+            case "Fog.Pages.RepoHome.Repo":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Fog.Pages.RepoHome");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "Repo", "LibGit2Sharp.Repository");
+                xamlMember.Getter = get_74_RepoHome_Repo;
+                xamlMember.Setter = set_74_RepoHome_Repo;
+                break;
+            case "Fog.Pages.RepoHome.IsRepoNotAvliable":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Fog.Pages.RepoHome");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "IsRepoNotAvliable", "Boolean");
+                xamlMember.Getter = get_75_RepoHome_IsRepoNotAvliable;
+                xamlMember.Setter = set_75_RepoHome_IsRepoNotAvliable;
+                break;
+            case "Fog.Pages.RepoHome.NotAvliableReason":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Fog.Pages.RepoHome");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "NotAvliableReason", "String");
+                xamlMember.Getter = get_76_RepoHome_NotAvliableReason;
+                xamlMember.Setter = set_76_RepoHome_NotAvliableReason;
+                break;
+            case "Fog.Pages.RepoHome.ChangedFileCount":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Fog.Pages.RepoHome");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "ChangedFileCount", "String");
+                xamlMember.Getter = get_77_RepoHome_ChangedFileCount;
+                xamlMember.Setter = set_77_RepoHome_ChangedFileCount;
+                break;
+            case "Fog.Pages.RepoHome.LocalBranches":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Fog.Pages.RepoHome");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "LocalBranches", "System.Collections.ObjectModel.ObservableCollection`1<LibGit2Sharp.Branch>");
+                xamlMember.Getter = get_78_RepoHome_LocalBranches;
+                xamlMember.Setter = set_78_RepoHome_LocalBranches;
+                break;
+            case "LibGit2Sharp.Branch.IsRemote":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.Branch");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "IsRemote", "Boolean");
+                xamlMember.Getter = get_79_Branch_IsRemote;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "LibGit2Sharp.Branch.TrackedBranch":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.Branch");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "TrackedBranch", "LibGit2Sharp.Branch");
+                xamlMember.Getter = get_80_Branch_TrackedBranch;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "LibGit2Sharp.Branch.IsTracking":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.Branch");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "IsTracking", "Boolean");
+                xamlMember.Getter = get_81_Branch_IsTracking;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "LibGit2Sharp.Branch.TrackingDetails":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.Branch");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "TrackingDetails", "LibGit2Sharp.BranchTrackingDetails");
+                xamlMember.Getter = get_82_Branch_TrackingDetails;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "LibGit2Sharp.Branch.IsCurrentRepositoryHead":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.Branch");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "IsCurrentRepositoryHead", "Boolean");
+                xamlMember.Getter = get_83_Branch_IsCurrentRepositoryHead;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "LibGit2Sharp.Branch.Tip":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.Branch");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "Tip", "LibGit2Sharp.Commit");
+                xamlMember.Getter = get_84_Branch_Tip;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "LibGit2Sharp.Branch.Commits":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.Branch");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "Commits", "LibGit2Sharp.ICommitLog");
+                xamlMember.Getter = get_85_Branch_Commits;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "LibGit2Sharp.Branch.UpstreamBranchCanonicalName":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.Branch");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "UpstreamBranchCanonicalName", "String");
+                xamlMember.Getter = get_86_Branch_UpstreamBranchCanonicalName;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "LibGit2Sharp.Branch.RemoteName":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.Branch");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "RemoteName", "String");
+                xamlMember.Getter = get_87_Branch_RemoteName;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "LibGit2Sharp.ReferenceWrapper`1<LibGit2Sharp.Commit>.CanonicalName":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.ReferenceWrapper`1<LibGit2Sharp.Commit>");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "CanonicalName", "String");
+                xamlMember.Getter = get_88_ReferenceWrapper_CanonicalName;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "LibGit2Sharp.ReferenceWrapper`1<LibGit2Sharp.Commit>.FriendlyName":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.ReferenceWrapper`1<LibGit2Sharp.Commit>");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "FriendlyName", "String");
+                xamlMember.Getter = get_89_ReferenceWrapper_FriendlyName;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "LibGit2Sharp.ReferenceWrapper`1<LibGit2Sharp.Commit>.Reference":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.ReferenceWrapper`1<LibGit2Sharp.Commit>");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "Reference", "LibGit2Sharp.Reference");
+                xamlMember.Getter = get_90_ReferenceWrapper_Reference;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Fog.Pages.RepoHome.RemoteBranches":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Fog.Pages.RepoHome");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "RemoteBranches", "System.Collections.ObjectModel.ObservableCollection`1<LibGit2Sharp.Branch>");
+                xamlMember.Getter = get_91_RepoHome_RemoteBranches;
+                xamlMember.Setter = set_91_RepoHome_RemoteBranches;
+                break;
+            case "Fog.Pages.RepoHome.Tags":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Fog.Pages.RepoHome");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "Tags", "System.Collections.ObjectModel.ObservableCollection`1<LibGit2Sharp.Tag>");
+                xamlMember.Getter = get_92_RepoHome_Tags;
+                xamlMember.Setter = set_92_RepoHome_Tags;
+                break;
+            case "LibGit2Sharp.Tag.Annotation":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.Tag");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "Annotation", "LibGit2Sharp.TagAnnotation");
+                xamlMember.Getter = get_93_Tag_Annotation;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "LibGit2Sharp.Tag.Target":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.Tag");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "Target", "LibGit2Sharp.GitObject");
+                xamlMember.Getter = get_94_Tag_Target;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "LibGit2Sharp.Tag.PeeledTarget":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.Tag");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "PeeledTarget", "LibGit2Sharp.GitObject");
+                xamlMember.Getter = get_95_Tag_PeeledTarget;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "LibGit2Sharp.Tag.IsAnnotated":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.Tag");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "IsAnnotated", "Boolean");
+                xamlMember.Getter = get_96_Tag_IsAnnotated;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "LibGit2Sharp.ReferenceWrapper`1<LibGit2Sharp.GitObject>.CanonicalName":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.ReferenceWrapper`1<LibGit2Sharp.GitObject>");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "CanonicalName", "String");
+                xamlMember.Getter = get_97_ReferenceWrapper_CanonicalName;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "LibGit2Sharp.ReferenceWrapper`1<LibGit2Sharp.GitObject>.FriendlyName":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.ReferenceWrapper`1<LibGit2Sharp.GitObject>");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "FriendlyName", "String");
+                xamlMember.Getter = get_98_ReferenceWrapper_FriendlyName;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "LibGit2Sharp.ReferenceWrapper`1<LibGit2Sharp.GitObject>.Reference":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.ReferenceWrapper`1<LibGit2Sharp.GitObject>");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "Reference", "LibGit2Sharp.Reference");
+                xamlMember.Getter = get_99_ReferenceWrapper_Reference;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Fog.Pages.RepoHome.Stashes":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Fog.Pages.RepoHome");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "Stashes", "System.Collections.ObjectModel.ObservableCollection`1<LibGit2Sharp.Stash>");
+                xamlMember.Getter = get_100_RepoHome_Stashes;
+                xamlMember.Setter = set_100_RepoHome_Stashes;
+                break;
+            case "LibGit2Sharp.Stash.WorkTree":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.Stash");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "WorkTree", "LibGit2Sharp.Commit");
+                xamlMember.Getter = get_101_Stash_WorkTree;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "LibGit2Sharp.Stash.Base":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.Stash");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "Base", "LibGit2Sharp.Commit");
+                xamlMember.Getter = get_102_Stash_Base;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "LibGit2Sharp.Stash.Index":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.Stash");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "Index", "LibGit2Sharp.Commit");
+                xamlMember.Getter = get_103_Stash_Index;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "LibGit2Sharp.Stash.Untracked":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.Stash");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "Untracked", "LibGit2Sharp.Commit");
+                xamlMember.Getter = get_104_Stash_Untracked;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "LibGit2Sharp.Stash.Message":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.Stash");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "Message", "String");
+                xamlMember.Getter = get_105_Stash_Message;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Fog.Pages.RepoHome.Submodules":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Fog.Pages.RepoHome");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "Submodules", "System.Collections.ObjectModel.ObservableCollection`1<LibGit2Sharp.Submodule>");
+                xamlMember.Getter = get_106_RepoHome_Submodules;
+                xamlMember.Setter = set_106_RepoHome_Submodules;
+                break;
+            case "LibGit2Sharp.Submodule.Name":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.Submodule");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "Name", "String");
+                xamlMember.Getter = get_107_Submodule_Name;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "LibGit2Sharp.Submodule.Path":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.Submodule");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "Path", "String");
+                xamlMember.Getter = get_108_Submodule_Path;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "LibGit2Sharp.Submodule.Url":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.Submodule");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "Url", "String");
+                xamlMember.Getter = get_109_Submodule_Url;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "LibGit2Sharp.Submodule.HeadCommitId":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.Submodule");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "HeadCommitId", "LibGit2Sharp.ObjectId");
+                xamlMember.Getter = get_110_Submodule_HeadCommitId;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "LibGit2Sharp.Submodule.IndexCommitId":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.Submodule");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "IndexCommitId", "LibGit2Sharp.ObjectId");
+                xamlMember.Getter = get_111_Submodule_IndexCommitId;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "LibGit2Sharp.Submodule.WorkDirCommitId":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.Submodule");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "WorkDirCommitId", "LibGit2Sharp.ObjectId");
+                xamlMember.Getter = get_112_Submodule_WorkDirCommitId;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "LibGit2Sharp.Submodule.FetchRecurseSubmodulesRule":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.Submodule");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "FetchRecurseSubmodulesRule", "LibGit2Sharp.SubmoduleRecurse");
+                xamlMember.Getter = get_113_Submodule_FetchRecurseSubmodulesRule;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "LibGit2Sharp.Submodule.IgnoreRule":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.Submodule");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "IgnoreRule", "LibGit2Sharp.SubmoduleIgnore");
+                xamlMember.Getter = get_114_Submodule_IgnoreRule;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "LibGit2Sharp.Submodule.UpdateRule":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.Submodule");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "UpdateRule", "LibGit2Sharp.SubmoduleUpdate");
+                xamlMember.Getter = get_115_Submodule_UpdateRule;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Fog.Pages.RepoHome.Notes":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Fog.Pages.RepoHome");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "Notes", "System.Collections.ObjectModel.ObservableCollection`1<LibGit2Sharp.Note>");
+                xamlMember.Getter = get_116_RepoHome_Notes;
+                xamlMember.Setter = set_116_RepoHome_Notes;
+                break;
+            case "LibGit2Sharp.Note.BlobId":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.Note");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "BlobId", "LibGit2Sharp.ObjectId");
+                xamlMember.Getter = get_117_Note_BlobId;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "LibGit2Sharp.Note.Message":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.Note");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "Message", "String");
+                xamlMember.Getter = get_118_Note_Message;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "LibGit2Sharp.Note.Namespace":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.Note");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "Namespace", "String");
+                xamlMember.Getter = get_119_Note_Namespace;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "LibGit2Sharp.Note.TargetObjectId":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("LibGit2Sharp.Note");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "TargetObjectId", "LibGit2Sharp.ObjectId");
+                xamlMember.Getter = get_120_Note_TargetObjectId;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Fog.Pages.Repos.RepoStatusPage.Repo":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Fog.Pages.Repos.RepoStatusPage");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "Repo", "LibGit2Sharp.Repository");
+                xamlMember.Getter = get_121_RepoStatusPage_Repo;
+                xamlMember.Setter = set_121_RepoStatusPage_Repo;
+                break;
+            case "Fog.Pages.ServiceAccountsPage.ServiceAccounts":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Fog.Pages.ServiceAccountsPage");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "ServiceAccounts", "System.Collections.ObjectModel.ObservableCollection`1<Fog.ServiceAccount>");
+                xamlMember.Getter = get_122_ServiceAccountsPage_ServiceAccounts;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Fog.ServiceAccount.ID":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Fog.ServiceAccount");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "ID", "String");
+                xamlMember.Getter = get_123_ServiceAccount_ID;
+                xamlMember.Setter = set_123_ServiceAccount_ID;
+                break;
+            case "Fog.ServiceAccount.Name":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Fog.ServiceAccount");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "Name", "String");
+                xamlMember.Getter = get_124_ServiceAccount_Name;
+                xamlMember.Setter = set_124_ServiceAccount_Name;
+                break;
+            case "Fog.ServiceAccount.Type":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Fog.ServiceAccount");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "Type", "String");
+                xamlMember.Getter = get_125_ServiceAccount_Type;
+                xamlMember.Setter = set_125_ServiceAccount_Type;
+                break;
+            case "Fog.ServiceAccount.Host":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Fog.ServiceAccount");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "Host", "String");
+                xamlMember.Getter = get_126_ServiceAccount_Host;
+                xamlMember.Setter = set_126_ServiceAccount_Host;
+                break;
+            case "Fog.ServiceAccount.PAT":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Fog.ServiceAccount");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "PAT", "String");
+                xamlMember.Getter = get_127_ServiceAccount_PAT;
+                xamlMember.Setter = set_127_ServiceAccount_PAT;
+                break;
+            case "Fog.ServiceAccount.Avatar":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Fog.ServiceAccount");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "Avatar", "String");
+                xamlMember.Getter = get_128_ServiceAccount_Avatar;
+                xamlMember.Setter = set_128_ServiceAccount_Avatar;
+                break;
+            case "Fog.ServiceAccount.IsAuthenticated":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Fog.ServiceAccount");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "IsAuthenticated", "Boolean");
+                xamlMember.Getter = get_129_ServiceAccount_IsAuthenticated;
+                xamlMember.Setter = set_129_ServiceAccount_IsAuthenticated;
+                break;
+            case "Fog.ServiceAccount.IsAuthenticating":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Fog.ServiceAccount");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "IsAuthenticating", "Boolean");
+                xamlMember.Getter = get_130_ServiceAccount_IsAuthenticating;
+                xamlMember.Setter = set_130_ServiceAccount_IsAuthenticating;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Expander.ExpandDirection":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Expander");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "ExpandDirection", "Microsoft.UI.Xaml.Controls.ExpandDirection");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_131_Expander_ExpandDirection;
+                xamlMember.Setter = set_131_Expander_ExpandDirection;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Expander.Header":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Expander");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "Header", "Object");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_132_Expander_Header;
+                xamlMember.Setter = set_132_Expander_Header;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Expander.HeaderTemplate":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Expander");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "HeaderTemplate", "Microsoft.UI.Xaml.DataTemplate");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_133_Expander_HeaderTemplate;
+                xamlMember.Setter = set_133_Expander_HeaderTemplate;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Expander.HeaderTemplateSelector":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Expander");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "HeaderTemplateSelector", "Microsoft.UI.Xaml.Controls.DataTemplateSelector");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_134_Expander_HeaderTemplateSelector;
+                xamlMember.Setter = set_134_Expander_HeaderTemplateSelector;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Expander.IsExpanded":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Expander");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "IsExpanded", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_135_Expander_IsExpanded;
+                xamlMember.Setter = set_135_Expander_IsExpanded;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Expander.TemplateSettings":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Expander");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "TemplateSettings", "Microsoft.UI.Xaml.Controls.ExpanderTemplateSettings");
+                xamlMember.Getter = get_136_Expander_TemplateSettings;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Media.AcrylicBrush.TintOpacity":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Media.AcrylicBrush");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "TintOpacity", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_137_AcrylicBrush_TintOpacity;
+                xamlMember.Setter = set_137_AcrylicBrush_TintOpacity;
+                break;
+            case "Microsoft.UI.Xaml.Media.AcrylicBrush.TintLuminosityOpacity":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Media.AcrylicBrush");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "TintLuminosityOpacity", "System.Nullable`1<Double>");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_138_AcrylicBrush_TintLuminosityOpacity;
+                xamlMember.Setter = set_138_AcrylicBrush_TintLuminosityOpacity;
+                break;
+            case "Microsoft.UI.Xaml.Media.AcrylicBrush.TintColor":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Media.AcrylicBrush");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "TintColor", "Windows.UI.Color");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_139_AcrylicBrush_TintColor;
+                xamlMember.Setter = set_139_AcrylicBrush_TintColor;
+                break;
+            case "Microsoft.UI.Xaml.Media.AcrylicBrush.AlwaysUseFallback":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Media.AcrylicBrush");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "AlwaysUseFallback", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_140_AcrylicBrush_AlwaysUseFallback;
+                xamlMember.Setter = set_140_AcrylicBrush_AlwaysUseFallback;
+                break;
+            case "Microsoft.UI.Xaml.Media.AcrylicBrush.TintTransitionDuration":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Media.AcrylicBrush");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "TintTransitionDuration", "TimeSpan");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_141_AcrylicBrush_TintTransitionDuration;
+                xamlMember.Setter = set_141_AcrylicBrush_TintTransitionDuration;
+                break;
+            case "Microsoft.UI.Xaml.Controls.PersonPicture.ProfilePicture":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.PersonPicture");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "ProfilePicture", "Microsoft.UI.Xaml.Media.ImageSource");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_142_PersonPicture_ProfilePicture;
+                xamlMember.Setter = set_142_PersonPicture_ProfilePicture;
+                break;
+            case "Microsoft.UI.Xaml.Controls.PersonPicture.BadgeGlyph":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.PersonPicture");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "BadgeGlyph", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_143_PersonPicture_BadgeGlyph;
+                xamlMember.Setter = set_143_PersonPicture_BadgeGlyph;
+                break;
+            case "Microsoft.UI.Xaml.Controls.PersonPicture.BadgeImageSource":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.PersonPicture");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "BadgeImageSource", "Microsoft.UI.Xaml.Media.ImageSource");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_144_PersonPicture_BadgeImageSource;
+                xamlMember.Setter = set_144_PersonPicture_BadgeImageSource;
+                break;
+            case "Microsoft.UI.Xaml.Controls.PersonPicture.BadgeNumber":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.PersonPicture");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "BadgeNumber", "Int32");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_145_PersonPicture_BadgeNumber;
+                xamlMember.Setter = set_145_PersonPicture_BadgeNumber;
+                break;
+            case "Microsoft.UI.Xaml.Controls.PersonPicture.BadgeText":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.PersonPicture");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "BadgeText", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_146_PersonPicture_BadgeText;
+                xamlMember.Setter = set_146_PersonPicture_BadgeText;
+                break;
+            case "Microsoft.UI.Xaml.Controls.PersonPicture.Contact":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.PersonPicture");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "Contact", "Windows.ApplicationModel.Contacts.Contact");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_147_PersonPicture_Contact;
+                xamlMember.Setter = set_147_PersonPicture_Contact;
+                break;
+            case "Microsoft.UI.Xaml.Controls.PersonPicture.DisplayName":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.PersonPicture");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "DisplayName", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_148_PersonPicture_DisplayName;
+                xamlMember.Setter = set_148_PersonPicture_DisplayName;
+                break;
+            case "Microsoft.UI.Xaml.Controls.PersonPicture.Initials":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.PersonPicture");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "Initials", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_149_PersonPicture_Initials;
+                xamlMember.Setter = set_149_PersonPicture_Initials;
+                break;
+            case "Microsoft.UI.Xaml.Controls.PersonPicture.IsGroup":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.PersonPicture");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "IsGroup", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_150_PersonPicture_IsGroup;
+                xamlMember.Setter = set_150_PersonPicture_IsGroup;
+                break;
+            case "Microsoft.UI.Xaml.Controls.PersonPicture.PreferSmallImage":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.PersonPicture");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "PreferSmallImage", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_151_PersonPicture_PreferSmallImage;
+                xamlMember.Setter = set_151_PersonPicture_PreferSmallImage;
+                break;
+            case "Microsoft.UI.Xaml.Controls.PersonPicture.TemplateSettings":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.PersonPicture");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "TemplateSettings", "Microsoft.UI.Xaml.Controls.PersonPictureTemplateSettings");
+                xamlMember.Getter = get_152_PersonPicture_TemplateSettings;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Fog.Pages.Settings.SettingAccount.ServiceAccounts":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Fog.Pages.Settings.SettingAccount");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "ServiceAccounts", "System.Collections.ObjectModel.ObservableCollection`1<Fog.ServiceAccount>");
+                xamlMember.Getter = get_153_SettingAccount_ServiceAccounts;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.BreadcrumbBar.ItemsSource":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.BreadcrumbBar");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "ItemsSource", "Object");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_154_BreadcrumbBar_ItemsSource;
+                xamlMember.Setter = set_154_BreadcrumbBar_ItemsSource;
+                break;
+            case "Microsoft.UI.Xaml.Controls.BreadcrumbBar.ItemTemplate":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.BreadcrumbBar");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "ItemTemplate", "Object");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_155_BreadcrumbBar_ItemTemplate;
+                xamlMember.Setter = set_155_BreadcrumbBar_ItemTemplate;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ProgressBar.IsIndeterminate":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressBar");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "IsIndeterminate", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_156_ProgressBar_IsIndeterminate;
+                xamlMember.Setter = set_156_ProgressBar_IsIndeterminate;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ProgressBar.ShowPaused":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressBar");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "ShowPaused", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_157_ProgressBar_ShowPaused;
+                xamlMember.Setter = set_157_ProgressBar_ShowPaused;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ProgressBar.ShowError":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressBar");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "ShowError", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_158_ProgressBar_ShowError;
+                xamlMember.Setter = set_158_ProgressBar_ShowError;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ProgressBar.TemplateSettings":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressBar");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "TemplateSettings", "Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings");
+                xamlMember.Getter = get_159_ProgressBar_TemplateSettings;
+                xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.ImageIcon.Source":
                 userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ImageIcon");
                 xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "Source", "Microsoft.UI.Xaml.Media.ImageSource");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_74_ImageIcon_Source;
-                xamlMember.Setter = set_74_ImageIcon_Source;
+                xamlMember.Getter = get_160_ImageIcon_Source;
+                xamlMember.Setter = set_160_ImageIcon_Source;
                 break;
-            case "Fog.Pages.SettingPage.ColorTheme":
-                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Fog.Pages.SettingPage");
-                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "ColorTheme", "String");
-                xamlMember.Getter = get_75_SettingPage_ColorTheme;
-                xamlMember.Setter = set_75_SettingPage_ColorTheme;
+            case "Fog.Pages.Settings.SettingAccountAdd.BreadcrumbBarItems":
+                userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Fog.Pages.Settings.SettingAccountAdd");
+                xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "BreadcrumbBarItems", "String[]");
+                xamlMember.Getter = get_161_SettingAccountAdd_BreadcrumbBarItems;
+                xamlMember.Setter = set_161_SettingAccountAdd_BreadcrumbBarItems;
                 break;
             case "Fog.Pages.GitClonePage.CloneData":
                 userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Fog.Pages.GitClonePage");
                 xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "CloneData", "Fog.Pages.CloneGitDataModel");
-                xamlMember.Getter = get_76_GitClonePage_CloneData;
-                xamlMember.Setter = set_76_GitClonePage_CloneData;
+                xamlMember.Getter = get_162_GitClonePage_CloneData;
+                xamlMember.Setter = set_162_GitClonePage_CloneData;
                 break;
             case "Fog.Pages.GitInitPage.InitGitData":
                 userType = (global::Fog.Fog_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Fog.Pages.GitInitPage");
                 xamlMember = new global::Fog.Fog_XamlTypeInfo.XamlMember(this, "InitGitData", "Fog.Pages.InitGitDataModel");
-                xamlMember.Getter = get_77_GitInitPage_InitGitData;
-                xamlMember.Setter = set_77_GitInitPage_InitGitData;
+                xamlMember.Getter = get_163_GitInitPage_InitGitData;
+                xamlMember.Setter = set_163_GitInitPage_InitGitData;
                 break;
             }
             return xamlMember;

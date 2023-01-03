@@ -12,26 +12,42 @@
     <EnableMsixTooling>true</EnableMsixTooling>
   </PropertyGroup>
   <ItemGroup>
-    <Content Remove="Assets\Icons\icon_git.png" />
+    <Compile Remove="Assets\NewFolder\**" />
+    <Content Remove="Assets\NewFolder\**" />
+    <EmbeddedResource Remove="Assets\NewFolder\**" />
+    <None Remove="Assets\NewFolder\**" />
+    <Page Remove="Assets\NewFolder\**" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="Pages\AccountPage.xaml" />
     <None Remove="Pages\Home.xaml" />
     <None Remove="Pages\MainPage.xaml" />
     <None Remove="Pages\RepoHome.xaml" />
+    <None Remove="Pages\Repos\RepoStatusPage.xaml" />
+    <None Remove="Pages\ServiceAccountsPage.xaml" />
+    <None Remove="Pages\Settings\SettingAbout.xaml" />
+    <None Remove="Pages\Settings\SettingAccount.xaml" />
+    <None Remove="Pages\Settings\SettingAccountAdd.xaml" />
+    <None Remove="Pages\Settings\SettingAppearance.xaml" />
+    <None Remove="Pages\Settings\SettingGeneral.xaml" />
+    <None Remove="Pages\Settings\SettingGit.xaml" />
+    <None Remove="Pages\Settings\SettingIntegration.xaml" />
+    <None Remove="Pages\Settings\SettingShortcut.xaml" />
+    <None Remove="Pages\Settings\SettingUserProfile.xaml" />
     <None Remove="SettingPage.xaml" />
     <None Remove="Test\Git\GitBranchPage.xaml" />
     <None Remove="Test\Git\GitClonePage.xaml" />
     <None Remove="Test\Git\GitInitPage.xaml" />
+    <None Remove="WelcomeWindow.xaml" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="GitLabApiClient" Version="1.8.0" />
     <PackageReference Include="LibGit2Sharp" Version="0.26.2" />
-    <PackageReference Include="Microsoft.Data.Sqlite" Version="6.0.7" />
-    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.1.3" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="6.0.8" />
+    <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications" Version="7.1.2" />
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.1.4" />
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.1" />
-    <PackageReference Include="Octokit" Version="1.0.0" />
+    <PackageReference Include="Octokit" Version="2.0.1" />
     <Manifest Include="$(ApplicationManifest)" />
   </ItemGroup>
 
@@ -45,6 +61,36 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccessLibrary\DataAccessLibrary.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Pages\Settings\SettingAbout.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Pages\Settings\SettingShortcut.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Pages\Settings\SettingGit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Pages\Settings\SettingAccount.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Pages\Settings\SettingAppearance.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Pages\Settings\SettingGeneral.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Pages\MainPage.xaml">
@@ -72,11 +118,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Pages\AccountPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
     <Page Update="Pages\Home.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -95,4 +136,40 @@
   <PropertyGroup Condition="'$(DisableHasPackageAndPublishMenuAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
     <HasPackageAndPublishMenu>true</HasPackageAndPublishMenu>
   </PropertyGroup>
+  <ItemGroup>
+    <PRIResource Remove="Assets\NewFolder\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Pages\Settings\SettingAccountAdd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Pages\Settings\SettingIntegration.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Pages\Settings\SettingUserProfile.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Pages\Repos\RepoStatusPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="WelcomeWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Pages\ServiceAccountsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
 </Project>

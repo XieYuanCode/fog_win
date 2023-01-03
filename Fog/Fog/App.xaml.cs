@@ -29,6 +29,9 @@ namespace Fog
     /// </summary>
     public partial class App : Application
     {
+
+        private ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
+        private WindowManager windowManager = WindowManager.GetWindowManager();
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -36,22 +39,6 @@ namespace Fog
         public App()
         {
             this.InitializeComponent();
-
-            // Get theme choice from LocalSettings.
-            string ColorMode = ApplicationData.Current.LocalSettings.Values["ColorTheme"] as string;
-
-            if (ColorMode != null)
-            {
-                // Apply theme choice.
-                if (ColorMode == "Light")
-                {
-                    App.Current.RequestedTheme = ApplicationTheme.Light;
-                }
-                if (ColorMode == "Dark")
-                {
-                    App.Current.RequestedTheme = ApplicationTheme.Dark;
-                }
-            }
         }
 
         /// <summary>
@@ -59,15 +46,29 @@ namespace Fog
         /// will be used such as when the application is launched to open a specific file.
         /// </summary>
         /// <param name="args">Details about the launch request and process.</param>
-        protected override void OnLaunched(Microsoft.UI.Xaml.LaunchActivatedEventArgs args)
+        protected async override void OnLaunched(Microsoft.UI.Xaml.LaunchActivatedEventArgs args)
         {
 
-            DataAccess.InitializeDatabase();
+            await DataAccess.InitializeDatabase();
 
-            m_window = new MainWindow();
-            m_window.Activate();
+            windowManager.InitAllWindow();
+
+            var isFirstLoad = localSettings.Values["IsFirstLoad"] == null ? true : (bool)localSettings.Values["IsFirstLoad"];
+
+            //if (isFirstLoad == true)
+            //{
+            //    windowManager.welcole_window.Activate();
+            //}
+            //else
+            //{
+                windowManager.main_window.Activate();
+            //}
+
+            int ColorMode = (int)ApplicationData.Current.LocalSettings.Values["ColorMode"];
+
+            windowManager.UpdateWindowTheme(ColorMode);
+
+            ServiceAccountManager.GetServiceAccountManager().Init();
         }
-
-        private Window m_window;
     }
 }
