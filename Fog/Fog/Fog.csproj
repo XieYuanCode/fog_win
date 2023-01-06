@@ -160,6 +160,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Assets\Welcome_FlipView\" />
     <Folder Include="Controls\" />
   </ItemGroup>
   <ItemGroup>

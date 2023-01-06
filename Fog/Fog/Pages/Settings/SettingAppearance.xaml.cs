@@ -30,7 +30,7 @@ namespace Fog.Pages.Settings
         {
             this.InitializeComponent();
 
-            ColorMode_CB.SelectedIndex = (int)localSettings.Values["ColorMode"];
+            ColorMode_CB.SelectedIndex = localSettings.Values["ColorMode"] != null ? (int)localSettings.Values["ColorMode"] : 2;
         }
 
         private void OpenWidnwosColorSettings(object sender, RoutedEventArgs e)

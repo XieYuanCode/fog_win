@@ -28,7 +28,7 @@ namespace Fog
             main_window = new MainWindow();
             welcole_window = new WelcomeWindow();
 
-            int ColorMode = (int)ApplicationData.Current.LocalSettings.Values["ColorMode"];
+            int ColorMode = ApplicationData.Current.LocalSettings.Values["ColorMode"] != null? (int)ApplicationData.Current.LocalSettings.Values["ColorMode"]:2;
 
             UpdateWindowTheme(ColorMode);
         }

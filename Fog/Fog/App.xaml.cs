@@ -55,18 +55,15 @@ namespace Fog
 
             var isFirstLoad = localSettings.Values["IsFirstLoad"] == null ? true : (bool)localSettings.Values["IsFirstLoad"];
 
-            //if (isFirstLoad == true)
-            //{
-            //    windowManager.welcole_window.Activate();
-            //}
-            //else
-            //{
+            if (isFirstLoad == true)
+            {
+                //windowManager.welcole_window.Activate();
                 windowManager.main_window.Activate();
-            //}
-
-            int ColorMode = (int)ApplicationData.Current.LocalSettings.Values["ColorMode"];
-
-            windowManager.UpdateWindowTheme(ColorMode);
+            }
+            else
+            {
+                windowManager.main_window.Activate();
+            }
 
             ServiceAccountManager.GetServiceAccountManager().Init();
         }

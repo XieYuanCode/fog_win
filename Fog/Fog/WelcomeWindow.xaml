@@ -19,5 +19,20 @@
                VerticalAlignment="Center"
                Margin="28,0,0,0"/>
         </StackPanel>
+        <Grid Grid.Row="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="660"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Left" Grid.Column="0"></TextBlock>
+                <FlipView x:Name="Welcome_FlipView" MaxWidth="340" Height="600" Grid.Column="1">
+                    <Image Source="/Assets/Welcome_FlipView/welcome_carousel_1.jpg" Stretch="UniformToFill" AutomationProperties.Name="welcome_carousel_1"></Image>
+                    <Image Source="/Assets/Welcome_FlipView/welcome_carousel_2.jpg" Stretch="UniformToFill" AutomationProperties.Name="welcome_carousel_2"></Image>
+                    <Image Source="/Assets/Welcome_FlipView/welcome_carousel_3.jpg" Stretch="UniformToFill" AutomationProperties.Name="welcome_carousel_3"></Image>
+                    <Image Source="/Assets/Welcome_FlipView/welcome_carousel_4.jpg" Stretch="UniformToFill" AutomationProperties.Name="welcome_carousel_4"></Image>
+                </FlipView>
+            </Grid>
+        </Grid>
     </Grid>
 </Window>
