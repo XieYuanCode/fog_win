@@ -21,11 +21,11 @@
                     <RelativePanel Padding="15,0">
                         <StackPanel Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" VerticalAlignment="Center">
                             <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe838;" Margin="5, 0, 15, 0"/>
-                            <TextBlock Text="Default Directory For Cloned Repositories" VerticalAlignment="Center"></TextBlock>
+                            <TextBlock x:Uid="/Setting/General_Default_Clone_Folder_Label" VerticalAlignment="Center"></TextBlock>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
                             <TextBlock x:Name="DefaultClonedDir_TB" Margin="0,0,10,0" VerticalAlignment="Center"></TextBlock>
-                            <Button Content="Broswer..." Click="SelectDefaultClonedDir"></Button>
+                            <Button x:Uid="/Setting/General_Default_Clone_Folder_Btn" Click="SelectDefaultClonedDir"></Button>
                         </StackPanel>
                     </RelativePanel>
                 </Grid>
@@ -33,7 +33,7 @@
                     <RelativePanel Padding="15,0">
                         <StackPanel Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" VerticalAlignment="Center">
                             <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xf2b7;" Margin="5, 0,15, 0"/>
-                            <TextBlock Text="Language" VerticalAlignment="Center"></TextBlock>
+                            <TextBlock x:Uid="/Setting/General_Language_Label" VerticalAlignment="Center"></TextBlock>
                         </StackPanel>
                         <ComboBox x:Name="Language_CB" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" SelectionChanged="Language_CB_SelectionChanged">
                             <TextBlock Text="English"></TextBlock>
@@ -48,9 +48,9 @@
                     Width="1000"
                     x:Name="RequireRestart_IB"
                     Severity="Warning"
-                    Message="The application needs to be restarted to apply the new language Settings." >
+                    x:Uid="/Setting/General_Restart_InfoBar" >
                     <InfoBar.ActionButton>
-                        <Button x:Name="Restart_BTN" Content="Restart" Click="Restart_BTN_Click" />
+                        <Button x:Name="Restart_BTN" x:Uid="/Setting/General_Restart_Button" Click="Restart_BTN_Click" />
                     </InfoBar.ActionButton>
                 </InfoBar>
                 <Grid Margin="0, 25, 0, 0" RowSpacing="10">
@@ -64,7 +64,7 @@
                             <RelativePanel Padding="15,0">
                                 <StackPanel Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" VerticalAlignment="Center">
                                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe7f3;" Margin="5, 0,15, 0"/>
-                                    <TextBlock Text="Sound" VerticalAlignment="Center"></TextBlock>
+                                    <TextBlock x:Uid="/Setting/General_Sound_Label" VerticalAlignment="Center"></TextBlock>
                                 </StackPanel>
                                 <ToggleSwitch  x:Name="Sound_Switch" Width="50" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" MinWidth="50" Toggled="Sound_Switch_Toggled"/>
                             </RelativePanel>
@@ -73,7 +73,7 @@
                             <RelativePanel Padding="15,0">
                                 <StackPanel Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" VerticalAlignment="Center">
                                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe7c9;" Margin="5, 0,15, 0"/>
-                                    <TextBlock Text="Teaching" VerticalAlignment="Center"></TextBlock>
+                                    <TextBlock x:Uid="/Setting/General_Teaching_Label"  VerticalAlignment="Center"></TextBlock>
                                 </StackPanel>
                                 <ToggleSwitch  x:Name="Teaching_Switch" Width="50" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" MinWidth="50" Toggled="Teaching_Switch_Toggled"/>
                             </RelativePanel>
@@ -82,7 +82,7 @@
                             <RelativePanel Padding="15,0">
                                 <StackPanel Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" VerticalAlignment="Center">
                                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe789;" Margin="5, 0,15, 0"/>
-                                    <TextBlock Text="Notification" VerticalAlignment="Center"></TextBlock>
+                                    <TextBlock x:Uid="/Setting/General_Notification_Label" VerticalAlignment="Center"></TextBlock>
                                 </StackPanel>
                                 <ToggleSwitch  x:Name="Notification_Switch" Width="50" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" MinWidth="50" Toggled="Notification_Switch_Toggled"/>
                             </RelativePanel>
@@ -101,7 +101,7 @@
                             <RelativePanel Padding="15,0">
                                 <StackPanel Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" VerticalAlignment="Center">
                                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe756;" Margin="5, 0,15, 0"/>
-                                    <TextBlock Text="Terminal" VerticalAlignment="Center"></TextBlock>
+                                    <TextBlock x:Uid="/Setting/General_Terminnal_Label" VerticalAlignment="Center"></TextBlock>
                                 </StackPanel>
                                 <ComboBox x:Name="Terminal_CB" SelectedIndex="0" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
                                     <TextBlock Text="Windows Terminal"></TextBlock>
@@ -112,8 +112,8 @@
                             <RelativePanel Padding="15,0">
                                 <StackPanel Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" VerticalAlignment="Center">
                                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe977;" Margin="5, 0,15, 0"/>
-                                    <TextBlock Text="Editor" VerticalAlignment="Center"></TextBlock>
-                                    <TextBlock Text="You Can Configure This In Detail On The Repository Settings Page" Margin="20,0,0,0" VerticalAlignment="Center" Opacity="0.5"></TextBlock>
+                                    <TextBlock x:Uid="/Setting/General_Editor_Label" VerticalAlignment="Center"></TextBlock>
+                                    <TextBlock x:Uid="/Setting/General_Editor_Desc" Margin="20,0,0,0" VerticalAlignment="Center" Opacity="0.5"></TextBlock>
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
                                     <TextBlock x:Name="Editor_TB" Margin="0,0,10,0" VerticalAlignment="Center"></TextBlock>

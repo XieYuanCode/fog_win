@@ -1,5 +1,96 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="ko-KR" original="FOG/STRINGS/EN-US/SETTING.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="1.0.0.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="FOG/STRINGS/EN-US/SETTING.RESW" datatype="resx">
+        <trans-unit id="General_Title.Text" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">일반</target>
+        </trans-unit>
+        <trans-unit id="Home_Explorer_About_Lable.Text" translate="yes" xml:space="preserve">
+          <source>About</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">정보</target>
+        </trans-unit>
+        <trans-unit id="Home_Explorer_Appearance_Lable.Text" translate="yes" xml:space="preserve">
+          <source>Appearance</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">모양</target>
+        </trans-unit>
+        <trans-unit id="Home_Explorer_General_Lable.Text" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">일반</target>
+        </trans-unit>
+        <trans-unit id="Home_Explorer_Git_Lable.Text" translate="yes" xml:space="preserve">
+          <source>Git</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Git</target>
+        </trans-unit>
+        <trans-unit id="Home_Explorer_Integration_Lable.Text" translate="yes" xml:space="preserve">
+          <source>Integration</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">통합</target>
+        </trans-unit>
+        <trans-unit id="Home_Explorer_Service_Account_Lable.Text" translate="yes" xml:space="preserve">
+          <source>Service Account</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">서비스 계정</target>
+        </trans-unit>
+        <trans-unit id="Home_Explorer_Shortcut_Lable.Text" translate="yes" xml:space="preserve">
+          <source>Shortcut</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">바로 가기</target>
+        </trans-unit>
+        <trans-unit id="Home_Explorer_User_Profile_Lable.Text" translate="yes" xml:space="preserve">
+          <source>User Profile</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">사용자 프로필</target>
+        </trans-unit>
+        <trans-unit id="General_Default_Clone_Folder_Btn.Content" translate="yes" xml:space="preserve">
+          <source>Broswer...</source>
+          <target state="new">Broswer...</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">选择默认clone位置按钮content</note>
+        </trans-unit>
+        <trans-unit id="General_Default_Clone_Folder_Label.Text" translate="yes" xml:space="preserve">
+          <source>Default Directory For Cloned Repositories</source>
+          <target state="new">Default Directory For Cloned Repositories</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">默认clone位置label</note>
+        </trans-unit>
+        <trans-unit id="General_Language_Label.Text" translate="yes" xml:space="preserve">
+          <source>Language</source>
+          <target state="new">Language</target>
+        </trans-unit>
+        <trans-unit id="General_Notification_Label.Text" translate="yes" xml:space="preserve">
+          <source>Notification</source>
+          <target state="new">Notification</target>
+        </trans-unit>
+        <trans-unit id="General_Restart_Button.Content" translate="yes" xml:space="preserve">
+          <source>Restart</source>
+          <target state="new">Restart</target>
+        </trans-unit>
+        <trans-unit id="General_Restart_InfoBar.Message" translate="yes" xml:space="preserve">
+          <source>The application needs to be restarted to apply the new language Settings.</source>
+          <target state="new">The application needs to be restarted to apply the new language Settings.</target>
+        </trans-unit>
+        <trans-unit id="General_Sound_Label.Text" translate="yes" xml:space="preserve">
+          <source>Sound</source>
+          <target state="new">Sound</target>
+        </trans-unit>
+        <trans-unit id="General_Teaching_Label.Text" translate="yes" xml:space="preserve">
+          <source>Teaching</source>
+          <target state="new">Teaching</target>
+        </trans-unit>
+        <trans-unit id="General_Editor_Desc.Text" translate="yes" xml:space="preserve">
+          <source>You Can Configure This In Detail On The Repository Settings Page</source>
+          <target state="new">You Can Configure This In Detail On The Repository Settings Page</target>
+        </trans-unit>
+        <trans-unit id="General_Editor_Label.Text" translate="yes" xml:space="preserve">
+          <source>Editor</source>
+          <target state="new">Editor</target>
+        </trans-unit>
+        <trans-unit id="General_Terminnal_Label.Text" translate="yes" xml:space="preserve">
+          <source>Terminal</source>
+          <target state="new">Terminal</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
   <file datatype="xml" source-language="en-US" target-language="ko-KR" original="FOG/STRINGS/EN-US/RESOURCES.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
     <header>
       <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="1.0.0.0" tool-company="Microsoft" />
@@ -13,15 +104,27 @@
       </group>
     </body>
   </file>
-  <file datatype="xml" source-language="en-US" target-language="ko-KR" original="FOG/STRINGS/EN-US/SETTING.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+  <file datatype="xml" source-language="en-US" target-language="ko-KR" original="FOG/STRINGS/EN-US/WELCOME.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
     <header>
-      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="1.0.0.0" tool-company="Microsoft" />
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="0.0.0.0" tool-company="Microsoft" />
     </header>
     <body>
-      <group id="FOG/STRINGS/EN-US/SETTING.RESW" datatype="resx">
-        <trans-unit id="General_Title.Text" translate="yes" xml:space="preserve">
-          <source>General</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">일반</target>
+      <group id="FOG/STRINGS/EN-US/WELCOME.RESW" datatype="resx">
+        <trans-unit id="Welcome_Greeting.Text" translate="yes" xml:space="preserve">
+          <source>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus numquam ea!</source>
+          <target state="new">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus numquam ea!</target>
+        </trans-unit>
+        <trans-unit id="Welcome_Subtitle.Text" translate="yes" xml:space="preserve">
+          <source>Reduce Development Costs.</source>
+          <target state="new">Reduce Development Costs.</target>
+        </trans-unit>
+        <trans-unit id="Welcome_Title.Text" translate="yes" xml:space="preserve">
+          <source>Convenient Git Client</source>
+          <target state="new">Convenient Git Client</target>
+        </trans-unit>
+        <trans-unit id="Welcome_Start_Btn.Text" translate="yes" xml:space="preserve">
+          <source>Get Start</source>
+          <target state="new">Get Start</target>
         </trans-unit>
       </group>
     </body>

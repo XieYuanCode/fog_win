@@ -117,66 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="General_Default_Clone_Folder_Btn.Content" xml:space="preserve">
-    <value>Broswer...</value>
-    <comment>选择默认clone位置按钮content</comment>
+  <data name="Welcome_Greeting.Text" xml:space="preserve">
+    <value>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus numquam ea!</value>
   </data>
-  <data name="General_Default_Clone_Folder_Label.Text" xml:space="preserve">
-    <value>Default Directory For Cloned Repositories</value>
-    <comment>默认clone位置label</comment>
+  <data name="Welcome_Start_Btn.Text" xml:space="preserve">
+    <value>Get Start</value>
   </data>
-  <data name="General_Editor_Desc.Text" xml:space="preserve">
-    <value>You Can Configure This In Detail On The Repository Settings Page</value>
+  <data name="Welcome_Subtitle.Text" xml:space="preserve">
+    <value>Reduce Development Costs.</value>
   </data>
-  <data name="General_Editor_Label.Text" xml:space="preserve">
-    <value>Editor</value>
-  </data>
-  <data name="General_Language_Label.Text" xml:space="preserve">
-    <value>Language</value>
-  </data>
-  <data name="General_Notification_Label.Text" xml:space="preserve">
-    <value>Notification</value>
-  </data>
-  <data name="General_Restart_Button.Content" xml:space="preserve">
-    <value>Restart</value>
-  </data>
-  <data name="General_Restart_InfoBar.Message" xml:space="preserve">
-    <value>The application needs to be restarted to apply the new language Settings.</value>
-  </data>
-  <data name="General_Sound_Label.Text" xml:space="preserve">
-    <value>Sound</value>
-  </data>
-  <data name="General_Teaching_Label.Text" xml:space="preserve">
-    <value>Teaching</value>
-  </data>
-  <data name="General_Terminnal_Label.Text" xml:space="preserve">
-    <value>Terminal</value>
-  </data>
-  <data name="General_Title.Text" xml:space="preserve">
-    <value>General</value>
-  </data>
-  <data name="Home_Explorer_About_Lable.Text" xml:space="preserve">
-    <value>About</value>
-  </data>
-  <data name="Home_Explorer_Appearance_Lable.Text" xml:space="preserve">
-    <value>Appearance</value>
-  </data>
-  <data name="Home_Explorer_General_Lable.Text" xml:space="preserve">
-    <value>General</value>
-  </data>
-  <data name="Home_Explorer_Git_Lable.Text" xml:space="preserve">
-    <value>Git</value>
-  </data>
-  <data name="Home_Explorer_Integration_Lable.Text" xml:space="preserve">
-    <value>Integration</value>
-  </data>
-  <data name="Home_Explorer_Service_Account_Lable.Text" xml:space="preserve">
-    <value>Service Account</value>
-  </data>
-  <data name="Home_Explorer_Shortcut_Lable.Text" xml:space="preserve">
-    <value>Shortcut</value>
-  </data>
-  <data name="Home_Explorer_User_Profile_Lable.Text" xml:space="preserve">
-    <value>User Profile</value>
+  <data name="Welcome_Title.Text" xml:space="preserve">
+    <value>Convenient Git Client</value>
   </data>
 </root>

@@ -15,4 +15,28 @@
   <data name="General_Title.Text" xml:space="preserve">
     <value>概要</value>
   </data>
+  <data name="Home_Explorer_About_Lable.Text" xml:space="preserve">
+    <value>バージョン情報</value>
+  </data>
+  <data name="Home_Explorer_Appearance_Lable.Text" xml:space="preserve">
+    <value>外観</value>
+  </data>
+  <data name="Home_Explorer_General_Lable.Text" xml:space="preserve">
+    <value>概要</value>
+  </data>
+  <data name="Home_Explorer_Git_Lable.Text" xml:space="preserve">
+    <value>Git</value>
+  </data>
+  <data name="Home_Explorer_Integration_Lable.Text" xml:space="preserve">
+    <value>統合</value>
+  </data>
+  <data name="Home_Explorer_Service_Account_Lable.Text" xml:space="preserve">
+    <value>サービス アカウント</value>
+  </data>
+  <data name="Home_Explorer_Shortcut_Lable.Text" xml:space="preserve">
+    <value>ショートカット</value>
+  </data>
+  <data name="Home_Explorer_User_Profile_Lable.Text" xml:space="preserve">
+    <value>ユーザー プロフィール</value>
+  </data>
 </root>

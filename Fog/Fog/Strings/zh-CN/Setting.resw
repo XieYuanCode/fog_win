@@ -13,6 +13,56 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="General_Title.Text" xml:space="preserve">
-    <value>常规 </value>
+    <value>通用</value>
+  </data>
+  <data name="Home_Explorer_About_Lable.Text" xml:space="preserve">
+    <value>关于</value>
+  </data>
+  <data name="Home_Explorer_Appearance_Lable.Text" xml:space="preserve">
+    <value>外观</value>
+  </data>
+  <data name="Home_Explorer_General_Lable.Text" xml:space="preserve">
+    <value>通用</value>
+  </data>
+  <data name="Home_Explorer_Git_Lable.Text" xml:space="preserve">
+    <value>GIT</value>
+  </data>
+  <data name="Home_Explorer_Integration_Lable.Text" xml:space="preserve">
+    <value>集成</value>
+  </data>
+  <data name="Home_Explorer_Service_Account_Lable.Text" xml:space="preserve">
+    <value>帐户</value>
+  </data>
+  <data name="Home_Explorer_Shortcut_Lable.Text" xml:space="preserve">
+    <value>快捷键</value>
+  </data>
+  <data name="Home_Explorer_User_Profile_Lable.Text" xml:space="preserve">
+    <value>用户配置文件</value>
+  </data>
+  <data name="General_Default_Clone_Folder_Btn.Content" xml:space="preserve">
+    <value>浏览...</value>
+    <comment>选择默认clone位置按钮content</comment>
+  </data>
+  <data name="General_Default_Clone_Folder_Label.Text" xml:space="preserve">
+    <value>默认克隆目录</value>
+    <comment>默认clone位置label</comment>
+  </data>
+  <data name="General_Language_Label.Text" xml:space="preserve">
+    <value>语言</value>
+  </data>
+  <data name="General_Notification_Label.Text" xml:space="preserve">
+    <value>通知</value>
+  </data>
+  <data name="General_Restart_Button.Content" xml:space="preserve">
+    <value>重启</value>
+  </data>
+  <data name="General_Restart_InfoBar.Message" xml:space="preserve">
+    <value>应用需要重启使修改的语言设置生效</value>
+  </data>
+  <data name="General_Sound_Label.Text" xml:space="preserve">
+    <value>声音</value>
+  </data>
+  <data name="General_Teaching_Label.Text" xml:space="preserve">
+    <value>教学</value>
   </data>
 </root>

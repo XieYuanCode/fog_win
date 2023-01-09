@@ -13,7 +13,7 @@
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <StackPanel x:Name="AppTitleBar" Height="32" Background="Transparent" Orientation="Horizontal" Grid.Row="0">
-            <TextBlock x:Name="AppTitleTextBlock" Text="Welcome"
+            <TextBlock x:Name="AppTitleTextBlock" Text="Fog"
                TextWrapping="NoWrap"
                Style="{StaticResource CaptionTextBlockStyle}" 
                VerticalAlignment="Center"
@@ -25,7 +25,23 @@
                     <ColumnDefinition Width="660"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <TextBlock Text="Left" Grid.Column="0"></TextBlock>
+                <Grid Grid.Column="0" Margin="0,150,0,0">
+                    <RelativePanel>
+                        <StackPanel Orientation="Vertical" Margin="30,0,0,0">
+                            <TextBlock x:Uid="/Welcome/Welcome_Title" FontSize="55" FontWeight="Bold" HorizontalAlignment="Center" Width="600" ></TextBlock>
+                            <TextBlock x:Uid="/Welcome/Welcome_SubTitle" FontSize="45" FontWeight="Bold" HorizontalAlignment="Center"  TextWrapping="Wrap" Width="600" Foreground="{StaticResource SystemAccentColor}" Margin="0, -10, 0,0"></TextBlock>
+                            <TextBlock x:Uid="/Welcome/Welcome_Greeting" HorizontalAlignment="Center"  TextWrapping="Wrap" Width="600" FontSize="25" Margin="0, 15, 0,0"></TextBlock>
+                        </StackPanel>
+                        <Button RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" Margin="0,0,20,20" Click="GoNext" Style="{StaticResource AccentButtonStyle}">
+                            <Button.Content>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock x:Uid="/Welcome/Welcome_Start_Btn"></TextBlock>
+                                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe72a;" Margin="10,0,0,0" FontSize="10"/>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                    </RelativePanel>
+                </Grid>
                 <FlipView x:Name="Welcome_FlipView" MaxWidth="340" Height="600" Grid.Column="1">
                     <Image Source="/Assets/Welcome_FlipView/welcome_carousel_1.jpg" Stretch="UniformToFill" AutomationProperties.Name="welcome_carousel_1"></Image>
                     <Image Source="/Assets/Welcome_FlipView/welcome_carousel_2.jpg" Stretch="UniformToFill" AutomationProperties.Name="welcome_carousel_2"></Image>

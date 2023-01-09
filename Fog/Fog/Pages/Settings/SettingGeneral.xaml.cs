@@ -96,10 +96,11 @@ namespace Fog.Pages.Settings
         {
             localSettings.Values["Language"] = Language_CB.SelectedIndex;
 
-            if(Language_CB.SelectedIndex != LastLanguage)
+            if (Language_CB.SelectedIndex != LastLanguage)
             {
                 RequireRestart_IB.IsOpen = true;
-            } else
+            }
+            else
             {
                 RequireRestart_IB.IsOpen = false;
             }
@@ -116,7 +117,7 @@ namespace Fog.Pages.Settings
 
         private async void Restart_BTN_Click(object sender, RoutedEventArgs e)
         {
-            await CoreApplication.RequestRestartAsync(string.Empty);
+            var _ = await CoreApplication.RequestRestartAsync(String.Empty);
         }
     }
 }

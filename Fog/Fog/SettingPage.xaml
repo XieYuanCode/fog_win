@@ -20,35 +20,35 @@
                     <ListView Margin="10, 10, 0, 0" ItemClick="ListView_ItemClick" SelectionMode="Single" IsItemClickEnabled="True" SelectedIndex="0">
                         <StackPanel Orientation="Horizontal" Tag="General">
                             <ImageIcon Source="\Assets\icon_general.png" Margin="0,0,10,0" Width="18"></ImageIcon>
-                            <TextBlock Text="General"></TextBlock>
+                            <TextBlock x:Uid="/Setting/Home_Explorer_General_Lable"></TextBlock>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Tag="Appearance">
                             <ImageIcon Source="\Assets\icon_appearance.png" Margin="0,0,10,0" Width="18"></ImageIcon>
-                            <TextBlock Text="Appearance"></TextBlock>
+                            <TextBlock x:Uid="/Setting/Home_Explorer_Appearance_Lable"></TextBlock>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Tag="Git">
                             <ImageIcon Source="\Assets\icon_git.png" Margin="0,0,10,0" Width="18"></ImageIcon>
-                            <TextBlock Text="Git"></TextBlock>
+                            <TextBlock x:Uid="/Setting/Home_Explorer_Git_Lable"></TextBlock>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Tag="Account">
                             <ImageIcon Source="\Assets\icon_account.png" Margin="0,0,10,0" Width="18"></ImageIcon>
-                            <TextBlock Text="Service Account"></TextBlock>
+                            <TextBlock x:Uid="/Setting/Home_Explorer_Service_Account_Lable"></TextBlock>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Tag="User Profiles">
                             <ImageIcon Source="\Assets\icon_profiles.png" Margin="0,0,10,0" Width="18"></ImageIcon>
-                            <TextBlock Text="User Profiles"></TextBlock>
+                            <TextBlock x:Uid="/Setting/Home_Explorer_User_Profile_Lable"></TextBlock>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Tag="Shortcut">
                             <ImageIcon Source="\Assets\icon_shortcut.png" Margin="0,0,10,0" Width="18"></ImageIcon>
-                            <TextBlock Text="Shortcut"></TextBlock>
+                            <TextBlock x:Uid="/Setting/Home_Explorer_Shortcut_Lable"></TextBlock>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Tag="Integration">
                             <ImageIcon Source="\Assets\icon_integration.png" Margin="0,0,10,0" Width="18"></ImageIcon>
-                            <TextBlock Text="Integration"></TextBlock>
+                            <TextBlock x:Uid="/Setting/Home_Explorer_Integration_Lable"></TextBlock>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Tag="About">
                             <ImageIcon Source="\Assets\icon_about.png" Margin="0,0,10,0" Width="18"></ImageIcon>
-                            <TextBlock Text="About"></TextBlock>
+                            <TextBlock x:Uid="/Setting/Home_Explorer_About_Lable"></TextBlock>
                         </StackPanel>
                     </ListView>
                     <Grid Padding="10" Grid.Row="1">

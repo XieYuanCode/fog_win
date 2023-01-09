@@ -124,5 +124,10 @@ namespace Fog
                 case ElementTheme.Default: m_configurationSource.Theme = SystemBackdropTheme.Default; break;
             }
         }
+
+        private void GoNext(object sender, RoutedEventArgs e)
+        {
+            Welcome_FlipView.SelectedIndex = Welcome_FlipView.SelectedIndex + 1;
+        }
     }
 }
