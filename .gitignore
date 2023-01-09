@@ -1,4 +1,8 @@
 bin
 Fog/DataAccessLibrary/bin
+Fog/DataAccessLibrary/obj
 Fog/Fog/bin
 Fog/LocalRepoManager/bin
+/Fog/.vs
+/Fog/DataAccessLibrary/obj
+/Fog/Fog/obj

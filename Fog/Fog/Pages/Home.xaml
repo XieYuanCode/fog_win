@@ -145,7 +145,7 @@
                         <RowDefinition Height="*"></RowDefinition>
                         <RowDefinition Height="Auto"></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBox  Margin="10, 10, 0, 10" PlaceholderText="Search" Grid.Row="0"/>
+                    <TextBox  Margin="10, 10, 0, 10" Grid.Row="0" x:Uid="Repo_Explorer_Search_input"/>
                     <TreeView ItemsSource="{x:Bind localRepositories}"
                               ItemTemplateSelector="{StaticResource ExplorerItemTemplateSelector}"
                               Grid.Row="1">

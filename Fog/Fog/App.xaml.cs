@@ -18,6 +18,7 @@ using Windows.Foundation.Collections;
 using DataAccessLibrary;
 using Windows.UI.ViewManagement;
 using Windows.Storage;
+using Windows.Globalization;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -39,6 +40,15 @@ namespace Fog
         public App()
         {
             this.InitializeComponent();
+
+            ApplicationLanguages.PrimaryLanguageOverride = localSettings.Values["Language"] == null ? "en-us" : localSettings.Values["Language"] switch
+            {
+                0 => "en-us",
+                1 => "zh-cn",
+                2 => "ja-jp",
+                3 => "ko-kr",
+                _ => throw new NotImplementedException()
+            };
         }
 
         /// <summary>

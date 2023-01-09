@@ -16,7 +16,7 @@
                         <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
                     </Style>
                 </StackPanel.Resources>
-                <TextBlock Text="General" Style="{StaticResource TitleTextBlockStyle}"></TextBlock>
+                <TextBlock x:Uid="/Setting/General_Title" Style="{StaticResource TitleTextBlockStyle}"></TextBlock>
                 <Grid Background="{ThemeResource ButtonBackground}" Width="1000" HorizontalAlignment="Center" Height="70" VerticalAlignment="Center"  CornerRadius="4" Margin="0,20,0,0">
                     <RelativePanel Padding="15,0">
                         <StackPanel Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" VerticalAlignment="Center">
@@ -29,6 +29,30 @@
                         </StackPanel>
                     </RelativePanel>
                 </Grid>
+                <Grid  Background="{ThemeResource ButtonBackground}" Width="1000" HorizontalAlignment="Center" Height="70" VerticalAlignment="Center"  CornerRadius="4" Margin="0, -1, 0, 0">
+                    <RelativePanel Padding="15,0">
+                        <StackPanel Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" VerticalAlignment="Center">
+                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xf2b7;" Margin="5, 0,15, 0"/>
+                            <TextBlock Text="Language" VerticalAlignment="Center"></TextBlock>
+                        </StackPanel>
+                        <ComboBox x:Name="Language_CB" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" SelectionChanged="Language_CB_SelectionChanged">
+                            <TextBlock Text="English"></TextBlock>
+                            <TextBlock Text="简体中文"></TextBlock>
+                            <TextBlock Text=" 日本語"></TextBlock>
+                            <TextBlock Text="한국어"></TextBlock>
+                        </ComboBox>
+                    </RelativePanel>
+                </Grid>
+                <InfoBar
+                    Margin="0,-5,0,0"
+                    Width="1000"
+                    x:Name="RequireRestart_IB"
+                    Severity="Warning"
+                    Message="The application needs to be restarted to apply the new language Settings." >
+                    <InfoBar.ActionButton>
+                        <Button x:Name="Restart_BTN" Content="Restart" Click="Restart_BTN_Click" />
+                    </InfoBar.ActionButton>
+                </InfoBar>
                 <Grid Margin="0, 25, 0, 0" RowSpacing="10">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
@@ -65,7 +89,7 @@
                         </Grid>
                     </StackPanel>
                 </Grid>
-                
+
                 <Grid Margin="0, 25, 0, 0" RowSpacing="10">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>

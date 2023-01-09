@@ -12,8 +12,10 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
+using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Globalization;
 using Windows.Storage;
 using Windows.Storage.Pickers;
 using WinRT.Interop;
@@ -30,16 +32,21 @@ namespace Fog.Pages.Settings
     {
         private ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
 
+        private IReadOnlyList<string> userLanguages = Windows.Globalization.ApplicationLanguages.ManifestLanguages;
+
+        private int LastLanguage = ApplicationData.Current.LocalSettings.Values["Language"] == null ? 0 : (int)ApplicationData.Current.LocalSettings.Values["Language"];
         public SettingGeneral()
         {
             this.InitializeComponent();
 
             DefaultClonedDir_TB.Text = localSettings.Values["DefaultClonedDir"] == null ? "" : (string)localSettings.Values["DefaultClonedDir"];
+            Language_CB.SelectedIndex = localSettings.Values["Language"] == null ? 0 : (int)localSettings.Values["Language"];
             //Behavior
             Sound_Switch.IsOn = localSettings.Values["Sound"] == null ? true : (bool)localSettings.Values["Sound"];
             Teaching_Switch.IsOn = localSettings.Values["Teaching"] == null ? true : (bool)localSettings.Values["Teaching"];
             Notification_Switch.IsOn = localSettings.Values["Notification"] == null ? true : (bool)localSettings.Values["Notification"];
-            
+
+            Console.WriteLine(userLanguages);
         }
 
         private void Sound_Switch_Toggled(object sender, RoutedEventArgs e)
@@ -83,6 +90,33 @@ namespace Fog.Pages.Settings
             Windows.Storage.StorageFolder folder = await folderPicker.PickSingleFolderAsync();
 
             return folder;
+        }
+
+        private void Language_CB_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            localSettings.Values["Language"] = Language_CB.SelectedIndex;
+
+            if(Language_CB.SelectedIndex != LastLanguage)
+            {
+                RequireRestart_IB.IsOpen = true;
+            } else
+            {
+                RequireRestart_IB.IsOpen = false;
+            }
+
+            ApplicationLanguages.PrimaryLanguageOverride = localSettings.Values["Language"] switch
+            {
+                0 => "en-us",
+                1 => "zh-cn",
+                2 => "ja-jp",
+                3 => "ko-kr",
+                _ => throw new NotImplementedException()
+            };
+        }
+
+        private async void Restart_BTN_Click(object sender, RoutedEventArgs e)
+        {
+            await CoreApplication.RequestRestartAsync(string.Empty);
         }
     }
 }

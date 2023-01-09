@@ -1,1 +1,0 @@
-G:\document\fog_win\Fog\Fog\Fog.csproj;x86

@@ -23,7 +23,10 @@
   </Dependencies>
 
   <Resources>
-    <Resource Language="x-generate"/>
+	  <Resource Language="zh-cn"/>
+	  <Resource Language="en-us"/>
+	  <Resource Language="ja-jp"/>
+	  <Resource Language="ko-kr"/>
   </Resources>
 
   <Applications>

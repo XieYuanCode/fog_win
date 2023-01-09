@@ -61,8 +61,6 @@ namespace Fog.Pages.Settings
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine(Parent);
-
             (Parent as Frame).Navigate(typeof(SettingAccountAdd), null, new SlideNavigationTransitionInfo() { Effect = SlideNavigationTransitionEffect.FromRight });
         }
 
