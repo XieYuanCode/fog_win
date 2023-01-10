@@ -1,6 +1,7 @@
 // Copyright (c) Microsoft Corporation and Contributors.
 // Licensed under the MIT License.
 
+using Fog.Pages.ContentDialogs;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
@@ -29,6 +30,14 @@ namespace Fog.Pages.Welcome
         public WelcomeServiceAccountSetting()
         {
             this.InitializeComponent();
+        }
+
+        private async void Button_Click(object sender, RoutedEventArgs e)
+        {
+            AddServiceAccountContentDialog addServiceAccountContentDialog = new AddServiceAccountContentDialog();
+            await addServiceAccountContentDialog.ShowAsync();
+
+            Console.WriteLine(addServiceAccountContentDialog.Result);
         }
     }
 }

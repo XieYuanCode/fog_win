@@ -30,6 +30,7 @@
     <Page Remove="MultilingualResources\**" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="Pages\ContentDialogs\AddServiceAccountContentDialog.xaml" />
     <None Remove="Pages\Home.xaml" />
     <None Remove="Pages\MainPage.xaml" />
     <None Remove="Pages\RepoHome.xaml" />
@@ -196,6 +197,11 @@
     <XliffResource Include="MultilingualResources\Fog.ja-JP.xlf" />
     <XliffResource Include="MultilingualResources\Fog.ko-KR.xlf" />
     <XliffResource Include="MultilingualResources\Fog.zh-CN.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Pages\ContentDialog\AddServiceAccountContentDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Pages\Welcome\WelcomeServiceAccountSetting.xaml">
