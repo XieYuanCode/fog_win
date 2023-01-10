@@ -1,0 +1,68 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="Fog.Pages.Welcome.WelcomeGeneralSetting"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Fog.Pages.Welcome"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="20, 20, 0, 0">
+            <TextBlock x:Uid="/Welcome/Welcome_General_Title" Style="{StaticResource TitleLargeTextBlockStyle}" FontWeight="SemiBold"></TextBlock>
+            <Grid Background="{ThemeResource ButtonBackground}" Width="626" HorizontalAlignment="Center" Height="60" VerticalAlignment="Center"  CornerRadius="4" Margin="0,20,0,0">
+                <RelativePanel Padding="15,0">
+                    <StackPanel Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" VerticalAlignment="Center">
+                        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe838;" Margin="5, 0, 15, 0"/>
+                        <TextBlock x:Uid="/Setting/General_Default_Clone_Folder_Label" VerticalAlignment="Center"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
+                        <TextBlock x:Name="DefaultClonedDir_TB" Margin="0,0,10,0" VerticalAlignment="Center"></TextBlock>
+                        <Button x:Uid="/Setting/General_Default_Clone_Folder_Btn" Click="SelectDefaultClonedDir"></Button>
+                    </StackPanel>
+                </RelativePanel>
+            </Grid>
+            <Grid  Background="{ThemeResource ButtonBackground}" Width="626" HorizontalAlignment="Center" Height="60" VerticalAlignment="Center"  CornerRadius="4" Margin="0, 5, 0, 0">
+                <RelativePanel Padding="15,0">
+                    <StackPanel Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" VerticalAlignment="Center">
+                        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xf2b7;" Margin="5, 0,15, 0"/>
+                        <TextBlock x:Uid="/Setting/General_Language_Label" VerticalAlignment="Center"></TextBlock>
+                    </StackPanel>
+                    <ComboBox x:Name="Language_CB" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" SelectionChanged="Language_CB_SelectionChanged">
+                        <TextBlock Text="English"></TextBlock>
+                        <TextBlock Text="简体中文"></TextBlock>
+                        <TextBlock Text=" 日本語"></TextBlock>
+                        <TextBlock Text="한국어"></TextBlock>
+                    </ComboBox>
+                </RelativePanel>
+            </Grid>
+            <InfoBar
+                    Width="626"
+                    x:Name="RequireRestart_IB"
+                    Severity="Warning"
+                    x:Uid="/Setting/General_Restart_InfoBar" >
+                <InfoBar.ActionButton>
+                    <Button x:Name="Restart_BTN" x:Uid="/Setting/General_Restart_Button" Click="Restart_BTN_Click" />
+                </InfoBar.ActionButton>
+            </InfoBar>
+            <Grid  Background="{ThemeResource ButtonBackground}" Width="626" HorizontalAlignment="Center" Height="60" VerticalAlignment="Center"  CornerRadius="4" Margin="0, 5, 0, 0">
+                <RelativePanel Padding="15,0">
+                    <StackPanel Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" VerticalAlignment="Center">
+                        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe790;" Margin="5, 0, 15, 0"/>
+                        <TextBlock Text="Color" VerticalAlignment="Center"></TextBlock>
+                    </StackPanel>
+                    <ComboBox RelativePanel.AlignRightWithPanel="True" 
+                              RelativePanel.AlignVerticalCenterWithPanel="True"
+                              SelectionChanged="ComboBox_SelectionChanged" x:Name="ColorMode_CB">
+                        <TextBlock Text="Light"></TextBlock>
+                        <TextBlock Text="Dark"></TextBlock>
+                        <TextBlock Text="System"></TextBlock>
+                    </ComboBox>
+                </RelativePanel>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Page>

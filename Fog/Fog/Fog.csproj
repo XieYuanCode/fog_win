@@ -44,6 +44,10 @@
     <None Remove="Pages\Settings\SettingIntegration.xaml" />
     <None Remove="Pages\Settings\SettingShortcut.xaml" />
     <None Remove="Pages\Settings\SettingUserProfile.xaml" />
+    <None Remove="Pages\Welcome\WelcomeGeneralSetting.xaml" />
+    <None Remove="Pages\Welcome\WelcomeGitSetting.xaml" />
+    <None Remove="Pages\Welcome\WelcomeGreeting.xaml" />
+    <None Remove="Pages\Welcome\WelcomeServiceAccountSetting.xaml" />
     <None Remove="SettingPage.xaml" />
     <None Remove="Test\Git\GitBranchPage.xaml" />
     <None Remove="Test\Git\GitClonePage.xaml" />
@@ -192,5 +196,25 @@
     <XliffResource Include="MultilingualResources\Fog.ja-JP.xlf" />
     <XliffResource Include="MultilingualResources\Fog.ko-KR.xlf" />
     <XliffResource Include="MultilingualResources\Fog.zh-CN.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Pages\Welcome\WelcomeServiceAccountSetting.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Pages\Welcome\WelcomeGitSetting.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Pages\Welcome\WelcomeGeneralSetting.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Pages\Welcome\WelcomeGreeting.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 </Project>

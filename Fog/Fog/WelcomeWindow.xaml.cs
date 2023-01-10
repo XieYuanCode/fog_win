@@ -1,4 +1,6 @@
-﻿using Microsoft.UI;
+﻿using Fog.Pages.Welcome;
+using LibGit2Sharp;
+using Microsoft.UI;
 using Microsoft.UI.Composition.SystemBackdrops;
 using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
@@ -7,7 +9,9 @@ using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
+using Microsoft.UI.Xaml.Media.Animation;
 using Microsoft.UI.Xaml.Navigation;
+using Microsoft.Windows.ApplicationModel.Resources;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -16,6 +20,7 @@ using System.Numerics;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.ViewManagement;
 using WinRT;
 using WinRT.Interop;
@@ -38,6 +43,9 @@ namespace Fog
         private IntPtr hwnd;
         private AppWindow _apw;
         private OverlappedPresenter _presenter;
+        public int CurrentStep { get; set; } = 0;
+
+        private ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
 
         public WelcomeWindow()
         {
@@ -50,6 +58,8 @@ namespace Fog
 
             _apw.Resize(new Windows.Graphics.SizeInt32(_Width: 1000, _Height: 600));
             _presenter.IsResizable = false;
+
+            Welcome_Frame.Navigate(typeof(WelcomeGreeting));
         }
 
         public void GetAppWindowAndPresenter()
@@ -127,7 +137,61 @@ namespace Fog
 
         private void GoNext(object sender, RoutedEventArgs e)
         {
-            Welcome_FlipView.SelectedIndex = Welcome_FlipView.SelectedIndex + 1;
+            if (CurrentStep < 3)
+            {
+                CurrentStep++;
+                UpdateFrame(CurrentStep, true);
+                Prev_Btn.Visibility = Visibility.Visible;
+                Welcome_FlipView.SelectedIndex = CurrentStep;
+
+                if (CurrentStep == 3)
+                {
+                    Next_Btn.Text = "Get Start";
+                }
+            } else if ( CurrentStep == 3)
+            {
+                //localSettings.Values["IsFirstLoad"] = false;
+                WindowManager.GetWindowManager().main_window.Activate();
+                WindowManager.GetWindowManager().welcole_window.Close();
+            }
+        }
+
+        private void GoPre(object sender, RoutedEventArgs e)
+        {
+            if (CurrentStep > 0)
+            {
+                CurrentStep--;
+                UpdateFrame(CurrentStep, false);
+                Welcome_FlipView.SelectedIndex = CurrentStep;
+                if (CurrentStep == 0)
+                {
+                    Prev_Btn.Visibility = Visibility.Collapsed;
+                }
+            }
+        }
+
+        private void UpdateFrame(int frameCount, bool forward)
+        {
+            var slideNavigationTransitionEffect = forward == true ? SlideNavigationTransitionEffect.FromRight : SlideNavigationTransitionEffect.FromLeft;
+            var slideNavigationTransitionInfo = new SlideNavigationTransitionInfo() { Effect = slideNavigationTransitionEffect };
+
+            switch (frameCount)
+            {
+                case 0:
+                    Welcome_Frame.Navigate(typeof(WelcomeGreeting), null, slideNavigationTransitionInfo);
+                    break;
+                case 1:
+                    Welcome_Frame.Navigate(typeof(WelcomeGeneralSetting), null, slideNavigationTransitionInfo);
+                    break;
+                case 2:
+                    Welcome_Frame.Navigate(typeof(WelcomeGitSetting), null, slideNavigationTransitionInfo);
+                    break;
+                case 3:
+                    Welcome_Frame.Navigate(typeof(WelcomeServiceAccountSetting), null, slideNavigationTransitionInfo);
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

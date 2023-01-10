@@ -43,15 +43,6 @@ namespace Fog.Pages.Settings
             localSettings.Values["ColorMode"] = ColorMode_CB.SelectedIndex;
 
             WindowManager.GetWindowManager().UpdateWindowTheme(ColorMode_CB.SelectedIndex);
-            //if ((sender as ComboBox).XamlRoot != null)
-            //{
-            //    ((sender as ComboBox).XamlRoot.Content as Grid).RequestedTheme = ColorMode_CB.SelectedIndex switch
-            //    {
-            //        0 => ElementTheme.Light,
-            //        1 => ElementTheme.Dark,
-            //        _ => ElementTheme.Default
-            //    };
-            //}
         }
     }
 }

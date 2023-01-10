@@ -123,6 +123,18 @@
           <target state="new">Convenient Git Client</target>
         </trans-unit>
         <trans-unit id="Welcome_Start_Btn.Text" translate="yes" xml:space="preserve">
+          <source>Next</source>
+          <target state="new">Next</target>
+        </trans-unit>
+        <trans-unit id="Welcome_Prev_Btn.Text" translate="yes" xml:space="preserve">
+          <source>Previous</source>
+          <target state="new">Previous</target>
+        </trans-unit>
+        <trans-unit id="Welcome_General_Title.Text" translate="yes" xml:space="preserve">
+          <source>General Settings</source>
+          <target state="new">General Settings</target>
+        </trans-unit>
+        <trans-unit id="Welcome_Get_Start_btn_Text" translate="yes" xml:space="preserve">
           <source>Get Start</source>
           <target state="new">Get Start</target>
         </trans-unit>

@@ -65,10 +65,13 @@ namespace Fog
 
             var isFirstLoad = localSettings.Values["IsFirstLoad"] == null ? true : (bool)localSettings.Values["IsFirstLoad"];
 
+            var floder = ApplicationData.Current.LocalFolder;
+
             if (isFirstLoad == true)
             {
                 windowManager.welcole_window.Activate();
-                //windowManager.main_window.Activate();
+                
+                // windowManager.main_window.Activate();
             }
             else
             {

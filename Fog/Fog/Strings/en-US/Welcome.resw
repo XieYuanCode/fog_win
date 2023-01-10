@@ -117,11 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Welcome_General_Title.Text" xml:space="preserve">
+    <value>General Settings</value>
+  </data>
+  <data name="Welcome_Get_Start_btn_Text" xml:space="preserve">
+    <value>Get Start</value>
+  </data>
   <data name="Welcome_Greeting.Text" xml:space="preserve">
     <value>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus numquam ea!</value>
   </data>
+  <data name="Welcome_Prev_Btn.Text" xml:space="preserve">
+    <value>Previous</value>
+  </data>
   <data name="Welcome_Start_Btn.Text" xml:space="preserve">
-    <value>Get Start</value>
+    <value>Next</value>
   </data>
   <data name="Welcome_Subtitle.Text" xml:space="preserve">
     <value>Reduce Development Costs.</value>

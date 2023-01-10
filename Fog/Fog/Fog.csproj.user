@@ -5,6 +5,18 @@
     <None Update="App.xaml">
       <SubType>Designer</SubType>
     </None>
+    <Page Update="Pages\Welcome\WelcomeServiceAccountSetting.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Welcome\WelcomeGitSetting.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Welcome\WelcomeGeneralSetting.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Welcome\WelcomeGreeting.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="WelcomeWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
