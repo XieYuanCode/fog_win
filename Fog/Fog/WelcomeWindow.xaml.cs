@@ -10,6 +10,7 @@ using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Media.Animation;
+using Microsoft.UI.Xaml.Media.Imaging;
 using Microsoft.UI.Xaml.Navigation;
 using Microsoft.Windows.ApplicationModel.Resources;
 using System;
@@ -142,7 +143,7 @@ namespace Fog
                 CurrentStep++;
                 UpdateFrame(CurrentStep, true);
                 Prev_Btn.Visibility = Visibility.Visible;
-                Welcome_FlipView.SelectedIndex = CurrentStep;
+                //Welcome_FlipView.SelectedIndex = CurrentStep;
 
                 if (CurrentStep == 3)
                 {
@@ -162,7 +163,7 @@ namespace Fog
             {
                 CurrentStep--;
                 UpdateFrame(CurrentStep, false);
-                Welcome_FlipView.SelectedIndex = CurrentStep;
+                //Welcome_FlipView.SelectedIndex = CurrentStep;
                 if (CurrentStep == 0)
                 {
                     Prev_Btn.Visibility = Visibility.Collapsed;
@@ -179,19 +180,24 @@ namespace Fog
             {
                 case 0:
                     Welcome_Frame.Navigate(typeof(WelcomeGreeting), null, slideNavigationTransitionInfo);
+                    //bitmapImage.UriSource = new Uri("/Assets/Welcome_FlipView/welcome_carousel_1.jpg");
                     break;
                 case 1:
                     Welcome_Frame.Navigate(typeof(WelcomeGeneralSetting), null, slideNavigationTransitionInfo);
+                    //bitmapImage.UriSource = new Uri("/Assets/Welcome_FlipView/welcome_carousel_2.jpg");
                     break;
                 case 2:
                     Welcome_Frame.Navigate(typeof(WelcomeGitSetting), null, slideNavigationTransitionInfo);
+                    //bitmapImage.UriSource = new Uri("/Assets/Welcome_FlipView/welcome_carousel_3.jpg");
                     break;
                 case 3:
                     Welcome_Frame.Navigate(typeof(WelcomeServiceAccountSetting), null, slideNavigationTransitionInfo);
+                    //bitmapImage.UriSource = new Uri("/Assets/Welcome_FlipView/welcome_carousel_4.jpg");
                     break;
                 default:
                     break;
             }
+
         }
     }
 }

@@ -11,9 +11,9 @@
     mc:Ignorable="d">
 
     <Grid>
-        <StackPanel Orientation="Vertical" Margin="20, 20, 0, 0">
-            <TextBlock x:Uid="/Welcome/Welcome_General_Title" Style="{StaticResource TitleLargeTextBlockStyle}" FontWeight="SemiBold"></TextBlock>
-            <Grid Background="{ThemeResource ButtonBackground}" Width="626" HorizontalAlignment="Center" Height="60" VerticalAlignment="Center"  CornerRadius="4" Margin="0,20,0,0">
+        <StackPanel Orientation="Vertical" Margin="0, 20, 10, 0">
+            <TextBlock x:Uid="/Welcome/Welcome_General_Title" Style="{StaticResource TitleLargeTextBlockStyle}" FontWeight="SemiBold" Width="900"></TextBlock>
+            <Grid Background="{ThemeResource ButtonBackground}" Width="900" HorizontalAlignment="Center" Height="60" VerticalAlignment="Center"  CornerRadius="4" Margin="0,30,0,0">
                 <RelativePanel Padding="15,0">
                     <StackPanel Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" VerticalAlignment="Center">
                         <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe838;" Margin="5, 0, 15, 0"/>
@@ -25,7 +25,7 @@
                     </StackPanel>
                 </RelativePanel>
             </Grid>
-            <Grid  Background="{ThemeResource ButtonBackground}" Width="626" HorizontalAlignment="Center" Height="60" VerticalAlignment="Center"  CornerRadius="4" Margin="0, 5, 0, 0">
+            <Grid  Background="{ThemeResource ButtonBackground}" Width="900" HorizontalAlignment="Center" Height="60" VerticalAlignment="Center"  CornerRadius="4" Margin="0, 5, 0, 0">
                 <RelativePanel Padding="15,0">
                     <StackPanel Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" VerticalAlignment="Center">
                         <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xf2b7;" Margin="5, 0,15, 0"/>
@@ -48,7 +48,7 @@
                     <Button x:Name="Restart_BTN" x:Uid="/Setting/General_Restart_Button" Click="Restart_BTN_Click" />
                 </InfoBar.ActionButton>
             </InfoBar>
-            <Grid  Background="{ThemeResource ButtonBackground}" Width="626" HorizontalAlignment="Center" Height="60" VerticalAlignment="Center"  CornerRadius="4" Margin="0, 5, 0, 0">
+            <Grid  Background="{ThemeResource ButtonBackground}" Width="900" HorizontalAlignment="Center" Height="60" VerticalAlignment="Center"  CornerRadius="4" Margin="0, 5, 0, 0">
                 <RelativePanel Padding="15,0">
                     <StackPanel Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" VerticalAlignment="Center">
                         <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe790;" Margin="5, 0, 15, 0"/>

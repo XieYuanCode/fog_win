@@ -11,10 +11,15 @@
     mc:Ignorable="d">
 
     <Grid>
-        <StackPanel Orientation="Vertical" Margin="30,150,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="660"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Vertical" Margin="30,150,0,0" Grid.Column="0">
             <TextBlock x:Uid="/Welcome/Welcome_Title" FontSize="55" FontWeight="Bold" HorizontalAlignment="Center" Width="600" ></TextBlock>
             <TextBlock x:Uid="/Welcome/Welcome_SubTitle" FontSize="45" FontWeight="Bold" HorizontalAlignment="Center"  TextWrapping="Wrap" Width="600" Foreground="{StaticResource SystemAccentColor}" Margin="0, -10, 0,0"></TextBlock>
             <TextBlock x:Uid="/Welcome/Welcome_Greeting" HorizontalAlignment="Center"  TextWrapping="Wrap" Width="600" FontSize="25" Margin="0, 15, 0,0"></TextBlock>
         </StackPanel>
+        <Image Source="/Assets/Welcome_FlipView/welcome_carousel_1.jpg" Stretch="UniformToFill" Width="400" Grid.Column="1"></Image>
     </Grid>
 </Page>

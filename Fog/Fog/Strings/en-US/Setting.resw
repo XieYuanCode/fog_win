@@ -155,6 +155,18 @@
   <data name="General_Title.Text" xml:space="preserve">
     <value>General</value>
   </data>
+  <data name="Git_Global_Eamil_Label.Text" xml:space="preserve">
+    <value>Global Eamil</value>
+  </data>
+  <data name="Git_Global_Email_Textbox.PlaceholderText" xml:space="preserve">
+    <value>Git Global Email</value>
+  </data>
+  <data name="Git_Global_User_Name_Label.Text" xml:space="preserve">
+    <value>Global Username</value>
+  </data>
+  <data name="Git_Global_User_Name_Textbox.PlaceholderText" xml:space="preserve">
+    <value>Git Global Username</value>
+  </data>
   <data name="Home_Explorer_About_Lable.Text" xml:space="preserve">
     <value>About</value>
   </data>

@@ -88,6 +88,22 @@
           <source>Terminal</source>
           <target state="new">Terminal</target>
         </trans-unit>
+        <trans-unit id="Git_Global_Eamil_Label.Text" translate="yes" xml:space="preserve">
+          <source>Global Eamil</source>
+          <target state="new">Global Eamil</target>
+        </trans-unit>
+        <trans-unit id="Git_Global_User_Name_Label.Text" translate="yes" xml:space="preserve">
+          <source>Global Username</source>
+          <target state="new">Global Username</target>
+        </trans-unit>
+        <trans-unit id="Git_Global_Email_Textbox.PlaceholderText" translate="yes" xml:space="preserve">
+          <source>Git Global Email</source>
+          <target state="new">Git Global Email</target>
+        </trans-unit>
+        <trans-unit id="Git_Global_User_Name_Textbox.PlaceholderText" translate="yes" xml:space="preserve">
+          <source>Git Global Username</source>
+          <target state="new">Git Global Username</target>
+        </trans-unit>
       </group>
     </body>
   </file>
@@ -137,6 +153,10 @@
         <trans-unit id="Welcome_Get_Start_btn_Text" translate="yes" xml:space="preserve">
           <source>Get Start</source>
           <target state="new">Get Start</target>
+        </trans-unit>
+        <trans-unit id="Welcome_Git_Title.Text" translate="yes" xml:space="preserve">
+          <source>Git Settings</source>
+          <target state="new">Git Settings</target>
         </trans-unit>
       </group>
     </body>

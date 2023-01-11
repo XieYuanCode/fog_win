@@ -123,6 +123,9 @@
   <data name="Welcome_Get_Start_btn_Text" xml:space="preserve">
     <value>Get Start</value>
   </data>
+  <data name="Welcome_Git_Title.Text" xml:space="preserve">
+    <value>Git Settings</value>
+  </data>
   <data name="Welcome_Greeting.Text" xml:space="preserve">
     <value>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus numquam ea!</value>
   </data>

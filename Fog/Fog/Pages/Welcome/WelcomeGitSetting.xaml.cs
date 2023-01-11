@@ -1,6 +1,7 @@
 // Copyright (c) Microsoft Corporation and Contributors.
 // Licensed under the MIT License.
 
+using LibGit2Sharp;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
@@ -26,6 +27,8 @@ namespace Fog.Pages.Welcome
     /// </summary>
     public sealed partial class WelcomeGitSetting : Page
     {
+        public string GitGlobalUsername { get; set; }
+        public string GitGlobalEmail { get; set; }
         public WelcomeGitSetting()
         {
             this.InitializeComponent();

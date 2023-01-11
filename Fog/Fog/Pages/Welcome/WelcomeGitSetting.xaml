@@ -11,6 +11,30 @@
     mc:Ignorable="d">
 
     <Grid>
-        <TextBlock Text="Welcome Git Setting"></TextBlock>
+        <StackPanel Orientation="Vertical" Margin="0, 20, 10, 0">
+            <TextBlock x:Uid="/Welcome/Welcome_Git_Title" Style="{StaticResource TitleLargeTextBlockStyle}" FontWeight="SemiBold" Width="900"></TextBlock>
+            <Grid Background="{ThemeResource ButtonBackground}" Width="900" HorizontalAlignment="Center" Height="60" VerticalAlignment="Center"  CornerRadius="4" Margin="0,30,0,0" >
+                <RelativePanel Padding="15,0">
+                    <StackPanel Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" VerticalAlignment="Center">
+                        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe77b;" Margin="5, 0, 15, 0"/>
+                        <TextBlock x:Uid="/Setting/Git_Global_User_Name_Label" VerticalAlignment="Center"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
+                        <TextBox Width="313" x:Uid="/Setting/Git_Global_User_Name_Textbox"></TextBox>
+                    </StackPanel>
+                </RelativePanel>
+            </Grid>
+            <Grid Background="{ThemeResource ButtonBackground}" Width="900" HorizontalAlignment="Center" Height="60" VerticalAlignment="Center"  CornerRadius="4" Margin="0,5,0,0" >
+                <RelativePanel Padding="15,0">
+                    <StackPanel Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" VerticalAlignment="Center">
+                        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe715;" Margin="5, 0, 15, 0"/>
+                        <TextBlock x:Uid="/Setting/Git_Global_Eamil_Label" VerticalAlignment="Center"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
+                        <TextBox Width="313" x:Uid="/Setting/Git_Global_Email_Textbox"></TextBox>
+                    </StackPanel>
+                </RelativePanel>
+            </Grid>
+        </StackPanel>
     </Grid>
 </Page>

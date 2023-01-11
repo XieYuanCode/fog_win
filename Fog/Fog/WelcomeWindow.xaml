@@ -20,47 +20,33 @@
                Margin="28,0,0,0"/>
         </StackPanel>
         <Grid Grid.Row="1">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="660"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <Grid Grid.Column="0">
-                    <RelativePanel>
-                        <Frame x:Name="Welcome_Frame">
-                            <Frame.ContentTransitions>
-                                <TransitionCollection>
-                                    <NavigationThemeTransition  />
-                                </TransitionCollection>
-                            </Frame.ContentTransitions>
-                        </Frame>
-                        <StackPanel Orientation="Horizontal" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" Margin="0,0,20,20" Spacing="20">
-                            <Button x:Name="Prev_Btn"  Click="GoPre" Style="{StaticResource AccentButtonStyle}" Visibility="Collapsed">
-                                <Button.Content>
-                                    <StackPanel Orientation="Horizontal">
-                                        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe72b;" Margin="0,0,10,0" FontSize="10"/>
-                                        <TextBlock x:Uid="/Welcome/Welcome_Prev_Btn"></TextBlock>
-                                    </StackPanel>
-                                </Button.Content>
-                            </Button>
-                            <Button  Click="GoNext" Style="{StaticResource AccentButtonStyle}">
-                                <Button.Content>
-                                    <StackPanel Orientation="Horizontal">
-                                        <TextBlock x:Uid="/Welcome/Welcome_Start_Btn" x:Name="Next_Btn"></TextBlock>
-                                        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe72a;" Margin="10,0,0,0" FontSize="10"/>
-                                    </StackPanel>
-                                </Button.Content>
-                            </Button>
-                        </StackPanel>
-                    </RelativePanel>
-                </Grid>
-                <FlipView x:Name="Welcome_FlipView" MaxWidth="340" Height="600" Grid.Column="1">
-                    <Image Source="/Assets/Welcome_FlipView/welcome_carousel_1.jpg" Stretch="UniformToFill" AutomationProperties.Name="welcome_carousel_1"></Image>
-                    <Image Source="/Assets/Welcome_FlipView/welcome_carousel_2.jpg" Stretch="UniformToFill" AutomationProperties.Name="welcome_carousel_2"></Image>
-                    <Image Source="/Assets/Welcome_FlipView/welcome_carousel_3.jpg" Stretch="UniformToFill" AutomationProperties.Name="welcome_carousel_3"></Image>
-                    <Image Source="/Assets/Welcome_FlipView/welcome_carousel_4.jpg" Stretch="UniformToFill" AutomationProperties.Name="welcome_carousel_4"></Image>
-                </FlipView>
-            </Grid>
+            <RelativePanel>
+                <Frame x:Name="Welcome_Frame" Width="1000" Height="600">
+                    <Frame.ContentTransitions>
+                        <TransitionCollection>
+                            <NavigationThemeTransition  />
+                        </TransitionCollection>
+                    </Frame.ContentTransitions>
+                </Frame>
+                <StackPanel Orientation="Horizontal" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" Margin="0,0,20,20" Spacing="20">
+                    <Button x:Name="Prev_Btn"  Click="GoPre" Style="{StaticResource AccentButtonStyle}" Visibility="Collapsed">
+                        <Button.Content>
+                            <StackPanel Orientation="Horizontal">
+                                <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe72b;" Margin="0,0,10,0" FontSize="10"/>
+                                <TextBlock x:Uid="/Welcome/Welcome_Prev_Btn"></TextBlock>
+                            </StackPanel>
+                        </Button.Content>
+                    </Button>
+                    <Button  Click="GoNext" Style="{StaticResource AccentButtonStyle}">
+                        <Button.Content>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock x:Uid="/Welcome/Welcome_Start_Btn" x:Name="Next_Btn"></TextBlock>
+                                <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe72a;" Margin="10,0,0,0" FontSize="10"/>
+                            </StackPanel>
+                        </Button.Content>
+                    </Button>
+                </StackPanel>
+            </RelativePanel>
         </Grid>
     </Grid>
 </Window>
