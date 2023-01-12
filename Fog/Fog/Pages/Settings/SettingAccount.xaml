@@ -10,7 +10,7 @@
     mc:Ignorable="d">
 
     <Page.Resources>
-        <ResourceDictionary x:Key="Default">
+        <ResourceDictionary>
             <media:AcrylicBrush x:Key="CustomAcrylicInAppLuminosity"
             TintOpacity="0.4" TintLuminosityOpacity="0.3" TintColor="White"/>
             <DataTemplate x:Name="ServiceAccount_GridViewDataTemplate" x:DataType="ServiceAccountManager:ServiceAccount">
@@ -48,7 +48,7 @@
                                     <TextBlock Text="{x:Bind Path=Name, Mode=OneWay}" FontSize="20" Margin="10,10,0,0" Foreground="Black"></TextBlock>
                                 </Grid>
                                 <RelativePanel>
-                                    <TextBlock Text="{x:Bind Path=Host, Mode=OneWay}" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" FontSize="10" Margin="0,0,10,10" Foreground="Black"></TextBlock>
+                                    <TextBlock Text="{x:Bind Path=Host, Mode=OneWay}" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" FontSize="10" Margin="0,0,10,10"></TextBlock>
                                 </RelativePanel>
                             </Grid>
                         </Border>

@@ -67,7 +67,7 @@ namespace Fog.Pages.Welcome
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            AddServiceAccountContentDialog addServiceAccountContentDialog = new AddServiceAccountContentDialog();
+            AddServiceAccountContentDialog addServiceAccountContentDialog = new AddServiceAccountContentDialog(XamlRoot);
             await addServiceAccountContentDialog.ShowAsync();
 
             Console.WriteLine(addServiceAccountContentDialog.Result);

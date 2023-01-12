@@ -167,6 +167,9 @@ namespace Fog
                 if (CurrentStep == 0)
                 {
                     Prev_Btn.Visibility = Visibility.Collapsed;
+                } else if (CurrentStep == 2)
+                {
+                    Next_Btn.Text = "Next";
                 }
             }
         }

@@ -10,6 +10,7 @@ using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -35,11 +36,12 @@ namespace Fog.Pages.ContentDialogs
     public sealed partial class AddServiceAccountContentDialog : ContentDialog
     {
         public SignInResult Result { get; private set; }
-        public AddServiceAccountContentDialog()
+        public AddServiceAccountContentDialog(XamlRoot xamlRoot)
         {
             this.InitializeComponent();
-            this.Opened += AddServiceAccountContentDialog_Opened;
-            this.Closing += AddServiceAccountContentDialog_Closing;
+
+            this.XamlRoot = xamlRoot;
+            this.Style = Application.Current.Resources["DefaultContentDialogStyle"] as Style;
         }
 
         private void ContentDialog_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
