@@ -1,6 +1,7 @@
 // Copyright (c) Microsoft Corporation and Contributors.
 // Licensed under the MIT License.
 
+using GitLabApiClient.Models.Trees.Responses;
 using LibGit2Sharp;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
@@ -105,6 +106,13 @@ namespace Fog.Pages.Welcome
             localSettings.Values["ColorMode"] = ColorMode_CB.SelectedIndex;
 
             WindowManager.GetWindowManager().UpdateWindowTheme(ColorMode_CB.SelectedIndex);
+
+            (WindowManager.GetWindowManager().welcole_window.Content as Grid).RequestedTheme = ColorMode_CB.SelectedIndex switch
+            {
+                0 => ElementTheme.Light,
+                1 => ElementTheme.Dark,
+                _ => ElementTheme.Default
+            };
         }
     }
 }

@@ -12,7 +12,7 @@
     <Page.Resources>
         <ResourceDictionary x:Key="Default">
             <media:AcrylicBrush x:Key="CustomAcrylicInAppLuminosity"
-            TintOpacity="0.4" TintLuminosityOpacity="0.1" TintColor="White"/>
+            TintOpacity="0.4" TintLuminosityOpacity="0.3" TintColor="White"/>
             <DataTemplate x:Name="ServiceAccount_GridViewDataTemplate" x:DataType="ServiceAccountManager:ServiceAccount">
                 <GridViewItem>
                     <Grid x:Name="AccountCardControl" Width="200" Height="300">
@@ -25,16 +25,13 @@
                         </Grid.RowDefinitions>
                         <Grid Grid.Row="0">
                             <Border CornerRadius="4,4,0,0">
-                                <Grid>
+                                <Grid PointerEntered="Grid_PointerEntered" PointerExited="Grid_PointerExited">
                                     <Image Source="{x:Bind Avatar}" Width="200"></Image>
                                     <Rectangle Fill="{ThemeResource CustomAcrylicInAppLuminosity}" Width="200" Height="200"/>
                                     <PersonPicture ProfilePicture="{x:Bind Avatar}" Width="100"></PersonPicture>
                                     <RelativePanel>
                                         <Image Source="/Assets/github-logo.png" Width="20" Visibility="{x:Bind local:SettingAccount.isGitHub(Type)}" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True" Margin="0,0,10,10"></Image>
                                         <Image Source="/Assets/gitlab-logo.png" Width="20" Visibility="{x:Bind local:SettingAccount.isGitLab(Type)}" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True" Margin="0,0,10,10"></Image>
-                                        <HyperlinkButton RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True">
-                                            <SymbolIcon Symbol="More"  Foreground="Black"></SymbolIcon>
-                                        </HyperlinkButton>
                                     </RelativePanel>
                                 </Grid>
                             </Border>
@@ -46,12 +43,12 @@
                 Background="{ThemeResource BackButtonBackgroundThemeBrush}"
                 Width="200" 
                 Height="100">
-                            <Grid>
+                            <Grid Background="{ThemeResource BackButtonBackgroundThemeBrush}">
                                 <Grid>
-                                    <TextBlock Text="{x:Bind Path=Name, Mode=OneWay}" FontSize="20" Margin="10,10,0,0"></TextBlock>
+                                    <TextBlock Text="{x:Bind Path=Name, Mode=OneWay}" FontSize="20" Margin="10,10,0,0" Foreground="Black"></TextBlock>
                                 </Grid>
                                 <RelativePanel>
-                                    <TextBlock Text="{x:Bind Path=Host, Mode=OneWay}" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" FontSize="10" Margin="0,0,10,10"></TextBlock>
+                                    <TextBlock Text="{x:Bind Path=Host, Mode=OneWay}" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" FontSize="10" Margin="0,0,10,10" Foreground="Black"></TextBlock>
                                 </RelativePanel>
                             </Grid>
                         </Border>

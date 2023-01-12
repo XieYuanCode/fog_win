@@ -19,14 +19,9 @@
     <SuppressPseudoWarning Condition="'$(Configuration)' == 'Debug'">true</SuppressPseudoWarning>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Remove="Assets\NewFolder\**" />
     <Compile Remove="MultilingualResources\**" />
-    <Content Remove="Assets\NewFolder\**" />
-    <EmbeddedResource Remove="Assets\NewFolder\**" />
     <EmbeddedResource Remove="MultilingualResources\**" />
-    <None Remove="Assets\NewFolder\**" />
     <None Remove="MultilingualResources\**" />
-    <Page Remove="Assets\NewFolder\**" />
     <Page Remove="MultilingualResources\**" />
   </ItemGroup>
   <ItemGroup>
@@ -154,9 +149,6 @@
     <Warning Text="$(MSBuildProjectFile) is Multilingual build enabled, but the Multilingual App Toolkit is unavailable during the build. If building with Visual Studio, please check to ensure that toolkit is properly installed." />
   </Target>
   <ItemGroup>
-    <PRIResource Remove="Assets\NewFolder\**" />
-  </ItemGroup>
-  <ItemGroup>
     <Page Update="Pages\Settings\SettingAccountAdd.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -192,6 +184,9 @@
   </ItemGroup>
   <ItemGroup>
     <PRIResource Remove="MultilingualResources\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Assets\ServiceAccountTypeIcon\GitLab.png" />
   </ItemGroup>
   <ItemGroup>
     <XliffResource Include="MultilingualResources\Fog.ja-JP.xlf" />

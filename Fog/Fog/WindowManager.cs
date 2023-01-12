@@ -28,7 +28,7 @@ namespace Fog
             main_window = new MainWindow();
             welcole_window = new WelcomeWindow();
 
-            int ColorMode = ApplicationData.Current.LocalSettings.Values["ColorMode"] != null? (int)ApplicationData.Current.LocalSettings.Values["ColorMode"]:2;
+            int ColorMode = ApplicationData.Current.LocalSettings.Values["ColorMode"] != null ? (int)ApplicationData.Current.LocalSettings.Values["ColorMode"] : 2;
 
             UpdateWindowTheme(ColorMode);
         }
@@ -36,13 +36,6 @@ namespace Fog
         public void UpdateWindowTheme(int theme)
         {
             (main_window.Content as Grid).RequestedTheme = theme switch
-            {
-                0 => ElementTheme.Light,
-                1 => ElementTheme.Dark,
-                _ => ElementTheme.Default
-            };
-
-            (welcole_window.Content as Grid).RequestedTheme = theme switch
             {
                 0 => ElementTheme.Light,
                 1 => ElementTheme.Dark,
