@@ -5,4 +5,5 @@ Fog/Fog/bin
 Fog/LocalRepoManager/bin
 /Fog/.vs
 /Fog/DataAccessLibrary/obj
+/Fog/GitHelper/obj
 /Fog/Fog/obj

@@ -19,7 +19,7 @@
             <Grid Background="{ThemeResource ButtonBackground}" Width="1000" HorizontalAlignment="Center" Height="70" VerticalAlignment="Center"  CornerRadius="4" Margin="0,20,0,0">
                 <RelativePanel Padding="15,0">
                     <StackPanel Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" VerticalAlignment="Center">
-                        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe97c;" Margin="5, 0, 15, 0"/>
+                        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe748;" Margin="5, 0, 15, 0"/>
                         <TextBlock Text="Account Type" VerticalAlignment="Center"></TextBlock>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
@@ -39,10 +39,11 @@
             <Grid Background="{ThemeResource ButtonBackground}" Width="1000" HorizontalAlignment="Center" Height="70" VerticalAlignment="Center"  CornerRadius="4">
                 <RelativePanel Padding="15,0">
                     <StackPanel Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" VerticalAlignment="Center">
+                        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe774;" Margin="5, 0, 15, 0"/>
                         <TextBlock Text="Host" VerticalAlignment="Center"></TextBlock>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
-                        <TextBox Width="300" PlaceholderText="Enter your host, protocol is necessary." 
+                        <TextBox Width="300" PlaceholderText="Enter your host, protocol is necessary" 
                                  IsEnabled="{x:Bind Path=local:SettingAccountAdd.GetHostTextBoxVisibility(AccountType_ComboBox.SelectedIndex), Mode=OneWay}"
                                  x:Name="Host_TextBox" Text="https://github.com/"></TextBox>
                     </StackPanel>
@@ -51,16 +52,18 @@
             <Grid Background="{ThemeResource ButtonBackground}" Width="1000" HorizontalAlignment="Center" Height="70" VerticalAlignment="Center"  CornerRadius="4">
                 <RelativePanel Padding="15,0">
                     <StackPanel Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" VerticalAlignment="Center">
+                        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe77b;" Margin="5, 0, 15, 0"/>
                         <TextBlock Text="Username" VerticalAlignment="Center"></TextBlock>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
-                        <TextBox Width="300" PlaceholderText="Enter Your Username" x:Name="Username_TextBox"></TextBox>
+                        <TextBox Width="300" PlaceholderText="Enter your username" x:Name="Username_TextBox"></TextBox>
                     </StackPanel>
                 </RelativePanel>
             </Grid>
             <Grid Background="{ThemeResource ButtonBackground}" Width="1000" HorizontalAlignment="Center" Height="70" VerticalAlignment="Center"  CornerRadius="4">
                 <RelativePanel Padding="15,0">
                     <StackPanel Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" VerticalAlignment="Center">
+                        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe72e;" Margin="5, 0, 15, 0"/>
                         <TextBlock Text="Personal Access Token" VerticalAlignment="Center"></TextBlock>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
@@ -71,6 +74,7 @@
             <Grid Background="{ThemeResource ButtonBackground}" Width="1000" HorizontalAlignment="Center" Height="70" VerticalAlignment="Center"  CornerRadius="4">
                 <RelativePanel Padding="15,0">
                     <StackPanel Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" VerticalAlignment="Center">
+                        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe78b;" Margin="5, 0, 15, 0"/>
                         <TextBlock Text="Comfirm Account Infomation" VerticalAlignment="Center"></TextBlock>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">

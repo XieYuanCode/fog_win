@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccessLibrary\DataAccessLibrary.csproj" />
+    <ProjectReference Include="..\GitHelper\GitHelper.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Page Update="Pages\Settings\SettingAbout.xaml">

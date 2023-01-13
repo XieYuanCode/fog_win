@@ -41,7 +41,6 @@ namespace Fog.Pages.ContentDialogs
             this.InitializeComponent();
 
             this.XamlRoot = xamlRoot;
-            this.Style = Application.Current.Resources["DefaultContentDialogStyle"] as Style;
         }
 
         private void ContentDialog_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)

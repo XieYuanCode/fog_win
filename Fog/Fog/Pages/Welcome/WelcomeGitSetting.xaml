@@ -20,7 +20,7 @@
                         <TextBlock x:Uid="/Setting/Git_Global_User_Name_Label" VerticalAlignment="Center"></TextBlock>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
-                        <TextBox Width="313" x:Uid="/Setting/Git_Global_User_Name_Textbox"></TextBox>
+                        <TextBox Width="313" x:Uid="/Setting/Git_Global_User_Name_Textbox" Text="{x:Bind GitGlobalUsername}" x:Name="Username_TB" LostFocus="Username_TB_LostFocus"></TextBox>
                     </StackPanel>
                 </RelativePanel>
             </Grid>
@@ -31,7 +31,7 @@
                         <TextBlock x:Uid="/Setting/Git_Global_Eamil_Label" VerticalAlignment="Center"></TextBlock>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
-                        <TextBox Width="313" x:Uid="/Setting/Git_Global_Email_Textbox"></TextBox>
+                        <TextBox Width="313" x:Uid="/Setting/Git_Global_Email_Textbox" Text="{x:Bind GitGlobalEmail}" x:Name="User_Email_TB" LostFocus="User_Email_TB_LostFocus"></TextBox>
                     </StackPanel>
                 </RelativePanel>
             </Grid>

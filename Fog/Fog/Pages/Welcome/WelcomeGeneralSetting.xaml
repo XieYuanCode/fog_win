@@ -28,6 +28,21 @@
             <Grid  Background="{ThemeResource ButtonBackground}" Width="900" HorizontalAlignment="Center" Height="60" VerticalAlignment="Center"  CornerRadius="4" Margin="0, 5, 0, 0">
                 <RelativePanel Padding="15,0">
                     <StackPanel Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" VerticalAlignment="Center">
+                        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe790;" Margin="5, 0, 15, 0"/>
+                        <TextBlock Text="Color" VerticalAlignment="Center"></TextBlock>
+                    </StackPanel>
+                    <ComboBox RelativePanel.AlignRightWithPanel="True" 
+                              RelativePanel.AlignVerticalCenterWithPanel="True"
+                              SelectionChanged="ComboBox_SelectionChanged" x:Name="ColorMode_CB">
+                        <TextBlock Text="Light"></TextBlock>
+                        <TextBlock Text="Dark"></TextBlock>
+                        <TextBlock Text="System"></TextBlock>
+                    </ComboBox>
+                </RelativePanel>
+            </Grid>
+            <Grid  Background="{ThemeResource ButtonBackground}" Width="900" HorizontalAlignment="Center" Height="60" VerticalAlignment="Center"  CornerRadius="4" Margin="0, 5, 0, 0">
+                <RelativePanel Padding="15,0">
+                    <StackPanel Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" VerticalAlignment="Center">
                         <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xf2b7;" Margin="5, 0,15, 0"/>
                         <TextBlock x:Uid="/Setting/General_Language_Label" VerticalAlignment="Center"></TextBlock>
                     </StackPanel>
@@ -48,21 +63,6 @@
                     <Button x:Name="Restart_BTN" x:Uid="/Setting/General_Restart_Button" Click="Restart_BTN_Click" />
                 </InfoBar.ActionButton>
             </InfoBar>
-            <Grid  Background="{ThemeResource ButtonBackground}" Width="900" HorizontalAlignment="Center" Height="60" VerticalAlignment="Center"  CornerRadius="4" Margin="0, 5, 0, 0">
-                <RelativePanel Padding="15,0">
-                    <StackPanel Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" VerticalAlignment="Center">
-                        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe790;" Margin="5, 0, 15, 0"/>
-                        <TextBlock Text="Color" VerticalAlignment="Center"></TextBlock>
-                    </StackPanel>
-                    <ComboBox RelativePanel.AlignRightWithPanel="True" 
-                              RelativePanel.AlignVerticalCenterWithPanel="True"
-                              SelectionChanged="ComboBox_SelectionChanged" x:Name="ColorMode_CB">
-                        <TextBlock Text="Light"></TextBlock>
-                        <TextBlock Text="Dark"></TextBlock>
-                        <TextBlock Text="System"></TextBlock>
-                    </ComboBox>
-                </RelativePanel>
-            </Grid>
         </StackPanel>
     </Grid>
 </Page>

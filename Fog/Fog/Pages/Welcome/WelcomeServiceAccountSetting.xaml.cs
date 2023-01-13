@@ -19,6 +19,7 @@ using System.Numerics;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -41,6 +42,8 @@ namespace Fog.Pages.Welcome
 
         private Compositor _compositor = WindowManager.GetWindowManager().welcole_window.Compositor;
         private SpringVector3NaturalMotionAnimation _springAnimation;
+
+        private ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
 
         public ObservableCollection<ServiceAccount> ServiceAccounts
         {
@@ -68,6 +71,12 @@ namespace Fog.Pages.Welcome
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             AddServiceAccountContentDialog addServiceAccountContentDialog = new AddServiceAccountContentDialog(XamlRoot);
+            addServiceAccountContentDialog.RequestedTheme = localSettings.Values["ColorMode"] switch
+            {
+                0 => ElementTheme.Light,
+                1 => ElementTheme.Dark,
+                _ => ElementTheme.Default
+            }; 
             await addServiceAccountContentDialog.ShowAsync();
 
             Console.WriteLine(addServiceAccountContentDialog.Result);
@@ -87,7 +96,6 @@ namespace Fog.Pages.Welcome
             (sender as UIElement).CenterPoint = new Vector3(60, 60, 0);
 
             (sender as UIElement).StartAnimation(_springAnimation);
-
         }
     }
 }

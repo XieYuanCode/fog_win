@@ -27,11 +27,32 @@ namespace Fog.Pages.Welcome
     /// </summary>
     public sealed partial class WelcomeGitSetting : Page
     {
-        public string GitGlobalUsername { get; set; }
-        public string GitGlobalEmail { get; set; }
+        public string GitGlobalUsername { get; set; } = "";
+        public string GitGlobalEmail { get; set; } = "";
         public WelcomeGitSetting()
         {
             this.InitializeComponent();
+
+            GitGlobalUsername = GitHelper.GlobalConfigHelper.GetGlobalConfig("user.name");
+            GitGlobalEmail = GitHelper.GlobalConfigHelper.GetGlobalConfig("user.email");
+        }
+
+        private void Username_TB_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (Username_TB.Text.Trim() != GitGlobalUsername)
+            {
+                GitHelper.GlobalConfigHelper.SetGlobalConfig("user.name", Username_TB.Text.Trim());
+                GitGlobalUsername = Username_TB.Text.Trim();
+            }
+        }
+
+        private void User_Email_TB_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if(User_Email_TB.Text.Trim() != GitGlobalEmail)
+            {
+                GitHelper.GlobalConfigHelper.SetGlobalConfig("user.email", User_Email_TB.Text.Trim());
+                GitGlobalEmail = User_Email_TB.Text.Trim();
+            }
         }
     }
 }

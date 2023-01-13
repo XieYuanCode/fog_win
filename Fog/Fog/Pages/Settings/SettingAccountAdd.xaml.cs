@@ -69,7 +69,7 @@ namespace Fog.Pages.Settings
 
             if (isExist)
             {
-                LoginExist_TT.Title = Username_TextBox.Text + "Is Already Exist!";
+                LoginExist_TT.Title = Username_TextBox.Text + " Is Already Exist!";
                 LoginExist_TT.IsOpen = true;
                 return;
             }

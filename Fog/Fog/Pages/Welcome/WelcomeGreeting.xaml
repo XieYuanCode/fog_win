@@ -20,6 +20,6 @@
             <TextBlock x:Uid="/Welcome/Welcome_SubTitle" FontSize="45" FontWeight="Bold" HorizontalAlignment="Center"  TextWrapping="Wrap" Width="600" Foreground="{StaticResource SystemAccentColor}" Margin="0, -10, 0,0"></TextBlock>
             <TextBlock x:Uid="/Welcome/Welcome_Greeting" HorizontalAlignment="Center"  TextWrapping="Wrap" Width="600" FontSize="25" Margin="0, 15, 0,0"></TextBlock>
         </StackPanel>
-        <Image Source="/Assets/Welcome_FlipView/welcome_carousel_1.jpg" Stretch="UniformToFill" Width="400" Grid.Column="1"></Image>
+        <Image Source="/Assets/Welcome_FlipView/welcome_carousel_3.jpg" Stretch="UniformToFill" Width="400" Grid.Column="1"></Image>
     </Grid>
 </Page>
