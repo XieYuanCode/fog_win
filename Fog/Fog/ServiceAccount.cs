@@ -25,6 +25,7 @@ namespace Fog
             {
                 ID = Guid.NewGuid().ToString(),
                 Type = "GitHub",
+                Host = "https://github.com",
                 Name = name,
                 PAT = pat
             };

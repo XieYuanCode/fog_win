@@ -70,8 +70,6 @@ namespace Fog
             if (isFirstLoad == true)
             {
                 windowManager.welcole_window.Activate();
-
-                windowManager.main_window.Activate();
             }
             else
             {

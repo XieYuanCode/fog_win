@@ -78,8 +78,6 @@ namespace Fog.Pages.Welcome
                 _ => ElementTheme.Default
             }; 
             await addServiceAccountContentDialog.ShowAsync();
-
-            Console.WriteLine(addServiceAccountContentDialog.Result);
         }
 
         private void Grid_PointerEntered(object sender, PointerRoutedEventArgs e)

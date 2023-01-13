@@ -55,7 +55,7 @@
                 </RelativePanel>
             </Grid>
             <InfoBar
-                    Width="626"
+                    Width="900"
                     x:Name="RequireRestart_IB"
                     Severity="Warning"
                     x:Uid="/Setting/General_Restart_InfoBar" >

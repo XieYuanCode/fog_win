@@ -64,7 +64,10 @@ namespace Fog
                 if (type == "GitHub")
                 {
                     isExist = (name == serviceAccount.Name && serviceAccount.Type == "GitHub");
-                    break;
+                    if(isExist == true)
+                    {
+                        break;
+                    }
                 }
                 else if (type == "GitLab CE/EE")
                 {
