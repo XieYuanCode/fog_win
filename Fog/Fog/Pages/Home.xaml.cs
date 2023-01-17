@@ -41,6 +41,14 @@ namespace Fog.Pages
 
         ObservableCollection<FogTreeViewItem> localRepositories = LocalRepoManager.GetLocalRepoManager().localRepositories;
 
+        bool localRepositoriesCountGreaterThenZero
+        {
+            get
+            {
+                return localRepositories.Count > 0;
+            }
+        }
+
         private void ReopGroup_ContextRequested(UIElement sender, ContextRequestedEventArgs args)
         {
             Point point = new Point(0, 0);

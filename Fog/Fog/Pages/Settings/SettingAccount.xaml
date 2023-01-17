@@ -45,7 +45,7 @@
                 Height="100">
                             <Grid Background="{ThemeResource BackButtonBackgroundThemeBrush}">
                                 <Grid>
-                                    <TextBlock Text="{x:Bind Path=Name, Mode=OneWay}" FontSize="20" Margin="10,10,0,0" Foreground="Black"></TextBlock>
+                                    <TextBlock Text="{x:Bind Path=Name, Mode=OneWay}" FontSize="20" Margin="10,10,0,0"></TextBlock>
                                 </Grid>
                                 <RelativePanel>
                                     <TextBlock Text="{x:Bind Path=Host, Mode=OneWay}" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" FontSize="10" Margin="0,0,10,10"></TextBlock>
